@@ -1,0 +1,855 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e5e5e5;
+}
+/* Container principal */
+.container {
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px; /* Espaçamento interno */
+}
+html {
+    font-size: calc(1rem + 0.5vw); /* Base adaptável ao tamanho da tela */
+}
+
+/*MENU SUPERIOR*/
+header {
+    background-image: linear-gradient(to bottom, #00a79d, #016185);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 30px 30px;
+    width: calc(50px + 5vw);
+    height: auto;
+}
+.container d-flex{
+    position: fixed; /* Fixa o menu no topo da tela */
+    top: 0; /* Posição no topo */
+    left: 0; /* Alinhado à esquerda */
+    width: 100%; /* Ocupa toda a largura da tela */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    color: white;
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    border-radius: 0PX 0PX 70px 70px; /* Arredonda as bordas*/
+}
+.navbar .nav-link{
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none; /* Remove sublinhado */
+    color: #fff;
+    padding: 10px;
+    margin-right: 50px; /* Espaçamento entre os links */
+    cursor: pointer;
+    background-color: transparent;
+    width: calc(80px + 5vw);
+    height: auto;
+}
+.Logo{
+    width: calc(10px + 5vw);
+    height: auto;
+    margin-right: 50px; /* Espaço à direita do logo */
+    margin-left: 50px;
+}
+
+/* Links principais do menu */
+.nav-link, .dropdown .btn-secondary {
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
+.nav-link:hover {
+    color: #00a79d; /* Cor ao passar o mouse */
+}
+
+/* Dropdown principal */
+.dropdown .btn-secondary {
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    margin-right: 50px; 
+}
+
+/* Submenu */
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-size: 1.2rem;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+}
+
+.dropdown-item:hover {
+    background-color: #555; /* Cor ao passar o mouse */
+    color: #00a79d; /* Cor do texto ao passar o mouse */
+}
+h1, h2 {
+    font-family: "Quicksand", serif;
+    font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
+    margin:3% 1% 0% 1%;
+    text-align: center;
+    font-optical-sizing: auto;
+    color: #4a4a4a;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 1.2rem; /* 1.2 do tamanho definido no <html> */
+    line-height: 1.6;
+    text-align: justify;
+    font-family: "Montserrat";
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Alinhar itens em dispositivos menores */
+@media (max-width: 768px) {
+    body {
+      font-size: 2vw; /* Fontes maiores em telas pequenas */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1vw; /* Fontes menores em telas grandes */
+    }
+}
+
+/*MOCKUP 1*/
+.TituloC1{
+    margin:8% 1% 0% 1%;
+}
+.TextoC1{
+    margin:1% 1% 0% 1%;
+    font-family: "Open Sans";
+    font-weight: lighter;
+    color: #00a79d;
+    font-style: italic;
+    padding: 30px 0px 0px 50px ;
+ }
+
+#Corpo1{
+    margin:1% 1% 0% 1%;
+}
+#div2C1{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+    margin:1% 5% 0% 15%;
+    overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
+    position: relative; /* Define referência para o posicionamento absoluto */
+}
+.TextoNucleo{
+    margin: auto;
+    max-width: 1200px; /* Largura máxima */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Logo2{
+    width: calc(800px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
+    height: auto;
+    overflow: visible;
+    padding: 20px;
+}
+
+/* Container geral do SUSito*/
+.AssistenteVirtual {
+    position: fixed; /* Fixa na tela */
+    bottom: 20px; /* Distância da parte inferior */
+    right: 20px; /* Distância da borda direita */
+    display: flex;
+    flex-direction: column; /* Alinha verticalmente */
+    align-items: center;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+/* Estilo da imagem */
+.Hiperlinkchatbot {
+    width: 60px; /* Tamanho da imagem */
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+}
+
+.Hiperlinkchatbot:hover {
+    transform: scale(1.2); /* Aumenta levemente ao passar o mouse */
+}
+
+/* Hiperlink oculto inicialmente */
+.AssistenteLink {
+    display: none; /* Não exibe por padrão */
+    background-color: #00a79d; /* Fundo do hiperlink */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 10px;
+    border-radius: 5px; /* Borda arredondada */
+    margin-top: 10px; /* Espaço acima do link */
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    white-space: nowrap; /* Evita quebra de linha */
+    transition: opacity 0.3s; /* Suaviza exibição */
+}
+
+/* Exibe o link ao passar o mouse sobre a imagem */
+.AssistenteVirtual:hover .AssistenteLink {
+    display: block; /* Mostra o link */
+    opacity: 1; /* Torna visível */
+}
+.Hiperlinkchatbot{
+    position: absolute;
+    overflow: visible;
+    margin-top: 380px;
+    margin-left: 450px;
+}
+
+#Div2C2{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    gap: 2%;
+    grid-template-columns: 10% 30% auto;
+    margin:2% 10% 0% 5%;
+    position: relative; /* Define referência para o posicionamento absoluto */
+}
+
+.TituloC2{
+    color:  #00a79d;
+    margin-top: 2%;
+}
+
+.Textocorpo2{
+    max-width: 1200px; /* Largura máxima */
+    margin-left: 20%;
+    margin-right: 0%;
+}
+
+.ImagemC2{
+    width: calc(800px + 5vw);
+    height: auto;
+    margin-left: 35%;
+}
+
+.Barralateral{
+    height: 600px;
+    width: 150px;
+    margin-left: 85%;
+}
+
+.custom-btn {
+    text-decoration: none;
+    font-size: 1.5rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background-image: linear-gradient(to bottom, #71d285, #016185);
+    color: #fff;
+    border-radius: 25px;
+    margin: 1% 0% 0% 0%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.custom-btn:hover{
+    color: #fff !important;
+    background-color: #016185 !important;
+    border-color:#00a79d !important;
+    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
+    transform: translateY(-3px); /* Levanta o botão */
+}
+.btn-outline-primary:active {
+    transform: translateY(2px); /* Abaixa o botão ao clicar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+}
+
+/* DIRETORIA */
+.TituloC3{
+    margin-top: 3%;
+}
+#DiretoriaC3{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    column-gap: 5%;
+    margin:2% 20% 0% 20%;
+}
+.DiretoriaImg{
+    width: calc(1000px + 5vw);
+    height: auto;
+}
+.Andre, .Luciana, .Willames{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TextoAndre, .TextoLuciana, .TextoWillames{
+    text-align: center;
+}
+
+/*CARROSSEL*/
+
+.TituloCarrossel{
+    margin-top: 3%;
+} 
+/* Estilo principal do carrossel */
+#CarrosselEquipe {
+    position: relative;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.7s ease;
+}
+
+.carousel-images img {
+    width: 200%;
+    flex-shrink: 0;
+}
+
+/* Botões de navegação */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    background-color: transparent;
+}
+
+.carousel-controls button {
+    background-color: #71d285(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicadores (dots) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-indicators .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .dot.active {
+    background-color: white;
+}
+
+/* Bloco Chatbot modela para refinamento 16/01/2025*/
+/* Bloco chatbot versáo com ação de mouse ao posicionar nobre o susito e fexar o balçao caso nçao tenha ação sobre ele após 3 segundo */
+
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 3%;
+    height: 10%;
+    cursor: pointer;
+}
+#chat-window {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 58px;
+    width: 300px;
+    margin-bottom: 50px;
+    margin-right:5Spx;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/*Nova linha 20-201-2025 ação de posiçáo de mouse..*/
+.tooltip {  
+    display: none; /* Oculta o balão inicialmente */  
+    visibility: hidden; /*Deixar invisivel */
+    position: absolute;  
+    bottom: 70px; /* Distância do robô */  
+    right: 0; /* Alinhado à direita */  
+    background-color: white; /* Fundo do balão */  
+    border: 1px solid #ccc; /* Borda do balão */  
+    padding: 10px; /* Espaçamento interno */  
+}  
+
+#chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#chat-body {
+    padding: 10px;
+}
+#options {
+    margin-top: 0px;
+}
+.option-button {
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Novas linhas 20-201-2025 ação de posiçáo de mouse..*/
+/*Fim do bloco versáo 1.2 chatbot  Jeremias 20-01-2025*/
+
+/*FOOTER*/
+
+/*CORPO 5 - O Serviço pelo Brasil*/
+.TituloC5{
+    margin-top: 3%;
+}
+#Corpo5{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 70% 30%;
+    margin:2% 35% 10% 5%;
+    gap: 50px;
+    overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
+    position: relative; /* Define referência para o posicionamento absoluto */
+}
+.MapadoBrasil{
+    position: absolute; /*Imagem ultrapassa as linhas da DIV e do GRID*/
+    width: calc(500px + 5vw);
+    height: auto;
+    border: 0px solid #ccc;
+    margin: -2% 15% 2% 70%;
+}
+  
+#TextoC5{
+    margin: 15% 5% 0% 20%;
+}
+
+
+/*CORPO 6 - Fluxo de atendimento*/
+.TituloC6{
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #71d285;
+    margin-top: 7%;
+    text-align: center;
+}
+#FluxoAtendimento{
+    text-align: center;
+}
+.ImagemFluxo{
+    text-align: center;
+    width: calc(1500px + 5vw);
+    height: auto;
+}
+
+/*CORPO 7 - SOU USUÁRIO*/
+#ImgSouUsuario{
+    text-align: center;
+}
+.ImgSouUsuario{
+    width: calc(15% + 5vw);
+    height: auto;
+    margin-top: 3%;
+    text-align: center !important;
+}
+.TituloC7{
+    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+}
+.TituloC7D{
+    margin-right: 40%;
+    margin-left: 20%;
+    font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
+    text-align: center;
+}
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding-bottom: 0px;
+    margin: 0;
+}
+ul li {
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+  }
+ul li img {
+    display: block; /* Garante que a imagem ocupe uma linha inteira */
+    max-width: 100%; /* Faz com que as imagens sejam responsivas */
+    height: auto;
+}
+#Corpo7{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    margin:1% 5% 0% 10%;
+}
+
+.Corpo7E{
+    margin: 0% 2% 0% 15%;
+}
+.Corpo7D{
+    margin-top: 2%;
+}
+.BotaoClicavel {
+    cursor: pointer;
+    width: calc(1000PX + 5vw);
+    height: auto;
+    border: 0px solid #ccc;
+    transition: transform 0.2s; /* Animação ao passar o mouse */
+}
+.BotaoClicavel:hover {
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+}
+#text-box{
+    display: none; 
+    margin-top: 20px;
+}
+ /* CORPO 8 - Sou Profissional*/
+ .ImgSouProfissional{
+    text-align: center;
+    width: calc(25% + 5vw);
+    height: auto;
+    margin-left: 40%;
+    margin-top: 3%;   
+ }
+ #Corpo8{
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); /* Garante responsividade */
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%; /* Aplica espaçamento corretamente */
+    margin: 1% 5% 0% 10%;
+ }
+ #Corpo8E{
+    margin: 2% 1% 0% 10%;
+    border: none;
+    width: 100%; /* Faz com que a largura se ajuste ao grid */
+    height: auto;
+}
+.PerProfissional{
+    border: none !important;
+    cursor: pointer;
+    width: 100%; /* Para garantir que se ajustem ao espaço disponível */
+    height: auto;
+    transition: transform 0.2s; /* Animação ao passar o mouse */    
+}
+.PerProfissional :hover{
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+}
+ #Corpo8D{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    gap: 5px;
+    margin: 5% 8% 0% 10%;
+    width: 100%;
+}
+
+.Conselhos1, .Conselhos2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adicionado espaço entre os itens */
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.ImgConselhos{
+    cursor: pointer;
+    width: 100%; /* Ajusta ao tamanho do botão */
+    max-width: 300px; /* Limita crescimento excessivo */
+    height: auto;
+    border: none;
+    transition: transform 0.2s; /* Animação ao passar o mouse */
+    padding: 5%;
+    border-radius: 20%;
+    box-shadow: 0 0 5px #00a79d; /* Efeito brilhante */
+}
+
+
+/*CORPO 7*/
+#Video{
+    margin: 30% 0% 0% 2%;
+}
+#Corpo7A{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: 60% 40%;
+    margin: 1% 15% 0% 15%;
+    gap: 3%;
+}
+.TituloCorpo7A{
+    margin-top: 3%;
+}
+.TituloCorpo7B{
+    line-height: 2.0; /* Espaçamento 1.5 vezes a altura da fonte */  
+}
+#Corpo7B{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    gap: 5%;
+    margin: 1% 10% 0% 15%;
+}
+#DepoimentoEnf, #DepoimentoMed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.ImagemGraca, .ImagemArtur{
+    width: calc(400px + 5vw);
+    height: AUTO;
+    text-align: center;
+    margin-left: 10%;
+}
+.TituloGraca, .TituloArtur{
+    text-align: center;
+    color: #016185;
+    font-size: 150%;
+    line-height: 1.5; /* Espaçamento 1.5 vezes a altura da fonte */
+}
+.TextoGraca, .TextoArtur{
+    font-style: italic;
+}
+
+/*CORPO 8 - RESULTADOS PILOTO*/
+.TituloCorpo8{
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+#Corpo8{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4%;
+    margin: 1% 10% 0% 15%;
+}
+.Corpo8D{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+.Corpo8E{
+    display: flex; /* Organiza os parágrafos em uma coluna */
+    flex-direction: column; /* Cada parágrafo será uma linha separada */
+    gap: 16px; /* Espaçamento vertical entre os parágrafos */
+}
+.PCorpo8E{
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-size: 1.2rem; 
+    margin: 0; 
+}
+.Corpo8E i {
+    margin-right: 8px; 
+    color: #0dd4ac; 
+}
+.custom-btn8{
+    width: calc(300px + 5vw);
+    height: AUTO;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem; /* 1.5 vezes o tamanho base definido em <html> */
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background-image: linear-gradient(to bottom, #71d285, #016185);
+    color: #fff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.custom-btn8:hover{
+    color: #fff !important;
+    background-color: #016185 !important;
+    border-color:#00a79d !important;
+    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
+    transform: translateY(-3px); /* Levanta o botão */
+}
+.btn-outline-primary:active {
+    transform: translateY(2px); /* Abaixa o botão ao clicar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+
+}
+.PCorpo8D{
+    text-align: center;
+}
+
+/*CORPO 9 - COMUNIDADE DE PRÁICAS*/
+#Corpo9{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    align-items: center;
+    text-align: center;
+    margin-top: 3%;
+}
+.TituloCorpo9{
+    font-style: bold;
+    color: #00a79d;
+}
+.ImgCorpo9{
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+
+/*CORPO 10 - VEM POR AÍ*/
+#Corpo10{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    margin: 4% 10% 0% 15%;
+}
+.TituloCorpo10E{
+    font-weight: bold;
+    color: #52b297;
+}
+
+/*CORPO 11 - NOTÍCIAS*/
+#Corpo11{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: 70% 30%;
+}
+.Corpo11E{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+}
+.Corpo11D{
+    margin-top: 10%;
+}
+.ImgCorpo11{
+    width: calc(700px + 5vw);
+    height: auto;
+    padding: 2%;
+}
+.TituloCorpo11{
+    font-weight: bold;
+    color: #52b297;
+    text-align: left;
+    margin-left: 20%;
+}
+.BarraNoticias{
+    margin: 15% 10% 0% 25%;
+}
+
+/*CORPO 12 -BIBLIOTECA*/
+#Corpo12{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    margin: 4% 10% 0% 15%;
+    gap: 3%;
+}
+.TextoCorpo12{
+    margin-top: 4%;
+}
+.Corpo12D{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+    margin-top: 10%;
+}
+
+/*CORPO 13 - FINAL*/
+#Corpo13{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    margin: 4% 10% 0% 15%;
+}
+.TituloCorpo13{
+    font-weight: bold;
+    color: #00a79d;
+    text-align: center;
+}
+.fa-solid{
+    color: #00a79d;
+    size: 50%;
+}
+
+
+/*RODAPE*/
+footer{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.Texto1Rodape, .Texto2Rodape{
+    font-size: 0.5rem;
+    text-align: center;
+}
+.ImgInstituicoes, .ImgRodape{
+    text-align: center;
+}
