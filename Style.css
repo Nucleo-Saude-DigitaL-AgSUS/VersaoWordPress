@@ -46,7 +46,7 @@ header {
 
 .nav-link {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -102,7 +102,7 @@ header {
     color: white;
     font-weight: bold;
     background-color: transparent;
-    margin-right: 50px; 
+    margin-right: 0px; 
 }
 
 /* Submenu */
@@ -126,7 +126,7 @@ header {
 }
 
 .dropdown-item:hover {
-    background-color: #555; /* Cor ao passar o mouse */
+    background-color: transparent; /* Cor ao passar o mouse */
     color: #00a79d; /* Cor do texto ao passar o mouse */
 }
 h1, h2 {
@@ -221,11 +221,12 @@ img {
 }
 /* Estilo da imagem */
 .Hiperlinkchatbot {
-    width: 60px; /* Tamanho da imagem */
+    width: 10px; /* Tamanho da imagem */
     height: 60px;
     cursor: pointer;
     transition: transform 0.3s; /* Animação ao passar o mouse */
 }
+
 
 .Hiperlinkchatbot:hover {
     transform: scale(1.2); /* Aumenta levemente ao passar o mouse */
@@ -609,7 +610,7 @@ ul li img {
 }
 
  #Corpo8E{
-    margin: 2% 1% 0% 10%;
+    margin: 2% 0% 0% 10%;
     border: none;
     width: 100%; /* Faz com que a largura se ajuste ao grid */
     height: auto;
@@ -617,7 +618,7 @@ ul li img {
 .PerProfissional{
     border: none !important;
     cursor: pointer;
-    width: 100%; /* Para garantir que se ajustem ao espaço disponível */
+    width: 80%; /* Para garantir que se ajustem ao espaço disponível */
     height: auto;
     transition: transform 0.2s; /* Animação ao passar o mouse */    
 }
@@ -629,14 +630,20 @@ ul li img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2%;
-    margin: 5% 8% 0% 10%;
+    gap: 5%;
+    margin: 5% 8% 0% 0%;
     width: 100%;
+    box-sizing: border-box;
  }
+
 .Conselhos1, .Conselhos2 {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Ajusta a largura dos itens para no mínimo 200px e o máximo para a largura disponível */
-    gap: 2%; /* Adicionado espaço entre os itens */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
 }
 button{
     border: none;
@@ -646,7 +653,7 @@ button{
 .ImgConselhos {
     cursor: pointer;
     width: 100%;
-    max-width: 150px;
+    max-width: 500px;
     height: auto;
     border: none;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -668,7 +675,7 @@ button{
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    margin: 30% 0% 0% 2%;
+    margin: 30% 0% 10% 2%;
 }
 
 #Video iframe {
@@ -854,7 +861,7 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8%;
+    gap: 10%;
     margin-top: 10%;
 }
 .ImgCorpo13{
@@ -869,7 +876,7 @@ button{
     margin-left: 20%;
 }
 .BarraNoticias{
-    margin: 10% 20% 0% 0%;
+    margin: 10% 50% 0% 0%;
     height: auto;
 }
 
