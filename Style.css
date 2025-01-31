@@ -64,14 +64,14 @@ header {
     transition: width 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .Logo {
         width: 100px;
     }
 }
 
 /* MENU MOBILE */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .navbar {
         display: none;
     }
@@ -91,9 +91,6 @@ header {
     white-space: nowrap; /* Impede quebra de linha */
 }
 
-.nav-link:hover {
-    color: #00a79d; /* Cor ao passar o mouse */
-}
 
 /* Dropdown principal */
 .dropdown .btn-secondary {
@@ -102,7 +99,7 @@ header {
     color: white;
     font-weight: bold;
     background-color: transparent;
-    margin-right: 0px; 
+    margin-right: 0; 
 }
 
 /* Submenu */
@@ -111,7 +108,7 @@ header {
     margin: 0;
     padding: 0;
     border-radius: 4px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 4px 6px rgb(0 0 0 / 20%); /* Sombra */
     font-size: 1.2rem;
     z-index: 1000;
 }
@@ -129,10 +126,11 @@ header {
     background-color: transparent; /* Cor ao passar o mouse */
     color: #00a79d; /* Cor do texto ao passar o mouse */
 }
+
 h1, h2 {
-    font-family: "Quicksand", serif;
+    font-family: Quicksand, serif;
     font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
-    margin: 3% 1% 0% 1%;
+    margin: 3% 1% 0%;
     text-align: center;
     font-optical-sizing: auto;
     color: #4a4a4a;
@@ -147,7 +145,7 @@ p {
     font-size: 1.2rem; /* 1.2 do tamanho definido no <html> */
     line-height: 1.6;
     text-align: justify;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
 }
 
 img {
@@ -156,35 +154,38 @@ img {
     border-radius: 10px;
     object-fit: cover; /* Adicionado para que as imagens sejam cortadas para se encaixar no contedor */
 }
+
 /* Alinhar itens em dispositivos menores */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     body {
       font-size: 2vw; /* Fontes maiores em telas pequenas */
     }
   }
   
-  @media (min-width: 1024px) {
+  @media (width >= 1024px) {
     body {
       font-size: 1vw; /* Fontes menores em telas grandes */
     }
 }
 
-/*CORPO 1*/
+/* CORPO 1 */
 .TituloC1{
-    margin:8% 1% 0% 1%;
+    margin:8% 1% 0%;
 }
+
 .TextoC1{
-    margin:1% 1% 0% 1%;
-    font-family: "Open Sans";
+    margin:1% 1% 0%;
+    font-family: "Open Sans", sans-serif;
     font-weight: lighter;
     color: #00a79d;
     font-style: italic;
-    padding: 30px 0px 0px 50px;
+    padding: 30px 0 0 50px;
 }
 
 #Corpo1{
-    margin:1% 1% 0% 1%;
+    margin:1% 1% 0%;
 }
+
 #div2C1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -193,6 +194,7 @@ img {
     overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
     position: relative; /* Define referência para o posicionamento absoluto */
 }
+
 .TextoNucleo{
     margin: 0 auto; /* Centraliza horizontalmente */
     max-width: 1200px; /* Largura máxima */
@@ -201,15 +203,16 @@ img {
     align-items: center;
     justify-content: center;
 }
+
 .Logo2{
-    width: calc(800px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
+    width: calc(800px + 5vw); /* A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw). */
     height: auto;
     overflow: visible;
     padding: 20px;
     object-fit: contain; /* Evita que a imagem seja cortada nas bordas */
 }
 
-/* Container geral do SUSito*/
+/* Container geral do SUSito */
 .AssistenteVirtual {
     position: fixed; /* Fixa na tela */
     bottom: 20px; /* Distância da parte inferior */
@@ -219,6 +222,7 @@ img {
     align-items: center;
     z-index: 1000; /* Garante que fique acima de outros elementos */
 }
+
 /* Estilo da imagem */
 .Hiperlinkchatbot {
     width: 10px; /* Tamanho da imagem */
@@ -242,7 +246,7 @@ img {
     border-radius: 5px; /* Borda arredondada */
     margin-top: 10px; /* Espaço acima do link */
     font-size: 14px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 4px 6px rgb(0 0 0 / 20%); /* Sombra */
     white-space: nowrap; /* Evita quebra de linha */
     transition: opacity 0.3s; /* Suaviza exibição */
 }
@@ -252,6 +256,7 @@ img {
     display: block; /* Mostra o link */
     opacity: 1; /* Torna visível */
 }
+
 .Hiperlinkchatbot{
     position: absolute;
     overflow: visible;
@@ -259,7 +264,7 @@ img {
     margin-left: 450px;
 }
 
-/*CORPO 2 - SERVIÇO*/
+/* CORPO 2 - SERVIÇO */
 #Div2C2{
     display: grid;
     grid-auto-flow: column;
@@ -297,15 +302,15 @@ img {
 .custom-btn {
     text-decoration: none;
     font-size: 1.5rem; /* 2.5 vezes o tamanho base definido em <html> */
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 10px 20px;
     border: 1px solid #fff;
     background-image: linear-gradient(to bottom, #71d285, #016185);
     color: #fff;
     border-radius: 25px;
-    margin: 1% 0% 0% 0%;
+    margin: 1% 0% 0%;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%); /* Adiciona sombra */
 }
 
 .custom-btn:hover{
@@ -315,41 +320,44 @@ img {
     box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
+
 .btn-outline-primary:active {
     transform: translateY(2px); /* Abaixa o botão ao clicar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%); /* Reduz a sombra */
 }
 
 /* CORPO 3 - CONEÇA OS LIDERES DA AGSUS */
 .TituloC3{
     margin-top: 3%;
 }
+
 #DiretoriaC3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5%;
-    margin:2% 20% 0% 20%;
+    margin:2% 20% 0%;
 }
+
 .DiretoriaImg{
     width: calc(1000px + 5vw);
     height: auto;
 }
+
 .Andre, .Luciana, .Willames{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .TextoAndre, .TextoLuciana, .TextoWillames{
     text-align: center;
 }
 
-/*CORPO 4 - CARROSSEL EQUIPE*/
+/* CORPO 4 - CARROSSEL EQUIPE 
 
-.TituloCarrossel {
-    margin-top: 3%;
-}
 
-/* Estilo principal do carrossel */
+
+/* Estilo principal do carrossel 
 #CarrosselEquipe {
     position: relative;
     width: 100%;
@@ -371,7 +379,7 @@ img {
     object-position: center;
 }
 
-/* Botões de navegação */
+/* Botões de navegação 
 .carousel-controls {
     position: absolute;
     top: 50%;
@@ -383,7 +391,7 @@ img {
 }
 
 .carousel-controls button {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(0 0 0 / 50%);
     border: none;
     color: white;
     font-size: 30px;
@@ -394,10 +402,10 @@ img {
 }
 
 .carousel-controls button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(0 0 0 / 80%);
 }
 
-/* Indicadores (dots) */
+/* Indicadores (dots) 
 .carousel-indicators {
     position: absolute;
     bottom: 10px;
@@ -410,7 +418,7 @@ img {
 .carousel-indicators .dot {
     width: 10px;
     height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(0 0 0 / 50%);
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -419,8 +427,95 @@ img {
 .carousel-indicators .dot.active {
     background-color: white;
 }
+*/
 
-/* Bloco Chatbot modela para refinamento 16/01/2025*/
+/* CARROSSEL JEREMIAS */
+.TituloCarrossel {  
+    margin-top: 3%; /* Margem superior de 3% */  
+    text-align: center; /* Centraliza o texto */  
+}  
+
+/* Estilo principal para o contêiner do carrossel */  
+#CarrosselEquipe {  
+    position: relative; /* Posicionamento relativo para posicionamento absoluto interno */  
+    width: 90%; /* Largura do carrossel como 80% da largura do seu contêiner pai */  
+    max-width: 1000px; /* Largura máxima do carrossel */  
+    margin: 0 auto; /* Centraliza o carrossel na página */  
+    overflow: hidden; /* Esconde partes das imagens que transbordam o contêiner */  
+    border-radius: 10px; /* Bordas arredondadas no contêiner do carrossel */  
+    background-color: hwb(0 97% 1%); /* Cor de fundo do carrossel */  
+}  
+
+/* Estilo para as imagens dentro do carrossel */  
+.carousel-images {  
+    display: flex; /* Utiliza Flexbox para dispor as imagens em linha */  
+    transition: transform 0.7s ease; /* Transição suave ao mudar de imagem */  
+    width: 100%; /* A largura das imagens é 100% do carrossel */  
+}  
+
+/* Estilo para cada imagem do carrossel */  
+.carousel-images img {  
+    width: 100%; /* A imagem ocupa 100% do espaço disponível */  
+    border-radius: 10px; /* Bordas arredondadas nas imagens */  
+}  
+
+/* Estilo para os controles de navegação */  
+.carousel-controls {  
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner do carrossel */  
+    top: 50%; /* Posiciona verticalmente no meio do carrossel */  
+    width: 100%; /* Estende os controles por toda a largura do carrossel */  
+    display: flex; /* Utiliza Flexbox para dispor os botões em linha */  
+    justify-content: space-between; /* Espaça os botões entre as extremidades */  
+    transform: translateY(-50%); /* Move os botões para alinhar verticalmente ao centro */  
+}  
+
+/* Estilo para os botões de navegação */  
+.carousel-controls button {  
+    background-color: rgba(183, 241, 159, 0.5); /* Fundo preto semi-transparente */  
+    border: none; /* Remove a borda padrão do botão */  
+    color: white; /* Cor do texto do botão */  
+    font-size: 30px; /* Tamanho da fonte dos botões */  
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */  
+    padding: 10px; /* Preenchimento interno do botão */  
+    border-radius: 50%; /* Forma o botão como círculo */  
+    transition: background-color 0.3s ease; /* Transição suave ao mudar a cor do fundo */  
+}  
+
+/* Estilo para o efeito hover do botão */  
+.carousel-controls button:hover {  
+    background-color: rgba(0, 0, 0, 0.8); /* Aumenta a opacidade do fundo ao passar o mouse */  
+}  
+
+/* Estilo para os indicadores do carrossel */  
+.carousel-indicators {  
+    position: absolute; /* Posicionamento absoluto */  
+    bottom: 10px; /* Distância de 10px do fundo do carrossel */  
+    width: 75%; /* Largura total do carrossel */ 
+    display: flex; /* Utiliza Flexbox para dispor os indicadores em linha */  
+    justify-content: center; /* Centraliza os indicadores */  
+    gap: 25px; /* Espaço entre os indicadores */  
+}  
+
+/* Estilo para cada ponto do indicador */  
+.carousel-indicators .dot {  
+    width: 10px; /* Largura do ponto */  
+    height: 10px; /* Altura do ponto */  
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do ponto */  
+    border-radius: 50%; /* Forma o ponto como círculo */  
+    cursor: pointer; /* Muda o cursor ao passar sobre o ponto */  
+    transition: background-color 0.3s ease; /* Transição suave ao mudar a cor do fundo */  
+}  
+
+/* Estilo para o ponto ativo */  
+.carousel-indicators .dot.active {  
+    
+    background-color: white; /* Cor branca para o ponto ativo */  
+}
+
+/* FIM DO CARROSSEL JEREMIAS */
+
+/* Bloco Chatbot modela para refinamento 16/01/2025 */
+
 /* Bloco chatbot versáo com ação de mouse ao posicionar nobre o susito e fexar o balçao caso nçao tenha ação sobre ele após 3 segundo */
 
 #chatbot {
@@ -431,6 +526,7 @@ img {
     height: 10%;
     cursor: pointer;
 }
+
 #chat-window {
     display: none;
     position: fixed;
@@ -442,14 +538,14 @@ img {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     z-index: 1000;
 }
 
-/*Nova linha 20-201-2025 ação de posiçáo de mouse..*/
+/* Nova linha 20-201-2025 ação de posiçáo de mouse.. */
 .tooltip {  
     display: none; /* Oculta o balão inicialmente */  
-    visibility: hidden; /*Deixar invisivel */
+    visibility: hidden; /* Deixar invisivel */
     position: absolute;  
     bottom: 70px; /* Distância do robô */  
     right: 0; /* Alinhado à direita */  
@@ -465,12 +561,15 @@ img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 #chat-body {
     padding: 10px;
 }
+
 #options {
-    margin-top: 0px;
+    margin-top: 0;
 }
+
 .option-button {
     display: block;
     margin: 5px;
@@ -482,15 +581,17 @@ img {
     cursor: pointer;
 }
 
-/*Novas linhas 20-201-2025 ação de posiçáo de mouse..*/
-/*Fim do bloco versáo 1.2 chatbot  Jeremias 20-01-2025*/
+/* Novas linhas 20-201-2025 ação de posiçáo de mouse.. */
 
-/*FOOTER*/
+/* Fim do bloco versáo 1.2 chatbot  Jeremias 20-01-2025 */
 
-/*CORPO 5 - O SERVIÇO PELO BRASIL*/
+/* FOOTER */
+
+/* CORPO 5 - O SERVIÇO PELO BRASIL */
 .TituloC5{
     margin-top: 3%;
 }
+
 #Corpo5{
     display: grid;
     grid-auto-flow: column;
@@ -501,11 +602,12 @@ img {
     overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
     position: relative; /* Define referência para o posicionamento absoluto */
 }
+
 .MapadoBrasil{
-    position: absolute; /*Imagem ultrapassa as linhas da DIV e do GRID*/
+    position: absolute; /* Imagem ultrapassa as linhas da DIV e do GRID */
     width: calc(500px + 5vw);
     height: auto;
-    border: 0px solid #ccc;
+    border: 0 solid #ccc;
     margin: -2% 15% 2% 70%;
 }
   
@@ -514,7 +616,7 @@ img {
 }
 
 
-/*CORPO 6 - FLUXO DE ATENDIMENTO*/
+/* CORPO 6 - FLUXO DE ATENDIMENTO */
 .TituloC6{
     padding-top: 50px;
     padding-left: 50px;
@@ -522,9 +624,11 @@ img {
     margin-top: 7%;
     text-align: center;
 }
+
 #FluxoAtendimento{
     text-align: center;
 }
+
 .ImagemFluxo{
     text-align: center;
     max-width: 1500px;
@@ -532,7 +636,80 @@ img {
     height: auto;
 }
 
-/*CORPO 7 - SOU USUÁRIO*/
+/* CORPO 7 - SOU USUÁRIO 
+#ImgSouUsuario{
+    text-align: center;
+}
+
+.ImgSouUsuario{
+    width: calc(15% + 5vw);
+    height: auto;
+    margin-top: 3%;
+    text-align: center !important;
+}
+
+.TituloC7{
+    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> 
+}
+
+.TituloC7D{
+    margin-right: 40%;
+    margin-left: 20%;
+    font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> 
+    text-align: center;
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores da lista 
+    padding-bottom: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px; /* Espaçamento entre as imagens 
+  }
+
+ul li img {
+    display: block; /* Garante que a imagem ocupe uma linha inteira 
+    max-width: 100%; /* Faz com que as imagens sejam responsivas 
+    height: auto;
+}
+
+#Corpo7{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    margin:1% 5% 0% 10%;
+}
+
+.Corpo7E{
+    margin: 0% 2% 0% 15%;
+}
+
+.Corpo7D{
+    margin-top: 2%;
+}
+
+.BotaoClicavel {
+    cursor: pointer;
+    width: calc(1000PX + 5vw);
+    height: auto;
+    border: 0 solid #ccc;
+    transition: transform 0.2s; /* Animação ao passar o mouse 
+}
+
+.BotaoClicavel:hover {
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse 
+}
+
+#text-box{
+    display: none; 
+    margin-top: 20px;
+} */
+
+/* CORPO 7 - SOU USUARIO JEREMIAS */
 #ImgSouUsuario{
     text-align: center;
 }
@@ -543,7 +720,7 @@ img {
     text-align: center !important;
 }
 .TituloC7{
-    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-size: 2rem;  /* 2.5 vezes o tamanho base definido em <html> */
 }
 .TituloC7D{
     margin-right: 40%;
@@ -560,7 +737,7 @@ ul li {
     margin-bottom: 10px; /* Espaçamento entre as imagens */
   }
 ul li img {
-    display: block; /* Garante que a imagem ocupe uma linha inteira */
+    display: block; /* Garante que a imagem ocupe uma linha inteira */ 
     max-width: 100%; /* Faz com que as imagens sejam responsivas */
     height: auto;
 }
@@ -578,23 +755,42 @@ ul li img {
 }
 .Corpo7D{
     margin-top: 2%;
+    gap:5%;
 }
 .BotaoClicavel {
     cursor: pointer;
     width: calc(1000PX + 5vw);
     height: auto;
     border: 0px solid #ccc;
-    transition: transform 0.2s; /* Animação ao passar o mouse */
+    transition: transform 0.2s; /* Animação ao passar o mouse */ 
 }
 .BotaoClicavel:hover {
-    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */ 
 }
 #text-box{
     display: none; 
     margin-top: 20px;
 }
+.textoExplicativo {  /* Vou fragimentar esse trecho de CSS 31/01/2023*/
+    width: calc(87% + 5vw); /* Mesma largura que as imagens */  
+    margin-top: 1px; /* Margem superior para o texto */  
+    position: justify; /* Permite ajustar a posição do texto */  
+    top: -10; /* Ajuste a posição vertical do texto (use valores positivos ou negativos) */  
+    left: 0; /* Ajuste a posição horizontal do texto (use valores positivos ou negativos) */  
+    text-align: left; /* Centraliza o texto */  
+    background-color: #f0f0f0; /* Cor de fundo (ajuste conforme necessário) */  
+    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
+    border-radius: 20px; /* Borda arredondada */  
+    padding: 35px; /* Preenchimento interno */   
+    opacity: 0; /* Opacidade inicial como 0 */  
+    transition: opacity 0.8s; /* Transição suave para a opacidade */  
+    display: none; /* Inicia como oculto */  
+    color: #070606; /* Cor do texto */  
+    font-size: 0.6rem; /* Tamanho da fonte (ajuste conforme desejado) */  
+    font-family: 'Arial', sans-serif; /* Tipo de fonte (ajuste conforme desejado) */  
+}
 
- /* CORPO 8 - SOU PROFISSIONAL*/
+ /* CORPO 8 - SOU PROFISSIONAL */
  .ImgSouProfissional{
     text-align: center;
     width: calc(25% + 5vw);
@@ -602,6 +798,7 @@ ul li img {
     margin-left: 40%;
     margin-top: 3%;
  }   
+
  #Corpo8{
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Garante responsividade */
@@ -615,6 +812,7 @@ ul li img {
     width: 100%; /* Faz com que a largura se ajuste ao grid */
     height: auto;
 }
+
 .PerProfissional{
     border: none !important;
     cursor: pointer;
@@ -622,6 +820,7 @@ ul li img {
     height: auto;
     transition: transform 0.2s; /* Animação ao passar o mouse */    
 }
+
 .PerProfissional :hover{
     transform: scale(1.1);
 }
@@ -645,6 +844,7 @@ ul li img {
     width: 100%;
     max-width: 800px;
 }
+
 button{
     border: none;
     background-color: transparent;
@@ -668,7 +868,7 @@ button{
 }
 
 
-/*CORPO 9 - NOSSA HISTÓRIA*/
+/* CORPO 9 - NOSSA HISTÓRIA */
 #Video {
     position: relative;
     padding-bottom: 56.25%; /* Proporção 16:9 */
@@ -685,7 +885,7 @@ button{
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    box-shadow: 0 4px 10px rgb(0 0 0 / 30%); /* Sombra sutil */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -698,15 +898,18 @@ button{
     grid-auto-flow: column;
     columns: center;
     grid-template-columns: 60% 40%;
-    margin: 1% 15% 0% 15%;
+    margin: 1% 15% 0%;
     gap: 3%;
 }
-.TituloC9A{
+
+#TituloC9A{
     margin-top: 3%;
 }
+
 .TituloC9B{
     line-height: 2.0; /* Espaçamento 1.5 vezes a altura da fonte */  
 }
+
 #C9B{
     display: grid;
     grid-auto-flow: column;
@@ -714,40 +917,46 @@ button{
     gap: 5%;
     margin: 1% 10% 0% 15%;
 }
+
 #DepoimentoEnf, #DepoimentoMed{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
 .ImagemGraca, .ImagemArtur{
     width: calc(400px + 5vw);
-    height: AUTO;
+    height: auto;
     text-align: center;
     margin-left: 10%;
 }
+
 .TituloGraca, .TituloArtur{
     text-align: center;
     color: #016185;
     font-size: 150%;
     line-height: 1.5; /* Espaçamento 1.5 vezes a altura da fonte */
 }
+
 .TextoGraca, .TextoArtur{
     font-style: italic;
     font-size: 1.2rem;
 }
 
-/*CORPO 10 - RESULTADOS PILOTO*/
+/* CORPO 10 - RESULTADOS PILOTO */
 .TituloC10{
     margin-top: 3%;
     margin-bottom: 1%;
 }
+
 #C10{
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 4%;
     margin: 1% 10% 0% 15%;
 }
+
 .C10D{
     display: grid;
     grid-auto-flow: column;
@@ -755,11 +964,13 @@ button{
     grid-template-columns: repeat(3, 1fr);
     gap: 2%;
 }
+
 .C10E{
     display: flex; /* Organiza os parágrafos em uma coluna */
     flex-direction: column; /* Cada parágrafo será uma linha separada */
     gap: 16px; /* Espaçamento vertical entre os parágrafos */
 }
+
 .PCorpo10E{
     display: flex; 
     align-items: center; 
@@ -767,24 +978,26 @@ button{
     font-size: 1.2rem; 
     margin: 0;
 }
+
 .Corpo10E i {
     margin-right: 8px; 
     color: #0dd4ac;
 }
+
 .custom-btn8{
     width: calc(300px + 5vw);
-    height: AUTO;
+    height: auto;
     text-decoration: none;
     text-align: center;
     font-size: 1.5rem; /* 1.5 vezes o tamanho base definido em <html> */
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 10px 20px;
     border: 1px solid #fff;
     background-image: linear-gradient(to bottom, #71d285, #016185);
     color: #fff;
     border-radius: 25px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%); /* Adiciona sombra */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -798,15 +1011,17 @@ button{
     box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
+
 .custom-btn8:active {
     transform: translateY(2px); /* Abaixa o botão ao clicar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%); /* Reduz a sombra */
 }
+
 .PCorpo10D{
     text-align: center;
 }
 
-/*CORPO 11 - COMUNIDADE DE PRÁICAS*/
+/* CORPO 11 - COMUNIDADE DE PRÁICAS */
 #Corpo11{
     display: flex;
     flex-direction: column;
@@ -815,35 +1030,38 @@ button{
     text-align: center;
     margin-top: 3%;
 }
+
 .TituloC11{
     font-style: bold;
     color: #00a79d;
 }
+
 .ImgC11{
     margin-top: 6%;
     margin-bottom: 5%;
 }
 
-/*CORPO 12 - VEM POR AÍ*/
+/* CORPO 12 - VEM POR AÍ */
 #Corpo12 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Adjust based on content */
     gap: 20px;
-    align-items: start;
-    justify-items: center;
+    place-items: start center;
     margin: 4% 10% 0% 15%;
 }
+
 .TituloC12E{
     font-weight: bold;
     color: #52b297;
 }
+
 .ImgSusito{
     width: calc(300px + 5vw);
     height: auto;
     margin-left: 15%;
 }
 
-/*CORPO 13 - NOTÍCIAS*/
+/* CORPO 13 - NOTÍCIAS */
 #Corpo13{
     display: grid;
     grid-auto-flow: column;
@@ -851,12 +1069,14 @@ button{
     grid-template-columns: 70% 30%;
     margin: 0% 10% 0% 15%;
 }
+
 .Corpo13E{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3%;
 }
+
 .Corpo13D{
     display: flex;
     flex-direction: column;
@@ -864,23 +1084,26 @@ button{
     gap: 10%;
     margin-top: 10%;
 }
+
 .ImgCorpo13{
     width: calc(700px + 5vw);
     height: auto;
     padding: 2%;
 }
+
 .TituloC13{
     font-weight: bold;
     color: #52b297;
     text-align: left;
     margin-left: 20%;
 }
+
 .BarraNoticias{
     margin: 10% 50% 0% 0%;
     height: auto;
 }
 
-/*CORPO 14 -BIBLIOTECA*/
+/* CORPO 14 -BIBLIOTECA */
 #Corpo14{
     display: grid;
     grid-auto-flow: column;
@@ -888,9 +1111,11 @@ button{
     margin: 4% 10% 0% 15%;
     gap: 3%;
 }
+
 .TextoCorpo14{
     margin-top: 4%;
 }
+
 .Corpo14D{
     display: flex;
     flex-direction: column;
@@ -899,7 +1124,7 @@ button{
     margin-top: 10%;
 }
 
-/*CORPO 15 - FINAL*/
+/* CORPO 15 - FINAL */
 #Corpo15{
     display: grid;
     grid-auto-flow: column;
@@ -907,15 +1132,18 @@ button{
     margin: 4% 10% 0% 15%;
     gap: 3%;
 }
+
 .TituloCorpo15{
     font-weight: bold;
     color: #00a79d;
     text-align: justify;
 }
+
 .fa-solid{
     color: #00a79d;
     size: 50%;
 }
+
 .RedesSociais{
     width: calc(800px + 5vw);
     height: auto;
@@ -924,7 +1152,7 @@ button{
     display: flex;
 }
 
-/*RODAPE*/
+/* RODAPE */
 footer{
     margin-top: 5%;
     display: flex;
@@ -932,13 +1160,21 @@ footer{
     align-items: center;
     gap: 3%;
 }
+
 .Texto1Rodape, .Texto2Rodape{
     font-size: 0.5rem;
     text-align: center;
 }
-.ImgInstituicoes, .ImgRodape{
+
+.ImgRodape{
     text-align: center;
     width: calc(100% + 5vw);
     height: auto;
-    margin: 0% 0% 0% 0%;
+    margin: 0%;
+}
+.ImgInstituicoes{
+    text-align: center;
+    width: calc(50% + 5vw);
+    height: auto;
+    margin: 0%;
 }
