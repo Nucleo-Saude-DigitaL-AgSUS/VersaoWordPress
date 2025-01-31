@@ -1,3 +1,5 @@
+
+/* Bloco Carroscel Equipe front-end Gustavo
 // CARROSSEL EQUIPE
 const carouselImages = document.querySelector('.carousel-images');
 const dots = document.querySelectorAll('.dot');
@@ -50,11 +52,105 @@ let autoRotate = setInterval(nextImage, autoRotateInterval);
     });
 });
 
+Fim do bloco do  Carroscel Equipe front-end Gustavo */
+
+/* Bloco Carroscel Equipe front-end Jeremias Silva 31/01/2025*/
+const carouselImages = document.querySelector('.carousel-images');  
+const dotsContainer = document.querySelector('.carousel-indicators');  
+const prevButton = document.querySelector('.prev');  
+const nextButton = document.querySelector('.next');  
+
+let currentIndex = 0;  
+const totalImages = carouselImages.children.length;  
+const autoRotateInterval = 5000; // Tempo entre trocas (em milissegundos)  
+
+// Cria os indicadores dinamicamente  
+for (let i = 0; i < totalImages; i++) {  
+    const dot = document.createElement('div');  
+    dot.classList.add('dot');  
+    dot.setAttribute('data-index', i);  
+    dot.addEventListener('click', () => {  
+        currentIndex = i;  
+        updateCarousel();  
+    });  
+    dotsContainer.appendChild(dot);  
+}  
+
+// Atualiza o carrossel para o índice atual  
+function updateCarousel() {  
+    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;  
+    document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));  
+    document.querySelector(`.dot[data-index="${currentIndex}"]`).classList.add('active');  
+}  
+
+// Próxima imagem  
+function nextImage() {  
+    currentIndex = (currentIndex + 1) % totalImages;  
+    updateCarousel();  
+}  
+
+// Imagem anterior  
+function prevImage() {  
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;  
+    updateCarousel();  
+}  
+
+// Clique nos botões de navegação  
+nextButton.addEventListener('click', nextImage);  
+prevButton.addEventListener('click', prevImage);  
+
+// Rotação automática  
+let autoRotate = setInterval(nextImage, autoRotateInterval);  
+
+// Pausar rotação automática ao interagir com os controles  
+[nextButton, prevButton].forEach(control => {  
+    control.addEventListener('mouseenter', () => clearInterval(autoRotate));  
+    control.addEventListener('mouseleave', () => {  
+        autoRotate = setInterval(nextImage, autoRotateInterval);  
+    });  
+});  
+
+// Iniciar o carrossel com a primeira imagem ativa  
+updateCarousel();
+/* Fim do bloco do Carroscel Equipe front-end Jeremias Silva 31/01/2025*/
+
+
+/* Bloco Sou Usuário    JEremias Silva 31/01/2025 */
+
+document.addEventListener('DOMContentLoaded', () => {  
+    // Seleciona todas as imagens que podem ser clicadas  
+    const images = document.querySelectorAll('.BotaoClicavel');  
+
+    images.forEach((image) => {  
+        image.addEventListener('click', () => {  
+            const textBox = image.nextElementSibling; // Seleciona o próximo elemento (texto)  
+
+            // Exibe o texto suavemente  
+            textBox.style.display = 'block'; // Altera o estilo para exibir  
+            setTimeout(() => {  
+                textBox.style.opacity = '1'; // Altera a opacidade para 1  
+                // Use uma transição CSS para suavizar essa transição  
+            }, 0); // Atraso de 0 para garantir que o display seja alterado antes da opacidade  
+
+            // Define um temporizador para ocultar o texto após 30 segundos  
+            setTimeout(() => {  
+                textBox.style.opacity = '0'; // Define a opacidade para 0  
+                setTimeout(() => {  
+                    textBox.style.display = 'none'; // Esconde o texto novamente após a opacidade  
+                }, 600); // Tempo suficiente para a animação de saída  
+            }, 20000); // 30000 ms = 30 segundos  
+        });  
+    });  
+});
+
+
+/* Fim do bloco Sou Usuário    JEremias Silva 31/01/2025 */
+
+
+
 
 /** Chatbot Bloco
-
 /*Bloco js posição do mouse sobre imagem, chamada do balão e fechamneto do balão 20-01-2025*/
-
 const chatbot = document.getElementById('chatbot'); // Obtém o elemento da imagem do chatbot
 const chatWindow = document.getElementById('chat-window'); // Obtém a janela de chat
 const tooltip = document.querySelector('.tooltip'); // Obtém o elemento do balão

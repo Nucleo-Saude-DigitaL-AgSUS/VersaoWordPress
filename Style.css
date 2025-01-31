@@ -343,13 +343,14 @@ img {
     text-align: center;
 }
 
-/*CORPO 4 - CARROSSEL EQUIPE*/
+/* Bloco de estilo para o carrossel equipe Gustavo 
+CORPO 4 - CARROSSEL EQUIPE
 
 .TituloCarrossel {
     margin-top: 3%;
 }
 
-/* Estilo principal do carrossel */
+ Estilo principal do carrossel equipe 
 #CarrosselEquipe {
     position: relative;
     width: 100%;
@@ -371,7 +372,7 @@ img {
     object-position: center;
 }
 
-/* Botões de navegação */
+Botões de navegação
 .carousel-controls {
     position: absolute;
     top: 50%;
@@ -397,7 +398,7 @@ img {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Indicadores (dots) */
+Indicadores (dots) 
 .carousel-indicators {
     position: absolute;
     bottom: 10px;
@@ -419,10 +420,99 @@ img {
 .carousel-indicators .dot.active {
     background-color: white;
 }
+*/
+
+/* Bloco de estilo para o carrossel equipe Jeremias 31/01/2025 */
+/* Estilo para o título do carrossel */  
+.TituloCarrossel {  
+    margin-top: 3%; /* Margem superior de 3% */  
+    text-align: center; /* Centraliza o texto */  
+}  
+
+/* Estilo principal para o contêiner do carrossel */  
+#CarrosselEquipe {  
+    position: relative; /* Posicionamento relativo para posicionamento absoluto interno */  
+    width: 80%; /* Largura do carrossel como 80% da largura do seu contêiner pai */  
+    max-width: 800px; /* Largura máxima do carrossel */  
+    margin: 0 auto; /* Centraliza o carrossel na página */  
+    overflow: hidden; /* Esconde partes das imagens que transbordam o contêiner */  
+    border-radius: 10px; /* Bordas arredondadas no contêiner do carrossel */  
+    background-color: hwb(0 97% 1%); /* Cor de fundo do carrossel */  
+}  
+
+/* Estilo para as imagens dentro do carrossel */  
+.carousel-images {  
+    display: flex; /* Utiliza Flexbox para dispor as imagens em linha */  
+    transition: transform 0.7s ease; /* Transição suave ao mudar de imagem */  
+    width: 100%; /* A largura das imagens é 100% do carrossel */  
+}  
+
+/* Estilo para cada imagem do carrossel */  
+.carousel-images img {  
+    width: 100%; /* A imagem ocupa 100% do espaço disponível */  
+    border-radius: 10px; /* Bordas arredondadas nas imagens */  
+}  
+
+/* Estilo para os controles de navegação */  
+.carousel-controls {  
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner do carrossel */  
+    top: 50%; /* Posiciona verticalmente no meio do carrossel */  
+    width: 100%; /* Estende os controles por toda a largura do carrossel */  
+    display: flex; /* Utiliza Flexbox para dispor os botões em linha */  
+    justify-content: space-between; /* Espaça os botões entre as extremidades */  
+    transform: translateY(-50%); /* Move os botões para alinhar verticalmente ao centro */  
+}  
+
+/* Estilo para os botões de navegação */  
+.carousel-controls button {  
+    background-color: rgba(183, 241, 159, 0.5); /* Fundo preto semi-transparente */  
+    border: none; /* Remove a borda padrão do botão */  
+    color: white; /* Cor do texto do botão */  
+    font-size: 30px; /* Tamanho da fonte dos botões */  
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */  
+    padding: 10px; /* Preenchimento interno do botão */  
+    border-radius: 50%; /* Forma o botão como círculo */  
+    transition: background-color 0.3s ease; /* Transição suave ao mudar a cor do fundo */  
+}  
+
+/* Estilo para o efeito hover do botão */  
+.carousel-controls button:hover {  
+    background-color: rgba(0, 0, 0, 0.8); /* Aumenta a opacidade do fundo ao passar o mouse */  
+}  
+
+/* Estilo para os indicadores do carrossel */  
+.carousel-indicators {  
+    position: absolute; /* Posicionamento absoluto */  
+    bottom: 10px; /* Distância de 10px do fundo do carrossel */  
+    width: 75%; /* Largura total do carrossel */ 
+    display: flex; /* Utiliza Flexbox para dispor os indicadores em linha */  
+    justify-content: center; /* Centraliza os indicadores */  
+    gap: 25px; /* Espaço entre os indicadores */  
+}  
+
+/* Estilo para cada ponto do indicador */  
+.carousel-indicators .dot {  
+    width: 10px; /* Largura do ponto */  
+    height: 10px; /* Altura do ponto */  
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do ponto */  
+    border-radius: 50%; /* Forma o ponto como círculo */  
+    cursor: pointer; /* Muda o cursor ao passar sobre o ponto */  
+    transition: background-color 0.3s ease; /* Transição suave ao mudar a cor do fundo */  
+}  
+
+/* Estilo para o ponto ativo */  
+.carousel-indicators .dot.active {  
+    
+    background-color: white; /* Cor branca para o ponto ativo */  
+}
+/* Fim do bloco de estilo para o carrossel equipe   jeremias 31/01/2025*/
+
+
+
+
 
 /* Bloco Chatbot modela para refinamento 16/01/2025*/
 /* Bloco chatbot versáo com ação de mouse ao posicionar nobre o susito e fexar o balçao caso nçao tenha ação sobre ele após 3 segundo */
-
 #chatbot {
     position: fixed;
     bottom: 20px;
@@ -532,7 +622,7 @@ img {
     height: auto;
 }
 
-/*CORPO 7 - SOU USUÁRIO*/
+/*CORPO 7 - SOU USUÁRIO Gustavo Pereira 31/01/2023 
 #ImgSouUsuario{
     text-align: center;
 }
@@ -543,7 +633,76 @@ img {
     text-align: center !important;
 }
 .TituloC7{
-    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-size: 2rem;  2.5 vezes o tamanho base definido em <html> 
+}
+.TituloC7D{
+    margin-right: 40%;
+    margin-left: 20%;
+    font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> 
+    text-align: center;
+}
+ul {
+    list-style-type: none; /* Remove os marcadores da lista 
+    padding-bottom: 0px;
+    margin: 0;
+}
+ul li {
+    margin-bottom: 10px; /* Espaçamento entre as imagens 
+  }
+ul li img {
+    display: block; /* Garante que a imagem ocupe uma linha inteira 
+    max-width: 100%; /* Faz com que as imagens sejam responsivas 
+    height: auto;
+}
+#Corpo7{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    margin:1% 5% 0% 10%;
+}
+
+.Corpo7E{
+    margin: 0% 2% 0% 15%;
+}
+.Corpo7D{
+    margin-top: 2%;
+}
+.BotaoClicavel {
+    cursor: pointer;
+    width: calc(1000PX + 5vw);
+    height: auto;
+    border: 0px solid #ccc;
+    transition: transform 0.2s; /* Animação ao passar o mouse 
+}
+.BotaoClicavel:hover {
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse 
+}
+#text-box{
+    display: none; 
+    margin-top: 20px;
+}
+ Fim do Bloco    sou usuario     Gustavo Pereira 31/01/2023 */
+
+ 
+ 
+ 
+ 
+ 
+ /* Boloco 7 - Sou Usuario Jeremias Silva 31/01/2023 */
+
+ #ImgSouUsuario{
+    text-align: center;
+}
+.ImgSouUsuario{
+    width: calc(15% + 5vw);
+    height: auto;
+    margin-top: 3%;
+    text-align: center !important;
+}
+.TituloC7{
+    font-size: 2rem;  /* 2.5 vezes o tamanho base definido em <html> */
 }
 .TituloC7D{
     margin-right: 40%;
@@ -560,7 +719,7 @@ ul li {
     margin-bottom: 10px; /* Espaçamento entre as imagens */
   }
 ul li img {
-    display: block; /* Garante que a imagem ocupe uma linha inteira */
+    display: block; /* Garante que a imagem ocupe uma linha inteira */ 
     max-width: 100%; /* Faz com que as imagens sejam responsivas */
     height: auto;
 }
@@ -584,17 +743,40 @@ ul li img {
     width: calc(1000PX + 5vw);
     height: auto;
     border: 0px solid #ccc;
-    transition: transform 0.2s; /* Animação ao passar o mouse */
+    transition: transform 0.2s; /* Animação ao passar o mouse */ 
 }
 .BotaoClicavel:hover {
-    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */ 
 }
 #text-box{
     display: none; 
     margin-top: 20px;
 }
+.textoExplicativo {  /* Vou fragimentar esse trecho de CSS 31/01/2023*/
+    width: calc(87% + 5vw); /* Mesma largura que as imagens */  
+    margin-top: 1px; /* Margem superior para o texto */  
+    position: justify; /* Permite ajustar a posição do texto */  
+    top: -10; /* Ajuste a posição vertical do texto (use valores positivos ou negativos) */  
+    left: 0; /* Ajuste a posição horizontal do texto (use valores positivos ou negativos) */  
+    text-align: left; /* Centraliza o texto */  
+    background-color: #f0f0f0; /* Cor de fundo (ajuste conforme necessário) */  
+    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
+    border-radius: 20px; /* Borda arredondada */  
+    padding: 35px; /* Preenchimento interno */   
+    opacity: 0; /* Opacidade inicial como 0 */  
+    transition: opacity 0.8s; /* Transição suave para a opacidade */  
+    display: none; /* Inicia como oculto */  
+    color: #070606; /* Cor do texto */  
+    font-size: 0.6rem; /* Tamanho da fonte (ajuste conforme desejado) */  
+    font-family: 'Arial', sans-serif; /* Tipo de fonte (ajuste conforme desejado) */  
+}
+ /*Fim do Bloco     sou usuario     JEremias Silva 31/01/2023 */
 
- /* CORPO 8 - SOU PROFISSIONAL*/
+
+
+
+
+ /* CORPO 8 - SOU PROFISSIONAL
  .ImgSouProfissional{
     text-align: center;
     width: calc(25% + 5vw);
@@ -604,7 +786,7 @@ ul li img {
  }   
  #Corpo8{
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Garante responsividade */
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); Garante responsividade 
     gap: 2%; 
     margin: 1% 5% 0% 10%;
 }
@@ -612,15 +794,15 @@ ul li img {
  #Corpo8E{
     margin: 2% 0% 0% 10%;
     border: none;
-    width: 100%; /* Faz com que a largura se ajuste ao grid */
+    width: 100%;  Faz com que a largura se ajuste ao grid 
     height: auto;
 }
 .PerProfissional{
     border: none !important;
     cursor: pointer;
-    width: 80%; /* Para garantir que se ajustem ao espaço disponível */
+    width: 80%; Para garantir que se ajustem ao espaço disponível 
     height: auto;
-    transition: transform 0.2s; /* Animação ao passar o mouse */    
+    transition: transform 0.2s; Animação ao passar o mouse    
 }
 .PerProfissional :hover{
     transform: scale(1.1);
@@ -666,7 +848,106 @@ button{
     transform: scale(1.05);
     box-shadow: 0 0 15px #00a79d;
 }
+*/
 
+/* CORPO 8 - SOU PROFISSIONAL  JEremias Silva 31/01/2023*/
+.ImgSouProfissional {  
+    text-align: center;  
+    width: calc(25% + 5vw);  
+    height: auto;  
+    margin-left: 40%;  
+    margin-top: 3%;  
+}  
+
+#Corpo8 {  
+    display: grid;  
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Garante responsividade */  
+    gap: 2%;   
+    margin: 1% 5% 0% 10%;  
+}  
+
+#Corpo8E {  
+    margin: 2% 0% 0% 10%;  
+    border: none;  
+    width: 100%; /* Faz com que a largura se ajuste ao grid */  
+    height: auto;  
+    position: relative; /* Define um contêiner relativo para o texto explicativo */  
+}  
+
+.PerProfissional {  
+    border: none !important;  
+    cursor: pointer;  
+    width: 80%; /* Para garantir que se ajustem ao espaço disponível */  
+    height: auto;  
+    transition: transform 0.2s; /* Animação ao passar o mouse */    
+}  
+
+.PerProfissional:hover {  
+    transform: scale(1.1);  
+}  
+
+#Corpo8D {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    gap: 5%;  
+    margin: 5% 8% 0% 0%;  
+    width: 100%;  
+    box-sizing: border-box;  
+}  
+
+.Conselhos1, .Conselhos2 {  
+    display: flex;  
+    flex-wrap: wrap;  
+    gap: 20px;  
+    justify-content: center;  
+    align-items: center;  
+    width: 100%;  
+    max-width: 800px;  
+}  
+
+button {  
+    border: none;  
+    background-color: transparent;  
+}  
+
+.ImgConselhos {  
+    cursor: pointer;  
+    width: 100%;  
+    max-width: 500px;  
+    height: auto;  
+    border: none;  
+    transition: transform 0.2s, box-shadow 0.2s;  
+    padding: 5%;  
+    border-radius: 20%;  
+    box-shadow: 0 0 10px #00a79d;  
+}  
+
+.ImgConselhos:hover {  
+    transform: scale(1.05);  
+    box-shadow: 0 0 15px #00a79d;  
+}  
+
+/* Adicionando o estilo do texto explicativo */  
+.textoExplicativo {  
+    width: calc(87% + 5vw); /* Mesma largura que as imagens */  
+    margin-top: 1px; /* Margem superior para o texto */  
+    position: absolute; /* Permite ajustar a posição do texto */  
+    top: 100%; /* Ajusta para começar logo abaixo da imagem */  
+    left: 0; /* Ajuste a posição horizontal do texto */  
+    text-align: left; /* Alinha o texto à esquerda */  
+    background-color: #f0f0f0; /* Cor de fundo (ajuste conforme necessário) */  
+    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
+    border-radius: 20px; /* Borda arredondada */  
+    padding: 35px; /* Preenchimento interno */   
+    opacity: 0; /* Opacidade inicial como 0 */  
+    transition: opacity 0.8s; /* Transição suave para a opacidade */  
+    display: none; /* Inicia como oculto */  
+    color: #070606; /* Cor do texto */  
+    font-size: 0.6rem; /* Tamanho da fonte (ajuste conforme desejado) */  
+    font-family: 'Arial', sans-serif; /* Tipo de fonte (ajuste conforme desejado) */  
+}
+/*Fim do Bloco     sou profissional     JEremias Silva 31/01/2023*/
 
 /*CORPO 9 - NOSSA HISTÓRIA*/
 #Video {
