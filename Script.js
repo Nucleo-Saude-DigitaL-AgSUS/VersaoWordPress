@@ -51,56 +51,72 @@ let autoRotate = setInterval(nextImage, autoRotateInterval);
 });
 
 
-/** Chatbot Bloco
+/** Chatbot Bloco */
 
-/*Bloco js posição do mouse sobre imagem, chamada do balão e fechamneto do balão 20-01-2025*/
+const chatButton = document.getElementById('chatButton');  
+const sustoImage = document.getElementById('sustoImage');  
+const chatDialog = document.getElementById('chatDialog');  
+let dialogTimeout;  
 
-const chatbot = document.getElementById('chatbot'); // Obtém o elemento da imagem do chatbot
-const chatWindow = document.getElementById('chat-window'); // Obtém a janela de chat
-const tooltip = document.querySelector('.tooltip'); // Obtém o elemento do balão
+chatButton.addEventListener('mouseover', () => {  
+    chatButton.style.opacity = '0';  
+    sustoImage.style.display = 'block';  
+    sustoImage.style.transform = 'scale(1.05)';  
 
-let tooltipTimeout;
-let closeTimeout;
+    setTimeout(() => {  
+        sustoImage.style.opacity = '1';  
+        
+        setTimeout(() => {  
+            chatDialog.classList.remove('hidden');  
+            resetDialogTimeout();  
+        }, 3);  
+    }, 300);  
+});  
 
-// Função para abrir a janela de chat e mostrar o balão
-function showChat() {
-    chatWindow.style.display = 'block'; // Abre a janela de chat
-    tooltip.style.display = 'block'; // Mostra o balão
-}
+function closeDialog() {  
+    chatDialog.classList.add('hidden');  
 
-// Função para fechar o balão e a janela de chat
-function hideChat() {
-    tooltip.style.display = 'none'; // Fecha o balão
-    chatWindow.style.display = 'none'; // Fecha a janela de chat
-}
+    setTimeout(() => {  
+        sustoImage.style.opacity = '0';  
+        sustoImage.style.transform = 'scale(1)';  
+        
+        setTimeout(() => {  
+            sustoImage.style.display = 'none';  
+            chatButton.style.opacity = '1';  
+        }, 300);  
+    }, 300);  
+}  
 
-// Evento ao posicionar o mouse sobre a imagem do chatbot
-chatbot.addEventListener('mouseenter', () => {
-    tooltipTimeout = setTimeout(() => {
-        showChat(); // Chama função para mostrar chat após 2 segundos
-        closeTimeout = setTimeout(hideChat, 1600); // Fecha após 3 segundos (300 minis-segundos)
-    }, 500); // Aparece após 1 segundos
-});
+function resetDialogTimeout() {  
+    clearTimeout(dialogTimeout);  
+    dialogTimeout = setTimeout(() => {  
+        closeDialog();  
+    }, 10000);  
+}  
 
-// Evento ao sair com o mouse da imagem do chatbot
-chatbot.addEventListener('mouseleave', () => {
-    clearTimeout(tooltipTimeout); // Cancela a exibição do balão se sair antes dos 2s
-});
+sustoImage.addEventListener('mouseout', (event) => {  
+    if (!chatDialog.contains(event.relatedTarget)) {  
+        closeDialog();  
+    }  
+});  
 
-// Evento ao clicar nos botões dentro da janela de chat
-document.querySelectorAll('.option-button').forEach(button => {
-    button.addEventListener('click', () => {
-        clearTimeout(closeTimeout); // Cancela o fechamento automático ao clicar
-        closeTimeout = setTimeout(hideChat, 180000); // Reinicia o timer de fechamento após clique
-        // Aqui você pode adicionar lógica adicional se necessário.
-    });
-});
+document.addEventListener('click', (event) => {  
+    if (!chatButton.contains(event.target) &&   
+        !sustoImage.contains(event.target) &&   
+        !chatDialog.contains(event.target)) {  
+        closeDialog();  
+    }  
+});  
 
-// Funções adicionais para redirecionamento e abrir WhatsApp
-function redirectToSection(section) {
-    alert('Redirecionando para ' + section);
-}
+const buttons = chatDialog.querySelectorAll('.option-button'); 
+buttons.forEach(button => {  
+    button.addEventListener('click', () => {  
+        closeDialog();  
+    });  
+});  
 
-function openWhatsApp() {
-    window.open('https://wa.me/61998109919', '_blank');
-}
+function redirectTo(url) {  
+    window.location.href = url;  
+}  
+
+chatDialog.addEventListener('mouseleave', closeDialog);

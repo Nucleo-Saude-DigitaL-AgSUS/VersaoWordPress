@@ -7,10 +7,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #e5e5e5;
+    margin:2% 10% 0% 10%;
 }
 /* Container principal */
 .container {
-    max-width: 1200px; /* Largura máxima */
+    max-width: 100%; /* Largura máxima */
     margin: 0 auto; /* Centraliza o conteúdo */
     padding: 20px; /* Espaçamento interno */
 }
@@ -33,7 +34,7 @@ header {
     position: fixed; /* Fixa o menu no topo da tela */
     top: 0; /* Posição no topo */
     left: 0; /* Alinhado à esquerda */
-    width: 100%; /* Ocupa toda a largura da tela */
+    width: calc(100% + 5vw); /* Ocupa toda a largura da tela */
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
     color: white;
     font-family: "Quicksand", serif;
@@ -47,12 +48,15 @@ header {
     font-size: 1rem;
     text-decoration: none; /* Remove sublinhado */
     color: #fff;
-    padding: 10px;
     margin-right: 50px; /* Espaçamento entre os links */
     cursor: pointer;
     background-color: transparent;
     width: calc(80px + 5vw);
     height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 .Logo{
     width: calc(10px + 5vw);
@@ -63,7 +67,10 @@ header {
 
 /* Links principais do menu */
 .nav-link, .dropdown .btn-secondary {
-    white-space: nowrap; /* Impede quebra de linha */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: center; /* Mantém o alinhamento centralizado */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
 }
 
 .nav-link:hover {
@@ -107,7 +114,6 @@ header {
 h1, h2 {
     font-family: "Quicksand", serif;
     font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
-    margin:3% 1% 0% 1%;
     text-align: center;
     font-optical-sizing: auto;
     color: #4a4a4a;
@@ -142,29 +148,64 @@ img {
     }
 }
 
+#Corpo0{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    margin: 10% 10% 0% 10%;
+}
+.Corpo0D{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnAgSUS {
+    width: calc(500px + 5vw);
+    height: 200px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background-image: linear-gradient(to bottom, #71d285, #016185);
+    color: #fff;
+    border-radius: 25px;
+    margin: 1% 0% 0% 0%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.btnAgSUS:hover{
+    color: #fff !important;
+    background-color: #016185 !important;
+    border-color:#00a79d !important;
+    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
+    transform: translateY(-3px); /* Levanta o botão */
+}
+.btn-outline-primary:active {
+    transform: translateY(2px); /* Abaixa o botão ao clicar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+}
 /*MOCKUP 1*/
 .TituloC1{
-    margin:8% 1% 0% 1%;
+    margin-top: 8%;
 }
 .TextoC1{
-    margin:1% 1% 0% 1%;
+    margin-top: 2%;
     font-family: "Open Sans";
     font-weight: lighter;
     color: #00a79d;
     font-style: italic;
-    padding: 30px 0px 0px 50px ;
  }
 
-#Corpo1{
-    margin:1% 1% 0% 1%;
-}
+
 #div2C1{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3%;
-    margin:1% 5% 0% 15%;
+    gap: 2%;
     overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
     position: relative; /* Define referência para o posicionamento absoluto */
 }
@@ -180,65 +221,120 @@ img {
     width: calc(800px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
     height: auto;
     overflow: visible;
-    padding: 20px;
 }
 
-/* Container geral do SUSito*/
+#chatButton {  
+    width: 7%;
+    height: 7%;
+    background-color: #00a79d;  
+    color: #fff;
+    border: none;  
+    border-radius: 20%;  
+    cursor: pointer;  
+    position: fixed;  
+    bottom: 100px;  
+    right: 0;  
+    transition: opacity 0.3s ease;  
+}  
+
+#sustoImage {  
+    position: fixed;  
+    bottom: 100px;  
+    right: 0;  
+    width: 200PX;  
+    height: 200PX;  
+    display: none;  
+    cursor: pointer;  
+    transition: opacity 0.3s ease, transform 0.3s ease;  
+    transform: scale(1);  
+}
+
+.dialogBubble {  
+    position: fixed;  
+    bottom: 150px;  
+    right: 50px;  
+    background-color: white;  
+    border: 1px solid #6c5ee7;  
+    border-radius: 10%;  
+    padding: 10px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    z-index: 1000;
+    margin-right: 6%;  
+    margin-bottom: 4%;
+}
+
+.dialogBubble button {  
+    margin-top: 0px;  
+    padding: 5px 10px;  
+    background-color: #007bff;  
+    color: white;  
+    border: none;  
+    border-radius: 500px;  
+    cursor: pointer;  
+}
+
+.hidden {  
+    display: none;  
+}
+
+/* Container geral do SUSito
 .AssistenteVirtual {
-    position: fixed; /* Fixa na tela */
-    bottom: 20px; /* Distância da parte inferior */
-    right: 20px; /* Distância da borda direita */
+    position: fixed; /* Fixa na tela *
+    bottom: 20px; /* Distância da parte inferior *
+    right: 20px; /* Distância da borda direita *
     display: flex;
-    flex-direction: column; /* Alinha verticalmente */
+    flex-direction: column; /* Alinha verticalmente 
     align-items: center;
     z-index: 1000; /* Garante que fique acima de outros elementos */
 }
-/* Estilo da imagem */
+/* Estilo da imagem *
 .Hiperlinkchatbot {
-    width: 60px; /* Tamanho da imagem */
+    width: 60px; /* Tamanho da imagem 
     height: 60px;
     cursor: pointer;
-    transition: transform 0.3s; /* Animação ao passar o mouse */
+    transition: transform 0.3s; /* Animação ao passar o mouse 
 }
 
 .Hiperlinkchatbot:hover {
-    transform: scale(1.2); /* Aumenta levemente ao passar o mouse */
+    transform: scale(1.2); /* Aumenta levemente ao passar o mouse 
 }
 
-/* Hiperlink oculto inicialmente */
+/* Hiperlink oculto inicialmente 
 .AssistenteLink {
-    display: none; /* Não exibe por padrão */
-    background-color: #00a79d; /* Fundo do hiperlink */
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
+    display: none; /* Não exibe por padrão 
+    background-color: #00a79d; /* Fundo do hiperlink 
+    color: white; /* Cor do texto *
+    text-decoration: none; /* Remove sublinhado
     padding: 10px;
-    border-radius: 5px; /* Borda arredondada */
-    margin-top: 10px; /* Espaço acima do link */
+    border-radius: 5px; /* Borda arredondada 
+    margin-top: 10px; /* Espaço acima do link *
     font-size: 14px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
-    white-space: nowrap; /* Evita quebra de linha */
-    transition: opacity 0.3s; /* Suaviza exibição */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra 
+    white-space: nowrap; /* Evita quebra de linha 
+    transition: opacity 0.3s; /* Suaviza exibição 
 }
 
-/* Exibe o link ao passar o mouse sobre a imagem */
+/* Exibe o link ao passar o mouse sobre a imagem 
 .AssistenteVirtual:hover .AssistenteLink {
-    display: block; /* Mostra o link */
-    opacity: 1; /* Torna visível */
+    display: block; 
+    opacity: 1; 
 }
 .Hiperlinkchatbot{
     position: absolute;
     overflow: visible;
     margin-top: 380px;
-    margin-left: 450px;
+    margin-left: 450px; */
 }
-
+#Corpo2{
+    margin: 2% 10%
+}
 #Div2C2{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     gap: 2%;
     grid-template-columns: 10% 30% auto;
-    margin:2% 10% 0% 5%;
+    margin:2% 10% 0% 10%;
     position: relative; /* Define referência para o posicionamento absoluto */
 }
 
@@ -250,7 +346,7 @@ img {
 .Textocorpo2{
     max-width: 1200px; /* Largura máxima */
     margin-left: 20%;
-    margin-right: 0%;
+    margin-right: auto;
 }
 
 .ImagemC2{
@@ -260,14 +356,17 @@ img {
 }
 
 .Barralateral{
-    height: 600px;
-    width: 150px;
+    height: auto;
+    width: calc(300px + 5vw);
     margin-left: 85%;
 }
 
 .custom-btn {
+    width: calc(500px + 5vw);
+    height: 200px;
+    text-align: center;
     text-decoration: none;
-    font-size: 1.5rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
     font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
     border: 1px solid #fff;
@@ -466,21 +565,20 @@ img {
     columns: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 70% 30%;
-    margin:2% 35% 10% 5%;
-    gap: 50px;
+    margin:2% 10% 2% 0%;
+    gap: 1%;
     overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
     position: relative; /* Define referência para o posicionamento absoluto */
 }
 .MapadoBrasil{
-    position: absolute; /*Imagem ultrapassa as linhas da DIV e do GRID*/
-    width: calc(500px + 5vw);
+    position: relative;
+    width: calc(1500px + 5vw);
     height: auto;
     border: 0px solid #ccc;
-    margin: -2% 15% 2% 70%;
 }
   
 #TextoC5{
-    margin: 15% 5% 0% 20%;
+    margin: 15% 0% 0% 40%;
 }
 
 
@@ -501,22 +599,112 @@ img {
     height: auto;
 }
 
-/*CORPO 7 - SOU USUÁRIO*/
-#ImgSouUsuario{
-    text-align: center;
-}
-.ImgSouUsuario{
-    width: calc(15% + 5vw);
-    height: auto;
-    margin-top: 3%;
-    text-align: center !important;
+/*CORPO 7 - Sou Gestor*/
+#Corpo7{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto;
+    gap: 5%;
+    margin:1% 10% 0% 10%;
 }
 .TituloC7{
+    margin-top: 3%;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px white;
+}
+.Corpo7E{
+    margin: 3% 0% 0% 10%;
+}
+.Corpo7D{
+    margin: 15% 0% 0% 10%;
+}
+.ImgCorpo7{
+    width: calc(110% + 5vw);
+    height: auto;
+    border: 0px solid #ccc;
+    margin: 2% 0% 0% 10%;
+}
+.TituloC7flip{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.flip-container {
+    perspective: 300px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 13%;
+}
+.flipper {
+    color: #016185;
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Limita a largura máxima */
+    height: auto;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+.front, .back {
+    position: absolute;
+    width: 150%;
+    max-width: 2000px; /* Define um limite para telas grandes */
+    min-width: 300px; /* Evita que fique muito pequeno */
+    height: auto;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 80px;
+    padding: 2%;
+    box-shadow: 0 0 15px #4a4a4a; /* Efeito brilhante */
+    margin: 2% 5% 2% 15%;
+}
+.front {
+    background-color: #016185;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back {
+    background-color: #016185;
+    transform: rotateY(180deg);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TextoC7flip{
+    font-size: 1rem;
+    max-width: 90%; /* Mantém margens seguras */
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+
+/*CORPO 8 - SOU USUÁRIO*/
+.TituloC8{
+    margin-top: 3%;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px white;
+}
+.TituloC8E{
     font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
 }
-.TituloC7D{
-    margin-right: 40%;
-    margin-left: 20%;
+.TituloC8D{
+    margin-right: 3cap;
+    margin-left: 50%;
     font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
     text-align: center;
 }
@@ -533,7 +721,7 @@ ul li img {
     max-width: 100%; /* Faz com que as imagens sejam responsivas */
     height: auto;
 }
-#Corpo7{
+#Corpo8{
     display: grid;
     grid-auto-flow: column;
     columns: center;
@@ -542,10 +730,10 @@ ul li img {
     margin:1% 5% 0% 10%;
 }
 
-.Corpo7E{
+.Corpo8E{
     margin: 0% 2% 0% 15%;
 }
-.Corpo7D{
+.Corpo8D{
     margin-top: 2%;
 }
 .BotaoClicavel {
@@ -562,7 +750,14 @@ ul li img {
     display: none; 
     margin-top: 20px;
 }
- /* CORPO 8 - Sou Profissional*/
+ /* CORPO 9 - Sou Profissional*/
+ .TituloC9{
+    margin-top: 3%;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px white;
+ }
+ .TituloC9D{
+    margin-left: 10%;
+ }
  .ImgSouProfissional{
     text-align: center;
     width: calc(25% + 5vw);
@@ -570,7 +765,7 @@ ul li img {
     margin-left: 40%;
     margin-top: 3%;   
  }
- #Corpo8{
+ #Corpo9{
     display: grid;
     grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); /* Garante responsividade */
     columns: center;
@@ -578,7 +773,7 @@ ul li img {
     gap: 5%; /* Aplica espaçamento corretamente */
     margin: 1% 5% 0% 10%;
  }
- #Corpo8E{
+ #Corpo9E{
     margin: 2% 1% 0% 10%;
     border: none;
     width: 100%; /* Faz com que a largura se ajuste ao grid */
@@ -594,20 +789,21 @@ ul li img {
 .PerProfissional :hover{
     transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
 }
- #Corpo8D{
-    display: grid;
-    grid-auto-flow: column;
-    columns: center;
+ #Corpo9D{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
     gap: 5px;
     margin: 5% 8% 0% 10%;
     width: 100%;
 }
 
 .Conselhos1, .Conselhos2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Adicionado espaço entre os itens */
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%; /* Adicionado espaço entre os itens */
 }
 button{
     border: none;
@@ -627,11 +823,12 @@ button{
 }
 
 
-/*CORPO 7*/
+
+/*CORPO 10*/
 #Video{
     margin: 30% 0% 0% 2%;
 }
-#Corpo7A{
+#Corpo10A{
     display: grid;
     grid-auto-flow: column;
     columns: center;
@@ -639,13 +836,13 @@ button{
     margin: 1% 15% 0% 15%;
     gap: 3%;
 }
-.TituloCorpo7A{
+.TituloCorpo10A{
     margin-top: 3%;
 }
-.TituloCorpo7B{
+.TituloCorpo10B{
     line-height: 2.0; /* Espaçamento 1.5 vezes a altura da fonte */  
 }
-#Corpo7B{
+#Corpo10B{
     display: grid;
     grid-auto-flow: column;
     columns: center;
@@ -675,11 +872,11 @@ button{
 }
 
 /*CORPO 8 - RESULTADOS PILOTO*/
-.TituloCorpo8{
+.TituloCorpo11{
     margin-top: 3%;
     margin-bottom: 1%;
 }
-#Corpo8{
+#Corpo11{
     display: grid;
     grid-auto-flow: column;
     columns: center;
@@ -687,30 +884,30 @@ button{
     gap: 4%;
     margin: 1% 10% 0% 15%;
 }
-.Corpo8D{
+.Corpo11D{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 2%;
 }
-.Corpo8E{
+.Corpo11E{
     display: flex; /* Organiza os parágrafos em uma coluna */
     flex-direction: column; /* Cada parágrafo será uma linha separada */
     gap: 16px; /* Espaçamento vertical entre os parágrafos */
 }
-.PCorpo8E{
+.PCorpo11E{
     display: flex; 
     align-items: center; 
     gap: 8px; 
     font-size: 1.2rem; 
     margin: 0; 
 }
-.Corpo8E i {
+.Corpo11E i {
     margin-right: 8px; 
     color: #0dd4ac; 
 }
-.custom-btn8{
+.custom-btn11{
     width: calc(300px + 5vw);
     height: AUTO;
     text-decoration: none;
@@ -726,7 +923,7 @@ button{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
-.custom-btn8:hover{
+.custom-btn11:hover{
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
@@ -738,12 +935,12 @@ button{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
 
 }
-.PCorpo8D{
+.PCorpo11D{
     text-align: center;
 }
 
-/*CORPO 9 - COMUNIDADE DE PRÁICAS*/
-#Corpo9{
+/*CORPO 12 - COMUNIDADE DE PRÁICAS*/
+#Corpo12{
     display: flex;
     flex-direction: column;
     gap: 10%;
@@ -751,49 +948,56 @@ button{
     text-align: center;
     margin-top: 3%;
 }
-.TituloCorpo9{
+.TituloCorpo12{
     font-style: bold;
     color: #00a79d;
 }
-.ImgCorpo9{
+.ImgCorpo12{
     margin-top: 6%;
     margin-bottom: 5%;
 }
 
-/*CORPO 10 - VEM POR AÍ*/
-#Corpo10{
+/*CORPO 13 - VEM POR AÍ*/
+#Corpo13{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     margin: 4% 10% 0% 15%;
+    gap: 3%;
 }
-.TituloCorpo10E{
+.TituloCorpo13E{
     font-weight: bold;
     color: #52b297;
 }
+#Corpo13D{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+}
 
-/*CORPO 11 - NOTÍCIAS*/
-#Corpo11{
+/*CORPO 14 - NOTÍCIAS*/
+#Corpo14{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     grid-template-columns: 70% 30%;
 }
-.Corpo11E{
+.Corpo14E{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3%;
 }
-.Corpo11D{
+.Corpo14D{
     margin-top: 10%;
 }
-.ImgCorpo11{
+.ImgCorpo14{
     width: calc(700px + 5vw);
     height: auto;
     padding: 2%;
 }
-.TituloCorpo11{
+.TituloCorpo14{
     font-weight: bold;
     color: #52b297;
     text-align: left;
@@ -803,33 +1007,53 @@ button{
     margin: 15% 10% 0% 25%;
 }
 
-/*CORPO 12 -BIBLIOTECA*/
-#Corpo12{
+/*CORPO 15 -BIBLIOTECA*/
+#Corpo15{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     margin: 4% 10% 0% 15%;
     gap: 3%;
 }
-.TextoCorpo12{
+.TextoCorpo15{
     margin-top: 4%;
 }
-.Corpo12D{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5%;
+.Corpo15D ul li{
     margin-top: 10%;
 }
+.btnbiblioteca {
+    width: calc(500px + 5vw);
+    height: 200px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    border: 1px solid #fff;
+    background-image: linear-gradient(to bottom, #71d285, #016185);
+    color: #fff;
+    border-radius: 25px;
+    margin: 1% 0% 0% 0%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
 
-/*CORPO 13 - FINAL*/
-#Corpo13{
+.btnbiblioteca:hover{
+    color: #fff !important;
+    background-color: #016185 !important;
+    border-color:#00a79d !important;
+    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
+    transform: translateY(-3px); /* Levanta o botão */
+}
+
+/*CORPO 16 - FINAL*/
+#Corpo16{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     margin: 4% 10% 0% 15%;
 }
-.TituloCorpo13{
+.TituloCorpo16{
     font-weight: bold;
     color: #00a79d;
     text-align: center;
