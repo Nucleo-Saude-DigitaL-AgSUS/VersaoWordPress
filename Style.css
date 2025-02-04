@@ -351,6 +351,10 @@ img {
 .hidden {  
     display: none;  
 }
+.TextoSUSito{
+    font-size: 0.8rem;
+    text-align: center;
+}
 
 #Corpo2{
     margin: 2% 10%
