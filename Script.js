@@ -115,7 +115,7 @@ updateCarousel();
 /* Fim do bloco do Carroscel Equipe front-end Jeremias Silva 31/01/2025*/
 
 
-/* Bloco Sou Usuário    JEremias Silva 31/01/2025 */
+/* Bloco Sou Usuário    Jeremias Silva 31/01/2025 */
 
 document.addEventListener('DOMContentLoaded', () => {  
     // Seleciona todas as imagens que podem ser clicadas  
@@ -142,9 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });  
     });  
 });
-
-
-/* Fim do bloco Sou Usuário    JEremias Silva 31/01/2025 */
+/* Fim do bloco Sou Usuário    Jeremias Silva 31/01/2025 */
 
 
 
