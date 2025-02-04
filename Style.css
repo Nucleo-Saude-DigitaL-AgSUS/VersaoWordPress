@@ -288,83 +288,69 @@ img {
     transform: scale(1);  
 }
 
-.dialogBubble {  
-    position: fixed;  
-    bottom: 150px;  
-    right: 50px;  
-    background-image: linear-gradient(to bottom, #00a79d, #4a4a4a);
+.dialogBubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+    background-color: #52b297;
     color: #fff;
-    border: 1px solid #6c5ee7;  
-    border-radius: 10%;  
-    padding: 10px;  
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    border: 10px solid #fff;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    margin-right: 4%;  
+    margin-right: 2%;
     margin-bottom: 2%;
     text-align: center;
+    gap: 3%;
+    font-size: 0.8rem;
 }
 
-.dialogBubble button {  
-    margin-top: 0px;  
-    padding: 5px 10px;  
+/* Criando a ponta do balão */
+.dialogBubble::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 35px 0 35px;
+    border-color: #52b297 transparent transparent transparent;
+}
+
+.dialogBubble button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
     background-color: transparent;
-    color: white;  
-    border: 2px, solid;  
-    border-radius: 500px;  
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.dialogBubble button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.divbtn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    align-items: center;
+    text-align: center;
+    gap: 2%;
+}
 .hidden {  
     display: none;  
 }
-
-/* Container geral do SUSito
-.AssistenteVirtual {
-    position: fixed; /* Fixa na tela *
-    bottom: 20px; /* Distância da parte inferior *
-    right: 20px; /* Distância da borda direita *
-    display: flex;
-    flex-direction: column; /* Alinha verticalmente 
-    align-items: center;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-
-/* Estilo da imagem *
-.Hiperlinkchatbot {
-    width: 60px; /* Tamanho da imagem 
-    height: 60px;
-    cursor: pointer;
-    transition: transform 0.3s; /* Animação ao passar o mouse 
-}
-
-.Hiperlinkchatbot:hover {
-    transform: scale(1.2); /* Aumenta levemente ao passar o mouse 
-}
-
-/* Hiperlink oculto inicialmente 
-.AssistenteLink {
-    display: none; /* Não exibe por padrão 
-    background-color: #00a79d; /* Fundo do hiperlink 
-    color: white; /* Cor do texto *
-    text-decoration: none; /* Remove sublinhado
-    padding: 10px;
-    border-radius: 5px; /* Borda arredondada 
-    margin-top: 10px; /* Espaço acima do link *
-    font-size: 14px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra 
-    white-space: nowrap; /* Evita quebra de linha 
-    transition: opacity 0.3s; /* Suaviza exibição 
-}
-
-/* Exibe o link ao passar o mouse sobre a imagem 
-.AssistenteVirtual:hover .AssistenteLink {
-    display: block; 
-    opacity: 1; 
-}
-.Hiperlinkchatbot{
-    position: absolute;
-    overflow: visible;
-    margin-top: 380px;
-    margin-left: 450px; */
 
 #Corpo2{
     margin: 2% 10%
