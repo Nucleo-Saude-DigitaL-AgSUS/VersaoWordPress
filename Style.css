@@ -152,44 +152,75 @@ img {
     display: grid;
     grid-auto-flow: column;
     columns: center;
+    grid-template-columns: 60% 40%;
     margin: 10% 10% 0% 10%;
 }
 .Corpo0D{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
 }
 .btnAgSUS {
-    width: calc(500px + 5vw);
-    height: 200px;
+    width: calc(400px + 5vw);
+    height: auto;
     text-align: center;
     text-decoration: none;
-    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-size: 1.5rem; /* 2.5 vezes o tamanho base definido em <html> */
     font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
     border: 1px solid #fff;
-    background-image: linear-gradient(to bottom, #71d285, #016185);
+    background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
     color: #fff;
+    text-shadow: 4px 4px 5px #4a4a4a;
     border-radius: 25px;
     margin: 1% 0% 0% 0%;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    transform: translateY(-3px) !important;
 }
 
-.btnAgSUS:hover{
+.btnAgSUS:hover, .btnAgSUS:focus {
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
-    transform: translateY(-3px); /* Levanta o botão */
+    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
+    transform: translateY(-3px) !important; /* Levanta o bot o */
 }
-.btn-outline-primary:active {
-    transform: translateY(2px); /* Abaixa o botão ao clicar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+/* DIRETORIA */
+.TituloC3{
+    margin-top: 3%;
 }
+#DiretoriaC3{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    column-gap: 5%;
+    margin:2% 20% 0% 20%;
+}
+.DiretoriaImg{
+    width: calc(1000px + 5vw);
+    height: auto;
+}
+.Andre, .Luciana, .Willames{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TextoAndre, .TextoLuciana, .TextoWillames{
+    text-align: center;
+}
+.botaoAgSUS{
+    text-align: center;
+}
+
 /*MOCKUP 1*/
+#Corpo1{
+    margin: 2% 10% 0% 10%;
+
+}
 .TituloC1{
-    margin-top: 8%;
+    margin-top: 3%;
 }
 .TextoC1{
     margin-top: 2%;
@@ -199,7 +230,6 @@ img {
     font-style: italic;
  }
 
-
 #div2C1{
     display: grid;
     grid-auto-flow: column;
@@ -208,6 +238,13 @@ img {
     gap: 2%;
     overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
     position: relative; /* Define referência para o posicionamento absoluto */
+    grid-template-columns: 50% 50%;
+}
+
+.Logo1{
+    width: calc(500px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
+    height: auto;
+    overflow: visible;
 }
 .TextoNucleo{
     margin: auto;
@@ -218,31 +255,33 @@ img {
     justify-content: center;
 }
 .Logo2{
-    width: calc(800px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
+    width: calc(500px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
     height: auto;
     overflow: visible;
+    margin-left: 10%;
 }
 
 #chatButton {  
     width: 7%;
     height: 7%;
-    background-color: #00a79d;  
+    background-image: linear-gradient(to bottom, #00a79d, #4a4a4a);
     color: #fff;
     border: none;  
-    border-radius: 20%;  
+    border-radius: 20PX 0PX 20px 0px;  
     cursor: pointer;  
     position: fixed;  
     bottom: 100px;  
     right: 0;  
-    transition: opacity 0.3s ease;  
+    transition: opacity 0.3s ease;
+    font-weight: bold;  
 }  
 
 #sustoImage {  
     position: fixed;  
     bottom: 100px;  
     right: 0;  
-    width: 200PX;  
-    height: 200PX;  
+    width: 100PX;  
+    height: 100PX;  
     display: none;  
     cursor: pointer;  
     transition: opacity 0.3s ease, transform 0.3s ease;  
@@ -253,24 +292,26 @@ img {
     position: fixed;  
     bottom: 150px;  
     right: 50px;  
-    background-color: white;  
+    background-image: linear-gradient(to bottom, #00a79d, #4a4a4a);
+    color: #fff;
     border: 1px solid #6c5ee7;  
     border-radius: 10%;  
     padding: 10px;  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
     z-index: 1000;
-    margin-right: 6%;  
-    margin-bottom: 4%;
+    margin-right: 4%;  
+    margin-bottom: 2%;
+    text-align: center;
 }
 
 .dialogBubble button {  
     margin-top: 0px;  
     padding: 5px 10px;  
-    background-color: #007bff;  
+    background-color: transparent;
     color: white;  
-    border: none;  
+    border: 2px, solid;  
     border-radius: 500px;  
-    cursor: pointer;  
+    cursor: pointer;
 }
 
 .hidden {  
@@ -286,7 +327,7 @@ img {
     flex-direction: column; /* Alinha verticalmente 
     align-items: center;
     z-index: 1000; /* Garante que fique acima de outros elementos */
-}
+
 /* Estilo da imagem *
 .Hiperlinkchatbot {
     width: 60px; /* Tamanho da imagem 
@@ -324,7 +365,7 @@ img {
     overflow: visible;
     margin-top: 380px;
     margin-left: 450px; */
-}
+
 #Corpo2{
     margin: 2% 10%
 }
@@ -362,16 +403,17 @@ img {
 }
 
 .custom-btn {
-    width: calc(500px + 5vw);
-    height: 200px;
+    width: calc(400px + 5vw);
+    height: auto;
     text-align: center;
     text-decoration: none;
-    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-size: 1.5rem; /* 2.5 vezes o tamanho base definido em <html> */
     font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
     border: 1px solid #fff;
-    background-image: linear-gradient(to bottom, #71d285, #016185);
+    background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
     color: #fff;
+    text-shadow: 4px 4px 5px #4a4a4a;
     border-radius: 25px;
     margin: 1% 0% 0% 0%;
     transition: all 0.3s ease;
@@ -382,7 +424,7 @@ img {
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
+    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
 .btn-outline-primary:active {
@@ -390,29 +432,7 @@ img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
 }
 
-/* DIRETORIA */
-.TituloC3{
-    margin-top: 3%;
-}
-#DiretoriaC3{
-    display: grid;
-    grid-auto-flow: column;
-    columns: center;
-    column-gap: 5%;
-    margin:2% 20% 0% 20%;
-}
-.DiretoriaImg{
-    width: calc(1000px + 5vw);
-    height: auto;
-}
-.Andre, .Luciana, .Willames{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.TextoAndre, .TextoLuciana, .TextoWillames{
-    text-align: center;
-}
+
 
 /*CARROSSEL*/
 
@@ -466,26 +486,31 @@ img {
 }
 
 /* Indicadores (dots) */
-.carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+/* Estilo para os indicadores do carrossel */  
+.carousel-indicators {  
+    position: absolute; /* Posicionamento absoluto */  
+    bottom: 10px; /* Distância de 10px do fundo do carrossel */  
+    width: 75%; /* Largura total do carrossel */ 
+    display: flex; /* Utiliza Flexbox para dispor os indicadores em linha */  
+    justify-content: center; /* Centraliza os indicadores */  
+    gap: 50px; /* Espaço entre os indicadores */ 
+    text-align: center; 
+}  
 
-.carousel-indicators .dot {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+/* Estilo para cada ponto do indicador */  
+.carousel-indicators .dot {  
+    width: 10px; /* Largura do ponto */  
+    height: 10px; /* Altura do ponto */  
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do ponto */  
+    border-radius: 50%; /* Forma o ponto como círculo */  
+    cursor: pointer; /* Muda o cursor ao passar sobre o ponto */  
+    transition: background-color 0.3s ease; /* Transição suave ao mudar a cor do fundo */  
+}  
 
-.carousel-indicators .dot.active {
-    background-color: white;
+/* Estilo para o ponto ativo */  
+.carousel-indicators .dot.active {  
+    
+    background-color: white; /* Cor branca para o ponto ativo */  
 }
 
 /* Bloco Chatbot modela para refinamento 16/01/2025*/
@@ -666,6 +691,7 @@ img {
     align-items: center;
     font-size: 1.2rem;
     color: #fff;
+    background-image: linear-gradient(to bottom, #016185, #71d285);
     border-radius: 80px;
     padding: 2%;
     box-shadow: 0 0 15px #4a4a4a; /* Efeito brilhante */
@@ -703,8 +729,8 @@ img {
     font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
 }
 .TituloC8D{
-    margin-right: 3cap;
-    margin-left: 50%;
+    margin-right: 40%;
+    margin-left: 20%;
     font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
     text-align: center;
 }
@@ -750,6 +776,26 @@ ul li img {
     display: none; 
     margin-top: 20px;
 }
+.textoExplicativo {  /* Vou fragimentar esse trecho de CSS 31/01/2023*/
+    width: calc(87% + 5vw); /* Mesma largura que as imagens */  
+    margin-top: 1px; /* Margem superior para o texto */  
+    position: justify; /* Permite ajustar a posição do texto */  
+    top: -10; /* Ajuste a posição vertical do texto (use valores positivos ou negativos) */  
+    left: 0; /* Ajuste a posição horizontal do texto (use valores positivos ou negativos) */  
+    text-align: left; /* Centraliza o texto */  
+    background-color: #f0f0f0; /* Cor de fundo (ajuste conforme necessário) */  
+    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
+    border-radius: 20px; /* Borda arredondada */  
+    padding: 35px; /* Preenchimento interno */   
+    opacity: 0; /* Opacidade inicial como 0 */  
+    transition: opacity 0.8s; /* Transição suave para a opacidade */  
+    display: none; /* Inicia como oculto */  
+    color: #070606; /* Cor do texto */  
+    font-size: 0.6rem; /* Tamanho da fonte (ajuste conforme desejado) */  
+    font-family: 'Arial', sans-serif; /* Tipo de fonte (ajuste conforme desejado) */  
+}
+
+
  /* CORPO 9 - Sou Profissional*/
  .TituloC9{
     margin-top: 3%;
@@ -780,22 +826,39 @@ ul li img {
     height: auto;
 }
 .PerProfissional{
+    
     border: none !important;
     cursor: pointer;
-    width: 100%; /* Para garantir que se ajustem ao espaço disponível */
+    width: 80%; /* Para garantir que se ajustem ao espaço disponível */
     height: auto;
     transition: transform 0.2s; /* Animação ao passar o mouse */    
 }
 .PerProfissional :hover{
     transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
 }
+.textoExplicativoCorpo8 {  
+    width: calc(87% + 5vw); /* Largura da div de texto explicativo */  
+    margin-top: 5px; /* Pequeno espaço entre a imagem e o texto */  
+    text-align: left; /* Alinha o texto à esquerda */  
+    background-color: #f0f0f0; /* Cor de fundo */  
+    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
+    border-radius: 5px; /* Borda arredondada */  
+    padding: 10px; /* Preenchimento interno */   
+    opacity: 0; /* Opacidade inicial como 0 */  
+    transition: opacity 0.8s; /* Transição suave para a opacidade */  
+    display: none; /* Inicia como oculto */  
+    color: #070606; /* Cor do texto */  
+    font-size: 0.6rem; /* Tamanho da fonte */  
+    font-family: 'Arial', sans-serif; /* Tipo de fonte */  
+}
  #Corpo9D{
     display:flex ;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 5%;
     margin: 5% 8% 0% 10%;
     width: 100%;
+    box-sizing: border-box;  
 }
 
 .Conselhos1, .Conselhos2 {
@@ -871,7 +934,7 @@ button{
     font-style: italic;
 }
 
-/*CORPO 8 - RESULTADOS PILOTO*/
+/*CORPO 11 - RESULTADOS PILOTO*/
 .TituloCorpo11{
     margin-top: 3%;
     margin-bottom: 1%;
@@ -908,7 +971,7 @@ button{
     color: #0dd4ac; 
 }
 .custom-btn11{
-    width: calc(300px + 5vw);
+    width: calc(200px + 5vw);
     height: AUTO;
     text-decoration: none;
     text-align: center;
@@ -916,8 +979,9 @@ button{
     font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
     border: 1px solid #fff;
-    background-image: linear-gradient(to bottom, #71d285, #016185);
+    background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
     color: #fff;
+    text-shadow: 4px 4px 5px #4a4a4a;
     border-radius: 25px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
@@ -927,7 +991,7 @@ button{
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
+    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
 .btn-outline-primary:active {
@@ -1018,21 +1082,26 @@ button{
 .TextoCorpo15{
     margin-top: 4%;
 }
+.ImgBiblioteca{
+    width: calc(500px + 5vw);
+    height: auto;
+}
 .Corpo15D ul li{
-    margin-top: 10%;
+    margin-top: 12%;
 }
 .btnbiblioteca {
     width: calc(500px + 5vw);
     height: 200px;
     text-align: center;
     text-decoration: none;
-    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-size: 1.5rem; /* 2.5 vezes o tamanho base definido em <html> */
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
     border: 1px solid #fff;
-    background-image: linear-gradient(to bottom, #71d285, #016185);
+    background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
     color: #fff;
-    border-radius: 25px;
+    text-shadow: 4px 4px 5px #4a4a4a;
+    border-radius: 25px 0px;
     margin: 1% 0% 0% 0%;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
@@ -1042,7 +1111,7 @@ button{
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 15px #00a79d; /* Efeito brilhante */
+    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
 
@@ -1066,7 +1135,7 @@ button{
 
 /*RODAPE*/
 footer{
-    margin-top: 10%;
+    margin-top: 7%;
     text-align: center;
 }
 

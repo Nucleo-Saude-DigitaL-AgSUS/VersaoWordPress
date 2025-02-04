@@ -30,7 +30,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <a class="nav-link px-3" href="#nucleo">A AgSUS</a>
+                        <a class="nav-link px-3" href="#Corpo0">A AgSUS</a>
                         <a class="nav-link px-3" href="#nucleo">O Núcleo</a>
                         <div class="dropdown">
                             <a class="btn btn-secondary dropdown-toggle px-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
@@ -52,6 +52,8 @@
             </div>
         </header>
         </div>
+
+    <!--CORPO 0 - AgSUS--> 
     <div id="Corpo0">
         <div class="Corpo0E">
             <h1>Você já conhece a AgSUS?</h1>
@@ -60,10 +62,31 @@
         </div>
         <div class="Corpo0D">
             <img src="Imagens/LogoAgSUS.png" alt="">
-            <a class="btnAgSUS" href="https://agenciasus.org.br/"> Falar com AgSUS</a>
         </div>
-
     </div>
+    <div class="botaoAgSUS"> 
+        <a class="btnAgSUS" href="https://agenciasus.org.br/"> Falar com a AgSUS</a>
+    </div>
+
+     <h1 class="TituloC3"> Conheça os Diretores da AgSUS! </h1>
+     <div id="DiretoriaC3">
+         <div class="Andre">
+             <img class="DiretoriaImg" src="Diretoria/Andre.png" alt="">
+             <p class="TextoAndre"> <b>André Longo</b> <br>
+                     Diretor-Presidente AgSUS</p> 
+         </div>
+         <div class="Luciana">
+             <img class="DiretoriaImg"  src="Diretoria/Luciana.png" alt="">
+             <p class="TextoLuciana"> <b> Luciana Maciel </b> <br>
+             Diretora de Atenção Integral à Saúde - AgSUS </p>
+         </div>
+             <div class="Willames">
+             <img class="DiretoriaImg"  src="Diretoria/Willames.png" alt="">
+             <p class="TextoWillames"> <b> Willames Pimentel</b> <br>
+             Diretor de Operações - AgSUS  </p>
+         </div>
+     </div>
+
     <!--CORPO 1 - CONHEÇA O NSD-->
     <div id="Corpo1">
         <h1 class="TituloC1">  Conheça o Núcleo de Saúde Digital, uma estratégia inovadora da AgSUS </h1>
@@ -79,30 +102,12 @@
     <img id="sustoImage" src="Imagens/Hiperlink Chatbot.png" class="hidden" alt="SUSITO" />  
     <div id="chatDialog" class="hidden">  
         <div class="dialogBubble">  
-            <p>Oi, eu sou o SUSITO</p>  
+            <p>Oi! Eu sou o <b>SUSito</b>, o assistente virtual do NSD. </p>  
             <button onclick="redirectTo('https://agenciasus.org.br/')">Ir para Agsus</button>  
             <button onclick="redirectTo('https://home.com')">Ir para Home</button>  
             <button onclick="redirectTo('https://wa.me/yourwhatsappnumber')">WhatsApp</button>  
         </div>  
     </div>
-
-    <!-- Bloco refente ao chatbot 17/01/2025 Jeremias  atualizado em 20-01-2025   
-    <img id="chatbot" src="Imagens/Hiperlink Chatbot.png" alt="Chatbot" />
-    <div class="tooltip"></div>
-    <div id="chat-window">
-        <div id="chat-header">Olá, eu sou o SUSITO.</div>
-        <div id="chat-body">
-            <p>Como posso ajudar você hoje?</p>
-            <div id="options">
-                <div class="option-button" onclick="redirectToSection('section1')">Ir para Seção 1</div>
-                <div class="option-button" onclick="redirectToSection('section2')">Ir para Seção 2</div>
-
-                <div class="option-button" onclick="openWhatsApp()">Vamos conversar no WhatsApp?</div>
-            </div>
-        </div>
-    </div>  -->
-    <!-- Fim do bloco chatbot -->
-
 
     <!--CORPO 2 - SERVIÇO-->
     <div id="Corpo2">
@@ -121,26 +126,6 @@
         </div>
     </div>
 
-    <!--CORPO 3 - CONEÇA OS LIDERES DA AGSUS-->
-        <h1 class="TituloC3"> Conheça os líderes da AgSUS! </h1>
-        <div id="DiretoriaC3">
-            <div class="Andre">
-                <img class="DiretoriaImg" src="Diretoria/Andre.png" alt="">
-                <p class="TextoAndre"> <b>André Longo</b> <br>
-                        Diretor-Presidente AgSUS</p> 
-            </div>
-            <div class="Luciana">
-                <img class="DiretoriaImg"  src="Diretoria/Luciana.png" alt="">
-                <p class="TextoLuciana"> <b> Luciana Maciel </b> <br>
-                Diretora de Atenção Integral à Saúde - AgSUS </p>
-            </div>
-                <div class="Willames">
-                <img class="DiretoriaImg"  src="Diretoria/Willames.png" alt="">
-                <p class="TextoWillames"> <b> Willames Pimentel</b> <br>
-                Diretor de Operações - AgSUS  </p>
-            </div>
-        </div>
-
     <!-- CORPO 4 - Carrossel Equipe-->
         <h1 class="TituloCarrossel"> Conheça nosso time do Núcleo de Saúde Digital da AgSUS!</h1>
         <div id="CarrosselEquipe">
@@ -153,12 +138,26 @@
                 <img src="Carrossel Equipe/ArthurGoncalves.png"  alt="Imagem 6">
                 <img src="Carrossel Equipe/NathaliaPimentel.png"  alt="Imagem 7">
                 <img src="Carrossel Equipe/PedroMoscadini.png"  alt="Imagem 8">
-            </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                    </div>
+                    <!-- Controles para navegar entre as imagens -->
             <div class="carousel-controls">
                 <button class="prev">❮</button>
+                <!-- Botão para a imagem anterior -->
                 <button class="next">❯</button>
+                <!-- Botão para a próxima imagem -->
             </div>
-        <!--DOTS (Pontos)-->
+
+            <!-- Indicadores de navegação do carrossel -->
+            <div class="carousel-indicators">
+                <!-- Os indicadores serão gerados dinamicamente no JavaScript -->
+        </div>
+
+
+        <!--DOTS (Pontos) -->
             <div class="carousel-indicators">
                 <span class="dot" data-index="0"></span>
                 <span class="dot" data-index="1"></span>
@@ -169,7 +168,7 @@
                 <span class="dot" data-index="6"></span>
                 <span class="dot" data-index="7"></span>
             </div>
-        </div>
+        </div> 
     
         <!-- CORPO 5 - O SERVIÇO PELO BRASIL-->
         <h1 class="TituloC5">O serviço pelo Brasil ...</h1>  
@@ -223,25 +222,111 @@
             <div class="Corpo8D"> 
                 <h2 class="TituloC8D"> Principais Dúvidas</h2>
                     <ul> 
-                        <li> <img src="Corpo5 Sou Usuario/PerUsuario1.png" alt="" class="BotaoClicavel" onclick="openTextBox()"> </li>
-                        <li> <img src="Corpo5 Sou Usuario/PerUsuario2.png" alt="" class="BotaoClicavel" onclick="openTextBox()"> </li>
-                        <li> <img src="Corpo5 Sou Usuario/PerUsuario3.png" alt="" class="BotaoClicavel" onclick="openTextBox()"> </li>
-                        <li> <img src="Corpo5 Sou Usuario/PerUsuario4.png" alt="" class="BotaoClicavel" onclick="openTextBox()"> </li>
-                        <li> <img src="Corpo5 Sou Usuario/PerUsuario5.png" alt="" class="BotaoClicavel" onclick="openTextBox()"> </li>
-                    </ul> 
-            </div>  
+                        <li>
+                            <img src="Corpo5 Sou Usuario/PerUsuario1.png" alt
+                                class="BotaoClicavel">
+                            <div class="textoExplicativo"
+                                style="display: none;">Não! Os(as) médicos(as) do
+                                NSD realizarão o teleatendimento apenas durante o
+                                período em que o médico(a) da sua Unidade de Saúde
+                                estiver de licença. Assim que ele ou ela retornar,
+                                os atendimentos presenciais serão retomados.
+                                Enquanto o seu médico cuida da própria saúde, nós
+                                estamos aqui para cuidar da sua!
+                            </div>
+                        </li>
+                        <li>
+                            <img src="Corpo5 Sou Usuario/PerUsuario2.png" alt
+                                class="BotaoClicavel">
+                            <div class="textoExplicativo" style="display: none;">A
+                                teleconsulta na Atenção Primária é ideal para o
+                                acompanhamento de doenças crônicas como hipertensão,
+                                diabetes, asma, DPOC, depressão, câncer e doença
+                                renal crônica. Caso sua condição não se enquadre, a
+                                equipe de Saúde da Família realizará uma avaliação
+                                na UBS e fará o encaminhamento adequado, seja para
+                                outra UBS, hospital ou outro serviço
+                                necessário.
+                            </div>
+                        </li>
+                        <li>
+                            <img src="Corpo5 Sou Usuario/PerUsuario3.png" alt
+                                class="BotaoClicavel">
+                            <div class="textoExplicativo"
+                                style="display: none;">Quando houver necessidade, o
+                                exame físico será realizado pela enfermagem, com o
+                                acompanhamento do(a) Médico(a) de Família e
+                                Comunidade por meio de videochamada. Dessa forma,
+                                garantimos que você receba o cuidado necessário
+                                mesmo na ausência do médico presencial.
+                            </div>
+                        </li>
+                        <li>
+                            <img src="Corpo5 Sou Usuario/PerUsuario4.png" alt
+                                class="BotaoClicavel">
+                            <div class="textoExplicativo" style="display: none;">As
+                                receitas, atestados e encaminhamentos emitidos na
+                                teleconsulta serão assinados digitalmente pelo(a)
+                                médico(a) e entregues a você pela equipe de Saúde da
+                                Família logo após o atendimento. Tudo pensado para
+                                garantir praticidade e cuidado no seu
+                                tratamento!
+                            </div>
+                        </li>
+                        <li>
+                            <img src="Corpo5 Sou Usuario/PerUsuario5.png" alt
+                                class="BotaoClicavel">
+                            <div class="textoExplicativo"
+                                style="display: none;">Quer saber se sua UBS oferece
+                                teleconsulta? Atualmente, o projeto está disponível
+                                em 8 UBS pelo Brasil. Clique aqui para conferir se a
+                                sua unidade faz parte dessa lista e aproveite essa
+                                inovação no seu cuidado!
+                            </div>
+                        </li>
+                    </ul>
+            </div>
         </div>
 
+<!-- Fim do bloco Sou Usuario    jeremias    31/01/2025-->
         <!--Corpo 9 Sou Profissional-->
         <h1 class="TituloC9">Sou Profissional</h1>
         <div id="Corpo9">
             <div id="Corpo9E">
                 <ul>
-                    <li> <img class="PerProfissional" src="Corpo6 Sou profisional/PerProfissional1.png" alt=""></li>
-                    <li> <img class="PerProfissional" src="Corpo6 Sou profisional/PerProfissional2.png" alt=""></li>
-                    <li> <img class="PerProfissional" src="Corpo6 Sou profisional/PerProfissional3.png" alt=""></li>
-                    <li> <img class="PerProfissional" src="Corpo6 Sou profisional/PerProfissional4.png" alt=""></li>
-                    <li> <img class="PerProfissional" src="Corpo6 Sou profisional/PerProfissional5.png" alt=""></li>
+                    <li>
+                        <img src="Corpo6 Sou profisional/PerProfissional1.png" alt="" class="BotaoClicavel">
+                        <div class="textoExplicativoCorpo8" style="display: none;">Atendimento à distância, suporte
+                            assistencial, consultas, monitoramento e diagnóstico, clínico ambulatoriais, realizados por meio
+                            de tecnologia da informação e comunicação.</div>
+                    </li>
+                    <li>
+                        <img src="Corpo6 Sou profisional/PerProfissional2.png" alt="" class="BotaoClicavel">
+                        <div class="textoExplicativoCorpo8" style="display: none;">É fundamental adotar medidas como o uso
+                            de plataformas de videoconferência seguras e criptografadas, garantir o consentimento explícito
+                            do paciente para o tratamento de seus dados, além de implementar controles de acesso rigorosos e
+                            manter a conformidade com a LGPD.</div>
+                    </li>
+                    <li>
+                        <img src="Corpo6 Sou profisional/PerProfissional3.png" alt="" class="BotaoClicavel">
+                        <div class="textoExplicativoCorpo8" style="display: none;">A teleconsulta amplia o acesso dos
+                            pacientes, otimiza o tempo, facilita o acompanhamento, reduz custos operacionais e melhora a
+                            resolutividade no cuidado à saúde. </div>
+                    </li>
+                    <li>
+                        <img src="Corpo6 Sou profisional/PerProfissional4.png" alt="" class="BotaoClicavel">
+                        <div class="textoExplicativoCorpo8" style="display: none;">Sim! Mas não se preocupe! O NSD oferece
+                            cursos e materiais didáticos para capacitar você no uso da teleconsulta com segurança e
+                            eficiência.</div>
+                    </li>
+                    <li>
+                        <img src="Corpo6 Sou profisional/PerProfissional5.png" alt="" class="BotaoClicavel">
+                        <div class="textoExplicativoCorpo8" style="display: none;">A teleconsulta é indicada para o
+                            acompanhamento de condições crônicas, orientações gerais de saúde, esclarecimento de dúvidas,
+                            avaliação inicial de sintomas leves, triagem para definir a necessidade de atendimento
+                            presencial, revisão de exames, emissão de prescrições simples e acompanhamento de tratamentos já
+                            estabelecidos.</div>
+                    </li>
                 </ul>
             </div>
             <div> <h2 class="TituloC9D">Descubra o que o seu Conselho Profissional diz sobre Teleconsulta</h2>
@@ -307,17 +392,17 @@
                 <div class="Corpo11D">
                     <div>
                         <img src="Corpo 8 Resultados Piloto/PC.png" alt="">
-                        <p class="PCorpo11D" >6.312</p>
+                        <p id="ContagemC11D1"> 6.312</p>
                         <p class="PCorpo11D">TELECONSULTAS REALIZADAS</p>
                     </div>
                     <div>
                         <img src="Corpo 8 Resultados Piloto/GRAFICO.png" alt="">
-                        <p class="PCorpo11D">85%</p>
+                        <p id="ContagemC11D2"> 85%</p>
                         <p class="PCorpo11D">DE RESOLUTIVIDADE</p>
                     </div>
                     <div>
                         <img src="Corpo 8 Resultados Piloto/SMILE.png" alt="">
-                        <p class="PCorpo11D">97%</p>
+                        <p id="ContagemC11D3"> 97%</p>
                         <p class="PCorpo11D">DE SATISFAÇÃO DOS PACIENTES</p>
                     </div>
                 </div>
