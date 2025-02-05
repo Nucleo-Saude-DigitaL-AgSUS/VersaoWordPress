@@ -1,52 +1,68 @@
-// CARROSSEL EQUIPE
-const carouselImages = document.querySelector('.carousel-images');
-const dots = document.querySelectorAll('.dot');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+document.addEventListener("DOMContentLoaded", function () {
+    const carouselImages = document.querySelector('.carousel-images');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+    
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-images img');
+    const totalImages = images.length;
+    const autoRotateInterval = 3000;
 
-let currentIndex = 0;
-const totalImages = dots.length;
-const autoRotateInterval = 3000; // Tempo entre trocas (em milissegundos)
+    // Criação dinâmica dos indicadores (dots)
+    for (let i = 0; i < totalImages; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.setAttribute('data-index', i);
+        if (i === 0) dot.classList.add('active');
+        indicatorsContainer.appendChild(dot);
+    }
 
-// Atualiza o carrossel para o índice atual
-function updateCarousel(index) {
-    carouselImages.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-}
+    const dots = document.querySelectorAll('.dot');
 
-// Próxima imagem
-function nextImage() {
-    currentIndex = (currentIndex + 1) % totalImages;
-    updateCarousel(currentIndex);
-}
+    // Atualiza o carrossel para o índice atual
+    function updateCarousel(index) {
+        const translateX = -index * 100;
+        carouselImages.style.transform = `translateX(${translateX}%)`;
+        
+        // Atualizar os indicadores (dots)
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
 
-// Imagem anterior
-function prevImage() {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    updateCarousel(currentIndex);
-}
-
-// Clique nos botões de navegação
-nextButton.addEventListener('click', nextImage);
-prevButton.addEventListener('click', prevImage);
-
-// Clique nos indicadores
-dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-        currentIndex = parseInt(dot.getAttribute('data-index'));
+    // Próxima imagem
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
         updateCarousel(currentIndex);
+    }
+
+    // Imagem anterior
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateCarousel(currentIndex);
+    }
+
+    // Clique nos botões de navegação
+    nextButton.addEventListener('click', nextImage);
+    prevButton.addEventListener('click', prevImage);
+
+    // Clique nos indicadores
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            currentIndex = parseInt(dot.getAttribute('data-index'));
+            updateCarousel(currentIndex);
+        });
     });
-});
 
-// Rotação automática
-let autoRotate = setInterval(nextImage, autoRotateInterval);
+    // Rotação automática
+    let autoRotate = setInterval(nextImage, autoRotateInterval);
 
-// Pausar rotação automática ao interagir com os controles
-[nextButton, prevButton, ...dots].forEach(control => {
-    control.addEventListener('mouseenter', () => clearInterval(autoRotate));
-    control.addEventListener('mouseleave', () => {
-        autoRotate = setInterval(nextImage, autoRotateInterval);
+    // Pausar rotação automática ao interagir com os controles
+    [nextButton, prevButton, ...dots].forEach(control => {
+        control.addEventListener('mouseenter', () => clearInterval(autoRotate));
+        control.addEventListener('mouseleave', () => {
+            autoRotate = setInterval(nextImage, autoRotateInterval);
+        });
     });
 });
 
@@ -220,4 +236,49 @@ let observer = new IntersectionObserver(entries => {
     if (element) {
         observer.observe(element);
     }
+});
+
+// FLIP DO SOU GESTOR - Critérios //
+document.addEventListener("DOMContentLoaded", function () {
+    const flipper = document.querySelector(".flipper");
+    const front = document.querySelector(".front");
+
+    front.addEventListener("mouseenter", function () {
+        flipper.style.transform = "rotateY(180deg)";
+    });
+
+    flipper.addEventListener("mouseleave", function () {
+        flipper.style.transform = "rotateY(0deg)";
+    });
+});
+
+/** Corpo 7E Sou Gestor  */
+document.addEventListener('DOMContentLoaded', () => {  
+    // Seleciona todas as imagens que podem ser clicadas dentro do bloco Corpo7  
+    const images = document.querySelectorAll('#Corpo7 .ImgCorpo7');  
+
+    images.forEach((image) => {  
+        // Cria ou seleciona o elemento texto explicativo  
+        let textBox = image.nextElementSibling; // O texto explicativo deve ser próximo da imagem  
+
+        // Inicializa a opacidade do texto como 0  
+        textBox.style.opacity = '0';  
+        textBox.style.display = 'none'; // Garante que o texto comece oculto  
+
+        // Mostra o texto quando o mouse entra  
+        image.addEventListener('mouseenter', () => {  
+            textBox.style.display = 'block'; // Exibe o texto  
+            setTimeout(() => {  
+                textBox.style.opacity = '1'; // Muda a opacidade para 1  
+            }, 0);  
+        });  
+
+        // Esconde o texto quando o mouse sai  
+        image.addEventListener('mouseleave', () => {  
+            textBox.style.opacity = '0'; // Define a opacidade para 0  
+            setTimeout(() => {  
+                textBox.style.display = 'none'; // Esconde o texto novamente  
+            }, 600);  
+        });  
+    });  
 });
