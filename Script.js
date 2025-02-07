@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /** Chatbot Bloco */
 
 const chatButton = document.getElementById('chatButton');  
-const sustoImage = document.getElementById('sustoImage');  
+const sustoImage = document.getElementById('susitoImage');  
 const chatDialog = document.getElementById('chatDialog');  
 let dialogTimeout;  
 
@@ -141,7 +141,7 @@ chatDialog.addEventListener('mouseleave', closeDialog);
 /* Bloco Sou Usuário    Jeremias Silva 31/01/2025 */
 document.addEventListener('DOMContentLoaded', () => {  
     // Seleciona todas as imagens que podem ser clicadas  
-    const images = document.querySelectorAll('.BotaoClicavel');  
+    const images = document.querySelectorAll('.botaoClicavel');  
 
     images.forEach((image) => {  
         image.addEventListener('click', () => {  
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Bloco Sou Profissional    Jeremias Silva 31/01/2025 */ document.addEventListener('DOMContentLoaded', () => {  
     // Seleciona todas as imagens que podem ser clicadas dentro de #Corpo8E  
-    const images = document.querySelectorAll('#Corpo9E .BotaoClicavel');  
+    const images = document.querySelectorAll('.corpo9E .botaoClicavel');  
 
     images.forEach((image) => {  
         const textBox = image.nextElementSibling; // Seleciona o próximo elemento (texto)  
@@ -217,11 +217,11 @@ let observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             let counterElement = entry.target;
 
-            if (counterElement.id === "ContagemC11D1") {
+            if (counterElement.id === "contagemC11D1") {
                 animateCounter(counterElement, 0, 6312, 2000); // Contagem de 0 a 6.312
-            } else if (counterElement.id === "ContagemC11D2") {
+            } else if (counterElement.id === "contagemC11D2") {
                 animateCounter(counterElement, 0, 85, 2000, true); // Contagem de 0 a 85%
-            } else if (counterElement.id === "ContagemC11D3") {
+            } else if (counterElement.id === "contagemC11D3") {
                 animateCounter(counterElement, 0, 97, 2000, true); // Contagem de 0 a 97%
             }
 
@@ -231,7 +231,7 @@ let observer = new IntersectionObserver(entries => {
 }, { threshold: 0.5 }); // Ativa quando pelo menos 50% do elemento está visível
 
 // Observar os elementos com IDs "ContagemC10D1", "ContagemC10D2" e "ContagemC10D3"
-["ContagemC11D1", "ContagemC11D2", "ContagemC11D3"].forEach(id => {
+["contagemC11D1", "contagemC11D2", "contagemC11D3"].forEach(id => {
     let element = document.getElementById(id);
     if (element) {
         observer.observe(element);
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /** Corpo 7E Sou Gestor  */
 document.addEventListener('DOMContentLoaded', () => {  
     // Seleciona todas as imagens que podem ser clicadas dentro do bloco Corpo7  
-    const images = document.querySelectorAll('#Corpo7 .ImgCorpo7');  
+    const images = document.querySelectorAll('#Corpo7 .imgCorpo7');  
 
     images.forEach((image) => {  
         // Cria ou seleciona o elemento texto explicativo  

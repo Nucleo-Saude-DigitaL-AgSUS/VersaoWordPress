@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,10 +6,9 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    margin: 0% 10% 0% 10%;
+    margin: 0% 15% 0% 15%;
 }
 
-/* Ajustando o Header */
 header {
     background-image: linear-gradient(to bottom, #00a79d, #016185);
     display: flex;
@@ -18,38 +17,33 @@ header {
     padding: 10px 5%;
     border-radius: 0 0 30px 30px;
     width: 100%;
-    height: auto;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
-/* Ajustando o container do menu */
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
 }
 
-/* Ajuste da Logo */
-.Logo {
+.logo {
     max-width: 100%;
     height: auto;
-    width: 120px; /* Define um tamanho inicial */
+    width: 120px;
 }
 
 @media (max-width: 768px) {
     .Logo {
-        width: 80px; /* Reduz o tamanho da logo em telas menores */
+        width: 80px;
     }
 }
 
-/* Ajuste do menu para evitar corte */
 .navbar .nav-link,
 .dropdown .btn-secondary {
     font-weight: bold;
@@ -57,22 +51,22 @@ header {
     text-decoration: none;
     color: #fff;
     padding: 10px;
-    white-space: nowrap; /* Evita quebra de linha desnecessária */
+    white-space: nowrap;
 }
-#navbarNav{
+
+#navbarNav {
     display: grid;
     grid-auto-flow: column;
-    columns: center;
+    justify-items: center;
     gap: 2%;
-    
 }
-#dropdownMenuLink{
+
+#dropdownMenuLink {
     text-decoration: none;
     background-color: transparent;
     border: none;
 }
 
-/* Ajuste da barra de navegação para telas menores */
 @media (max-width: 992px) {
     .navbar {
         flex-direction: column;
@@ -86,10 +80,9 @@ header {
     }
 }
 
-/* Ajustando o dropdown */
 .dropdown-menu {
     font-size: 1rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-item {
@@ -97,7 +90,6 @@ header {
     text-align: left;
 }
 
-/* Garantindo que o menu colapsado funcione corretamente em telas pequenas */
 @media (max-width: 768px) {
     .navbar-collapse {
         text-align: center;
@@ -105,23 +97,20 @@ header {
 }
 
 .dropdown-item:hover {
-    background-color: #555; /* Cor ao passar o mouse */
-    color: #00a79d; /* Cor do texto ao passar o mouse */
+    background-color: #555;
+    color: #00a79d;
 }
+
 h1, h2 {
     font-family: "Quicksand", serif;
-    font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
+    font-size: 2.5rem;
     text-align: center;
-    font-optical-sizing: auto;
     color: #4a4a4a;
     font-weight: bold;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 p {
-    font-size: 1.2rem; /* 1.2 do tamanho definido no <html> */
+    font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
     font-family: "Montserrat";
@@ -132,20 +121,22 @@ img {
     height: auto;
     border-radius: 10px;
 }
-/* Alinhar itens em dispositivos menores */
+
 @media (max-width: 768px) {
     body {
-      font-size: 2vw; /* Fontes maiores em telas pequenas */
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    body {
-      font-size: 1vw; /* Fontes menores em telas grandes */
+        font-size: 2vw;
     }
 }
 
-#Corpo0{
+@media (min-width: 1024px) {
+    body {
+        font-size: 1vw;
+    }
+}
+
+
+/*CORPO 1 - VOCÊ JÁ CONHECE A AGSUS?*/
+#Corpo1{
     display: grid;
     grid-auto-flow: column;
     columns: center;
@@ -153,15 +144,23 @@ img {
     padding-top: 15%;
     margin: 0% 10% 0% 10%;
 }
-.Corpo0D{
+
+.corpo1D{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
 }
-.Corpo0E{
+
+.logoAgsus{
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+}
+.corpo1E{
     padding-top: 10%;
 }
+
 .btnAgSUS {
     width: calc(400px + 5vw);
     height: auto;
@@ -178,86 +177,83 @@ img {
     margin: 1% 0% 0% 0%;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-    transform: translateY(-3px) !important;
-    
 }
 
 .btnAgSUS:hover, .btnAgSUS:focus {
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
+    box-shadow: 0 0 35px #fed433; /* Efeito brilhante */
     transform: translateY(-3px) !important; /* Levanta o bot o */
 }
+
 .botaoAgSUS{
     padding: 5% 10% 0% 10%;
 }
+
 /* DIRETORIA */
-.TituloC3{
-    padding: 5% 10% 0% 10%;
+.tituloDiretoria{
+    padding: 3% 10% 0% 10%;
 }
-#DiretoriaC3{
+
+#diretoriaC1{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     column-gap: 5%;
     margin:2% 20% 0% 20%;
 }
-.DiretoriaImg{
+
+.diretoriaImg{
     width: calc(1000px + 5vw);
     height: auto;
     padding-bottom: 3%;
 }
-.Andre, .Luciana, .Willames{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:5%;
-}
-.TextoAndre, .TextoLuciana, .TextoWillames{
+
+.textoDiretor{
     text-align: center;
     padding-top: 5%;
+    
 }
-.TextoLuciana{
-    padding-top: 20%;
+
+.textoLuciana{
+    padding-top: 15%;
+    text-align: center;
 }
+
 .botaoAgSUS{
     text-align: center;
 }
 
-/*MOCKUP 1*/
-#Corpo1{
-    margin: 2% 10% 0% 10%;
 
+/*CORPO 2 - CONHEÇA O NSD*/
+#Corpo2{
+    margin: 5% 10% 0% 10%;
 }
-.TituloC1{
+
+.tituloC2{
     margin-top: 3%;
 }
-.TextoC1{
+
+.titulo2C2{
     margin-top: 2%;
     font-family: "Open Sans";
     font-weight: lighter;
     color: #00a79d;
     font-style: italic;
- }
+}
 
-#div2C1{
+.div2C2{
     display: grid;
     grid-auto-flow: column;
     columns: center;
-    grid-template-columns: repeat(2, 1fr);
     gap: 2%;
     overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
     position: relative; /* Define referência para o posicionamento absoluto */
     grid-template-columns: 50% 50%;
 }
 
-.Logo1{
-    width: calc(500px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
-    height: auto;
-    overflow: visible;
-}
-.TextoNucleo{
+.textoC2{
     margin: auto;
     max-width: 1200px; /* Largura máxima */
     display: flex;
@@ -265,112 +261,25 @@ img {
     align-items: center;
     justify-content: center;
 }
-.Logo2{
-    width: calc(500px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
+
+.logoC2{
+    width: calc(300px + 5vw); /*A largura da imagem será o resultado de uma soma entre 800px (tamanho fixo base) e 5% da largura da viewport (5vw).*/
     height: auto;
     overflow: visible;
-    margin-left: 10%;
 }
 
-#chatButton {  
-    width: 7%;
-    height: 7%;
-    background-image: linear-gradient(to bottom, #00a79d, #4a4a4a);
-    color: #fff;
-    border: none;  
-    border-radius: 20PX 0PX 20px 0px;  
-    cursor: pointer;  
-    position: fixed;  
-    bottom: 100px;  
-    right: 0;  
-    transition: opacity 0.3s ease;
-    font-weight: bold;  
-}  
 
-#sustoImage {  
-    position: fixed;  
-    bottom: 100px;  
-    right: 0;  
-    width: 100PX;  
-    height: 100PX;  
-    display: none;  
-    cursor: pointer;  
-    transition: opacity 0.3s ease, transform 0.3s ease;  
-    transform: scale(1);  
+/* CORPO 3 - SUBSTITUIÇÃO TEMPORÁRIA DE MÉDICOS VIA TELESSAÚDE*/
+#Corpo3{
+    margin: 5% 10% 0% 10%;
 }
 
-.dialogBubble {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 300px;
-    max-height: 250px;
-    position: fixed;
-    bottom: 150px;
-    right: 50px;
-    background-color: #52b297;
-    color: #fff;
-    border: 10px solid #fff;
-    border-radius: 30px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    text-align: center;
-    gap: 3%;
-    font-size: 0.8rem;
+.tituloC3{
+    color:  #00a79d;
+    margin-top: 2%;
 }
 
-/* Criando a ponta do balão */
-.dialogBubble::before {
-    content: "";
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 35px 35px 0 35px;
-    border-color: #52b297 transparent transparent transparent;
-}
-
-.dialogBubble button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.dialogBubble button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.divbtn {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    align-items: center;
-    text-align: center;
-    gap: 2%;
-}
-.hidden {  
-    display: none;  
-}
-.TextoSUSito{
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-#Corpo2{
-    margin: 2% 10%
-}
-#Div2C2{
+#div2C3{
     display: grid;
     grid-auto-flow: column;
     columns: center;
@@ -380,29 +289,25 @@ img {
     position: relative; /* Define referência para o posicionamento absoluto */
 }
 
-.TituloC2{
-    color:  #00a79d;
-    margin-top: 2%;
-}
-
-.Textocorpo2{
+.textoCorpo3{
     max-width: 1200px; /* Largura máxima */
     margin-left: 20%;
     margin-right: auto;
 }
 
-.ImagemC2{
+.imagemC3{
     width: calc(800px + 5vw);
     height: auto;
     margin-left: 35%;
 }
 
-.Barralateral{
+.barralateralImg{
     height: auto;
     width: calc(300px + 5vw);
     margin-left: 85%;
 }
 
+/*Botões do corpo 3*/
 .custom-btn {
     width: calc(400px + 5vw);
     height: auto;
@@ -425,24 +330,22 @@ img {
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
+    box-shadow: 0 0 35px #fed433; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
+
 .btn-outline-primary:active {
     transform: translateY(2px); /* Abaixa o botão ao clicar */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
 }
 
 
+/*CORPO 4 - CARROSSEL DA EQUIPE*/
+.tituloCarrossel{
+    margin: 5% 10% 0% 10%;
+}
 
-/*CARROSSEL*/
-
-.TituloCarrossel{
-    padding-top: 5%;
-} 
-
-/* Estilo principal do carrossel */
-#CarrosselEquipe {
+#carrosselEquipe {
     position: relative;
     width: 100%;
     max-width: 1000px;
@@ -511,119 +414,60 @@ img {
 }
 
 
-/* Bloco Chatbot modela para refinamento 16/01/2025*/
-/* Bloco chatbot versáo com ação de mouse ao posicionar nobre o susito e fexar o balçao caso nçao tenha ação sobre ele após 3 segundo */
-
-#chatbot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 3%;
-    height: 10%;
-    cursor: pointer;
-}
-#chat-window {
-    display: none;
-    position: fixed;
-    bottom: 90px;
-    right: 58px;
-    width: 300px;
-    margin-bottom: 50px;
-    margin-right:5Spx;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-/*Nova linha 20-201-2025 ação de posiçáo de mouse..*/
-.tooltip {  
-    display: none; /* Oculta o balão inicialmente */  
-    visibility: hidden; /*Deixar invisivel */
-    position: absolute;  
-    bottom: 70px; /* Distância do robô */  
-    right: 0; /* Alinhado à direita */  
-    background-color: white; /* Fundo do balão */  
-    border: 1px solid #ccc; /* Borda do balão */  
-    padding: 10px; /* Espaçamento interno */  
-}  
-
-#chat-header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-#chat-body {
-    padding: 10px;
-}
-#options {
-    margin-top: 0px;
-}
-.option-button {
-    display: block;
-    margin: 5px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/*Novas linhas 20-201-2025 ação de posiçáo de mouse..*/
-/*Fim do bloco versáo 1.2 chatbot  Jeremias 20-01-2025*/
-
-/*FOOTER*/
-
-/*CORPO 5 - O Serviço pelo Brasil*/
-.TituloC5{
-    margin-top: 3%;
+/*CORPO 5 - O SERVIÇO PELO BRASIL*/
+.tituloC5 {
+    margin-top: 5%;
     color: #070606;
 }
-#Corpo5{
+
+#Corpo5 {
     display: grid;
     grid-auto-flow: column;
-    columns: center;
-    grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 70% 30%;
-    margin:2% 10% 2% 0%;
+    margin: 0% 10% 2% 0%;
     gap: 1%;
-    overflow: visible; /* Permite que o conteúdo ultrapasse as bordas */
-    position: relative; /* Define referência para o posicionamento absoluto */
+    overflow: visible; 
+    position: relative; 
 }
-.MapadoBrasil{
-    position: relative;
-    width: calc(1500px + 5vw);
-    height: auto;
-    border: 0px solid #ccc;
-}
-  
-#TextoC5{
+
+.textoC5 {
     margin: 15% 0% 0% 40%;
 }
 
+.mapadoBrasil {
+    position: relative;
+    width: calc(800px + 5vw);
+    height: auto;
+    border: 0px solid #ccc;
+}
 
-/*CORPO 6 - Fluxo de atendimento*/
-.TituloC6{
-    padding-top: 50px;
+
+/*CORPO 6 - FLUXO DE ATENDIMENTO*/
+#Corpo6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 50px;
     color: #070606;
-    margin-top: 7%;
+    margin: 5% 10% 0% 10%;
+}
+
+.tituloC6{
     text-align: center;
 }
-#FluxoAtendimento{
-    text-align: center;
-}
-.ImagemFluxo{
-    text-align: center;
-    width: calc(1500px + 5vw);
+
+.imagemFluxo{
+    width: calc(1000px + 5vw);
     height: auto;
 }
 
-/*CORPO 7 - Sou Gestor*/
+
+/*CORPO 7 - SOU GESTOR*/
+.tituloC7{
+    margin: 5% 10% 0% 10%;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px white;
+}
+
 #Corpo7{
     display: grid;
     grid-auto-flow: column;
@@ -633,23 +477,18 @@ img {
     gap: 5%;
     margin:1% 10% 0% 10%;
 }
-.TituloC7{
-    margin-top: 3%;
-    text-shadow: 2px 2px 0px black, -2px -2px 0px white;
-}
-.Corpo7E{
+
+.corpo7E{
     margin: 3% 0% 0% 10%;
 }
-.Corpo7D{
-    margin: 15% 0% 0% 10%;
-}
-.ImgCorpo7{
+.imgCorpo7{
     width: calc(110% + 5vw);  
     height: auto;  
     border: 0px solid #8b0d0d;  
     margin: 2% 0% 0% 10%;  
     transition: transform 0.2s; /* Animação ao passar o mouse */ 
 }
+
 .textoExplicativoCorpo7 {  
     margin-top: 1px; /* Margem superior para o texto */  
     position: relative; /* Define o tipo de posicionamento */  
@@ -668,13 +507,21 @@ img {
     text-align: center;
     padding: 5%;
 }
-.ImgCorpo7:hover + .textoExplicativoCorpo7 {  
+
+.imgCorpo7:hover + .textoExplicativoCorpo7 {  
     display: block; /* Exibe o texto quando a imagem é hover */  
 }  
-.TituloC7flip{
+
+.corpo7D{
+    margin: 15% 0% 0% 10%;
+}
+
+.tituloC7flip{
     font-size: 1.5rem;
     text-align: center;
 }
+
+/*Fliper dos critérios*/
 .flip-container {
     perspective: 1000px;
     cursor: pointer;
@@ -698,6 +545,7 @@ img {
     flex-direction: column;
     align-items: center;
 }
+
 .flip-container:hover .flipper {
     transform: rotateY(180deg);
 }
@@ -738,7 +586,7 @@ img {
     align-items: center;
 }
 
-.TextoC7flip {
+.textoC7flip {
     font-size: 1rem;
     max-width: 90%;
     overflow-wrap: break-word;
@@ -747,203 +595,222 @@ img {
 
 
 /*CORPO 8 - SOU USUÁRIO*/
-.TituloC8{
-    margin-top: 3%;
+.tituloC8{
+    margin: 5% 10% 0% 10%;
     text-shadow: 2px 2px 0px black, -2px -2px 0px white;
 }
-.TituloC8E{
-    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
-}
-.TituloC8D{
-    margin-right: 40%;
-    margin-left: 20%;
-    font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
-    text-align: center;
-}
-ul {
-    list-style-type: none; /* Remove os marcadores da lista */
-    padding-bottom: 0px;
-    margin: 0;
-}
-ul li {
-    margin-bottom: 10px; /* Espaçamento entre as imagens */
-  }
-ul li img {
-    display: block; /* Garante que a imagem ocupe uma linha inteira */
-    max-width: 100%; /* Faz com que as imagens sejam responsivas */
-    height: auto;
-}
+
 #Corpo8{
     display: grid;
     grid-auto-flow: column;
     columns: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 2%;
-    margin:1% 5% 0% 10%;
+    margin:0% 5% 0% 10%;
 }
 
-.Corpo8E{
+.corpo8E{
     margin: 20% 2% 0% 15%;
 }
-.Corpo8D{
+
+.tituloC8E{
+    font-size: 2rem; /* 2.5 vezes o tamanho base definido em <html> */
+}
+
+.corpo8D{
     margin-top: 2%;
 }
-.BotaoClicavel {
+
+.tituloC8D{
+    margin-right: 40%;
+    margin-left: 20%;
+    font-size: 2.5rem; /* 2.5 vezes o tamanho base definido em <html> */
+    text-align: center;
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+}
+
+ul li img {
+    display: block; /* Garante que a imagem ocupe uma linha inteira */
+    max-width: 100%; /* Faz com que as imagens sejam responsivas */
+    height: auto;
+}
+
+.botaoClicavel {
     cursor: pointer;
     width: calc(1000PX + 5vw);
     height: auto;
     border: 0px solid #ccc;
-    transition: transform 0.2s; /* Animação ao passar o mouse */
+    transition: transform 0.2s; 
 }
-.BotaoClicavel:hover {
-    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+
+.botaoClicavel:hover {
+    transform: scale(1.1); 
 }
+
 #text-box{
     display: none; 
     margin-top: 20px;
 }
-.textoExplicativo {  /* Vou fragimentar esse trecho de CSS 31/01/2023*/
-    width: calc(87% + 5vw); /* Mesma largura que as imagens */  
-    margin-top: 1px; /* Margem superior para o texto */  
-    position: justify; /* Permite ajustar a posição do texto */  
-    top: -10; /* Ajuste a posição vertical do texto (use valores positivos ou negativos) */  
-    left: 0; /* Ajuste a posição horizontal do texto (use valores positivos ou negativos) */  
-    text-align: left; /* Centraliza o texto */  
-    background-color: #f0f0f0; /* Cor de fundo (ajuste conforme necessário) */  
-    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
-    border-radius: 20px; /* Borda arredondada */  
-    padding: 35px; /* Preenchimento interno */   
-    opacity: 0; /* Opacidade inicial como 0 */  
-    transition: opacity 0.8s; /* Transição suave para a opacidade */  
-    display: none; /* Inicia como oculto */  
-    color: #070606; /* Cor do texto */  
-    font-size: 1rem; /* Tamanho da fonte (ajuste conforme desejado) */  
-    font-family: 'Arial', sans-serif; /* Tipo de fonte (ajuste conforme desejado) */  
+
+.textoExplicativo {  
+    width: calc(87% + 5vw); 
+    margin-top: 1px; 
+    position: justify;  
+    top: -10;  
+    left: 0;  
+    text-align: left;  
+    background-color: #f0f0f0; 
+    border: 2px solid #fbfdfdf3;  
+    border-radius: 20px;
+    padding: 35px; 
+    opacity: 0; 
+    transition: opacity 0.8s; 
+    display: none; 
+    color: #070606; 
+    font-size: 1rem; 
+    font-family: 'Arial', sans-serif; 
 }
 
 
- /* CORPO 9 - Sou Profissional*/
- .TituloC9{
-    margin-top: 3%;
+ /* CORPO 9 - SOU PROFISSIONAL*/
+.tituloC9{
+    margin: 5% 15% 0% 15%;
     text-shadow: 2px 2px 0px black, -2px -2px 0px white;
- }
- .TituloC9D{
-    margin-left: 10%;
- }
- .ImgSouProfissional{
-    text-align: center;
-    width: calc(25% + 5vw);
-    height: auto;
-    margin-left: 40%;
-    margin-top: 3%;   
- }
- #Corpo9{
+}
+
+#Corpo9{
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); /* Garante responsividade */
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); 
     columns: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5%; /* Aplica espaçamento corretamente */
-    margin: 1% 5% 0% 10%;
- }
- #Corpo9E{
-    margin: 2% 1% 0% 10%;
+    gap: 3%; 
+    margin: 1% 15% 0% 15%;
+}
+
+.corpo9E{
+    margin: 0% 1% 0% 10%;
     border: none;
-    width: 100%; /* Faz com que a largura se ajuste ao grid */
+    width: 100%; 
     height: auto;
 }
-.PerProfissional{
+
+
+.tituloC9D{
+    margin-left: 10%;
+}
+
+.botaoClicavel{
     border: none !important;
-    cursor: pointer;
-    width: 80%; /* Para garantir que se ajustem ao espaço disponível */
+    cursor: pointer !important;
+    width: 80%; 
     height: auto;
-    transition: transform 0.2s; /* Animação ao passar o mouse */    
+    transition: transform 0.2s;   
 }
-.PerProfissional :hover{
-    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+
+.botaoClicavel :hover{
+    transform: scale(1.1); 
 }
-.textoExplicativoCorpo8 {  
-    width: calc(87% + 5vw); /* Largura da div de texto explicativo */  
-    margin-top: 5px; /* Pequeno espaço entre a imagem e o texto */  
-    text-align: left; /* Alinha o texto à esquerda */  
-    background-color: #f0f0f0; /* Cor de fundo */  
-    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
-    border-radius: 5px; /* Borda arredondada */  
-    padding: 10px; /* Preenchimento interno */   
-    opacity: 0; /* Opacidade inicial como 0 */  
-    transition: opacity 0.8s; /* Transição suave para a opacidade */  
-    display: none; /* Inicia como oculto */  
-    color: #070606; /* Cor do texto */  
-    font-size: 1rem; /* Tamanho da fonte */  
-    font-family: 'Arial', sans-serif; /* Tipo de fonte */  
+
+.textoExplicativoC9 {  
+    width: calc(87% + 5vw);
+    margin-top: 5px; 
+    text-align: left; 
+    background-color: #f0f0f0;  
+    border: 2px solid #fbfdfdf3; 
+    border-radius: 5px; 
+    padding: 10px;  
+    opacity: 0;  
+    transition: opacity 0.8s;   
+    display: none;   
+    color: #070606; 
+    font-size: 1rem; 
+    font-family: 'Arial', sans-serif; 
 }
- #Corpo9D{
+
+ .corpo9D{
     display:flex ;
     flex-direction: column;
     align-items: center;
     gap: 5%;
-    margin: 5% 8% 0% 10%;
+    margin: 5% 15% 0% 5%;
     width: 100%;
     box-sizing: border-box;  
 }
 
-.Conselhos1, .Conselhos2 {
+.conselhos1, .conselhos2 {
     display: grid;
     grid-auto-flow: column;
     columns: center;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2%; /* Adicionado espaço entre os itens */
+    gap: 2%; 
 }
+
 button{
     border: none;
     background-color: transparent;
 }
 
-.ImgConselhos{
+.imgConselhos{
     cursor: pointer;
-    width: 100%; /* Ajusta ao tamanho do botão */
-    max-width: 300px; /* Limita crescimento excessivo */
+    width: 100%; 
+    max-width: 300px; 
     height: auto;
     border: none;
-    transition: transform 0.2s; /* Animação ao passar o mouse */
+    transition: transform 0.2s; 
     padding: 5%;
     border-radius: 20%;
-    box-shadow: 0 0 5px #00a79d; /* Efeito brilhante */
+    box-shadow: 0 0 5px #00a79d; 
 }
 
-.Corpo9D2{
+.corpo9D2{
     padding-top: 10%;
+    margin-left: 30%;
 }
-.Legislacoes{
+
+.legislacoes{
   margin: 1% 10% 0% 15%;
   display: grid;
   grid-auto-flow: column;
   columns: center;
   gap: 5%;
 }
-.TituloLegislacoes{
+
+.tituloLegislacoes{
     margin-top: 5%;
 }
-.ImgBrasao{
-    width: 100%; /* Ajusta ao tamanho do botão */
-    max-width: 200px; /* Limita crescimento excessivo */
+
+.imgBrasao{
+    width: 100%; 
+    max-width: 200px; 
     height: auto;
     border: none;
-    transition: transform 0.2s; /* Animação ao passar o mouse */
+    transition: transform 0.2s; 
     padding: 5%;
     border-radius: 20%;
-    box-shadow: 0 0 5px #00a79d; /* Efeito brilhante */
+    box-shadow: 0 0 5px #00a79d; 
 }
-.NomeLegislacao{
+
+.nomeLegislacao{
     padding-top: 2%;
     text-align: center;
     font-weight: bold;
 }
-.Legislacoes div {
+
+.legislacoes div {
     position: relative;
     display: inline-block;
 }
 
-.Legislacoes div:hover::after {
+.legislacoes div:hover::after {
     content: attr(data-info); /* Pega o texto do atributo data-info */
     position: absolute;
     left: 50%;
@@ -963,7 +830,7 @@ button{
     border: #fff solid 3px;
 }
 
-.Legislacoes div:hover::before {
+.legislacoes div:hover::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -976,16 +843,18 @@ button{
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.Legislacoes div:hover::after,
-.Legislacoes div:hover::before {
+.legislacoes div:hover::after,
+.legislacoes div:hover::before {
     opacity: 1;
     visibility: visible;
 }
-/*CORPO 10*/
-#Video{
-    margin: 0% 0% 0% 2%;
-    padding-bottom: 3%;
+
+
+/*CORPO 10 - NOSSA HISTÓRIA*/
+.tituloCorpo10A{
+    margin: 5% 10% 0% 10%;
 }
+
 #Corpo10A{
     display: flex;
     flex-direction: column;
@@ -993,12 +862,17 @@ button{
     margin: 1% 25% 0% 25%;
     gap: 3%;
 }
-.TituloCorpo10A{
-    padding-top: 5%;
+
+#video{
+    margin: 0% 0% 0% 2%;
+    padding-bottom: 3%;
 }
-.TituloCorpo10B{
-    line-height: 2.0; /* Espaçamento 1.5 vezes a altura da fonte */  
+
+.tituloCorpo10B{
+    line-height: 2.0;
+    margin-top: 3%;
 }
+
 #Corpo10B{
     display: grid;
     grid-auto-flow: column;
@@ -1006,33 +880,39 @@ button{
     gap: 5%;
     margin: 1% 10% 0% 15%;
 }
-#DepoimentoEnf, #DepoimentoMed{
+
+.depoimentoEnf, .depoimentoMed{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.ImagemGraca, .ImagemArtur{
-    width: calc(400px + 5vw);
-    height: AUTO;
+
+.imagemGraca, .imagemArtur{
+    width: calc(200px + 5vw);
+    height: auto;
     text-align: center;
     margin-left: 10%;
 }
-.TituloGraca, .TituloArtur{
+
+.tituloGraca, .tituloArtur{
     text-align: center;
     color: #016185;
     font-size: 150%;
-    line-height: 1.5; /* Espaçamento 1.5 vezes a altura da fonte */
+    line-height: 1.5; 
 }
-.TextoGraca, .TextoArtur{
+
+.textoGraca, .textoArtur{
     font-style: italic;
 }
 
+
 /*CORPO 11 - RESULTADOS PILOTO*/
-.TituloCorpo11{
+.tituloCorpo11{
     margin-top: 3%;
     margin-bottom: 1%;
 }
+
 #Corpo11{
     display: grid;
     grid-auto-flow: column;
@@ -1041,35 +921,32 @@ button{
     gap: 4%;
     margin: 1% 10% 0% 15%;
 }
-.Corpo11D{
-    display: grid;
-    grid-auto-flow: column;
-    columns: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2%;
+
+.corpo11E{
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px; 
 }
-.Corpo11E{
-    display: flex; /* Organiza os parágrafos em uma coluna */
-    flex-direction: column; /* Cada parágrafo será uma linha separada */
-    gap: 16px; /* Espaçamento vertical entre os parágrafos */
-}
-.PCorpo11E{
+
+.pCorpo11E{
     display: flex; 
     align-items: center; 
     gap: 8px; 
     font-size: 1.2rem; 
     margin: 0; 
 }
+
 .Corpo11E i {
     margin-right: 8px; 
     color: #0dd4ac; 
 }
+
 .custom-btn11{
     width: calc(200px + 5vw);
     height: AUTO;
     text-decoration: none;
     text-align: center;
-    font-size: 1.5rem; /* 1.5 vezes o tamanho base definido em <html> */
+    font-size: 1.5rem; 
     font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
     border: 1px solid #fff;
@@ -1078,24 +955,35 @@ button{
     text-shadow: 4px 4px 5px #4a4a4a;
     border-radius: 25px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .custom-btn11:hover{
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
+    box-shadow: 0 0 35px #fed433; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
+
 .btn-outline-primary:active {
     transform: translateY(2px); /* Abaixa o botão ao clicar */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
 
 }
-.PCorpo11D{
+
+.corpo11D{
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+
+.pCorpo11D{
     text-align: center;
 }
+
 
 /*CORPO 12 - COMUNIDADE DE PRÁICAS*/
 #Corpo12{
@@ -1104,37 +992,51 @@ button{
     gap: 10%;
     align-items: center;
     text-align: center;
-    margin-top: 3%;
+    margin: 5% 10% 0% 10%;
 }
-.TituloCorpo12{
+
+.tituloCorpo12{
     font-style: bold;
     color: #00a79d;
 }
-.ImgCorpo12{
-    margin-top: 6%;
-    margin-bottom: 5%;
+
+.imgCorpo12{
+    width: calc(500px + 5vw);
+    height: auto;
+    padding-top: 3%;
 }
+
 
 /*CORPO 13 - VEM POR AÍ*/
 #Corpo13{
     display: grid;
     grid-auto-flow: column;
     columns: center;
-    margin: 4% 10% 0% 15%;
+    margin: 5% 10% 0% 15%;
     gap: 3%;
 }
-.TituloCorpo13E{
+
+.tituloCorpo13E{
     font-weight: bold;
     color: #52b297;
 }
-#Corpo13D{
+
+#corpo13D{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 10%;
 }
 
+
 /*CORPO 14 - NOTÍCIAS*/
+.tituloCorpo14{
+    font-weight: bold;
+    color: #52b297;
+    text-align: center;
+    margin: 5% 10% 0% 15%;
+}
+
 #Corpo14{
     display: flex;
     flex-direction: column;
@@ -1142,54 +1044,51 @@ button{
     grid-template-columns: 60% 40%;
     margin: 0% 10% 0% 15%;
 }
-.Corpo14E{
+
+.corpo14E{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3%;
 }
 
-.ImgCorpo14{
+.imgCorpo14{
     width: calc(700px + 5vw);
     height: auto;
     padding: 2%;
 }
-.TituloCorpo14{
-    font-weight: bold;
-    color: #52b297;
-    text-align: center;
-    margin-left: 20%;
-    padding-top: 3%;
-}
 
 
 /*CORPO 15 -BIBLIOTECA*/
-.ImgTituloCorpo15{
-    width: calc(500px + 5vw);   
-}
 #Corpo15{
     display: grid;
     grid-auto-flow: column;
     columns: center;
-    margin: 4% 10% 0% 15%;
-    gap: 3%;
+    margin: 5% 10% 0% 15%;
+    gap: 1%;
 }
-.TextoCorpo15{
+
+.imgTituloCorpo15{
+    width: calc(500px + 5vw);   
+}
+
+.textoCorpo15{
     margin-top: 4%;
 }
-.ImgBiblioteca{
+
+.imgBiblioteca{
     width: calc(500px + 5vw);
     height: auto;
 }
-.Corpo15D{
+
+.corpo15D{
     padding-top: 15%;
 }
-.Corpo15E{
-    margin-right: 5%;
-}
-.Corpo15D ul li{
+
+.corpo15D ul li{
     margin-top: 20%;
 }
+
 .btnbiblioteca {
     width: calc(500px + 5vw);
     height: 200px;
@@ -1208,11 +1107,11 @@ button{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
-.btnbiblioteca:hover{
+.btnbiblioteca:hover, .btnbiblioteca:focus{
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
-    box-shadow: 0 0 35px #b0d11d; /* Efeito brilhante */
+    box-shadow: 0 0 35px #fed433; /* Efeito brilhante */
     transform: translateY(-3px); /* Levanta o botão */
 }
 
@@ -1223,14 +1122,64 @@ button{
     columns: center;
     margin: 4% 10% 0% 15%;
 }
-.TituloCorpo16{
+
+.tituloCorpo16{
     font-weight: bold;
     color: #00a79d;
     text-align: center;
 }
+
 .fa-solid{
     color: #00a79d;
     size: 50%;
+}
+
+.corpo9E2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    margin: 5% 10% 2% 15%;
+    background-image: linear-gradient(180deg,  #77e7e9 30%, #016185 70%);
+    border-radius: 5%;
+}
+.imgC9E2{
+    width: calc(120px + 5vw);
+    height: auto;
+    margin-top: 3%;  
+}
+.tituloC9E2{
+    margin-bottom: 3%;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.btnC9E2{
+    width: calc(100px + 5vw);
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem; 
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #fff;
+    background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
+    color: #fff;
+    text-shadow: 4px 4px 5px #4a4a4a;
+    border-radius: 25px;
+    margin: 5% 0% 0% 20%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 1% 3% 1% 3%;
+}
+    
+.btnC9E2:hover, .btnC9E2:focus {
+    color: #fff !important;
+    background-color: #016185 !important;
+    border-color:#00a79d !important;
+    box-shadow: 0 0 35px #fed433; /* Efeito brilhante */
+    transform: translateY(-3px) !important; /* Levanta o bot o */
 }
 
 
@@ -1240,11 +1189,113 @@ footer{
     text-align: center;
 }
 
-.Texto1Rodape, .Texto2Rodape{
+.texto1Rodape, .texto2Rodape{
     font-size: 0.7rem;
     text-align: center;
 }
-.ImgInstituicoes, .ImgRodape{
+
+.imgInstituicoes, .imgRodape{
     text-align: center;
     max-width: 70%;
+}
+
+/*ABA DO CHAT - SUSito*/
+#chatButton {  
+    width: 7%;
+    height: 7%;
+    background-image: linear-gradient(to bottom, #00a79d, #4a4a4a);
+    color: #fff;
+    border: none;  
+    border-radius: 20PX 0PX 20px 0px;  
+    cursor: pointer;  
+    position: fixed;  
+    bottom: 100px;  
+    right: 0;  
+    transition: opacity 0.3s ease;
+    font-weight: bold;  
+    z-index: 1001;
+}  
+
+#susitoImage {  
+    position: fixed;  
+    bottom: 100px;  
+    right: 0;  
+    width: 100PX;  
+    height: 100PX;  
+    display: none;  
+    cursor: pointer;  
+    transition: opacity 0.3s ease, transform 0.3s ease;  
+    transform: scale(1);  
+    z-index: 1001;
+}
+
+.dialogBubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    max-height: 250px;
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+    background-color: #52b297;
+    color: #fff;
+    border: 10px solid #fff;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    z-index: 1000;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    gap: 3%;
+    font-size: 0.8rem;
+}
+
+.dialogBubble::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 35px 0 35px;
+    border-color: #52b297 transparent transparent transparent;
+}
+
+.dialogBubble button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.dialogBubble button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.divbtn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    align-items: center;
+    text-align: center;
+    gap: 2%;
+    z-index: 1001;
+}
+.hidden {  
+    display: none;  
+}
+.textoSUSito{
+    font-size: 0.8rem;
+    text-align: center;
+    z-index: 1001;
 }
