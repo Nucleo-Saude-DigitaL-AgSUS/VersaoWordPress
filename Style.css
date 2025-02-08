@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: 'Open Sans', sans-serif;
     margin: 0% 15% 0% 15%;
 }
@@ -52,6 +52,7 @@ header {
     color: #fff;
     padding: 10px;
     white-space: nowrap;
+    margin: 0% 5% 0% 5%;
 }
 
 #navbarNav {
@@ -386,7 +387,7 @@ img {
 }
 
 .carousel-controls button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: none;
 }
 
 /* Indicadores (dots) */
@@ -502,7 +503,7 @@ img {
     transition: opacity 0.8s; /* Transição suave para a opacidade */  
     display: none; /* Inicia como oculto */  
     color: #130202; /* Cor do texto */  
-    font-size: 1rem; /* Tamanho da fonte */  
+    font-size: 0.8rem; /* Tamanho da fonte */  
     font-family: 'Arial', sans-serif; /* Tipo de fonte */ 
     text-align: center;
     padding: 5%;
@@ -676,7 +677,7 @@ ul li img {
     transition: opacity 0.8s; 
     display: none; 
     color: #070606; 
-    font-size: 1rem; 
+    font-size: 0.8rem; 
     font-family: 'Arial', sans-serif; 
 }
 
@@ -732,7 +733,7 @@ ul li img {
     transition: opacity 0.8s;   
     display: none;   
     color: #070606; 
-    font-size: 1rem; 
+    font-size: 0.8rem; 
     font-family: 'Arial', sans-serif; 
 }
 
@@ -771,13 +772,9 @@ button{
     box-shadow: 0 0 5px #00a79d; 
 }
 
-.corpo9D2{
-    padding-top: 10%;
-    margin-left: 30%;
-}
 
 .legislacoes{
-  margin: 1% 10% 0% 15%;
+    margin: 3% 10% 0% 20%;
   display: grid;
   grid-auto-flow: column;
   columns: center;
@@ -785,18 +782,21 @@ button{
 }
 
 .tituloLegislacoes{
-    margin-top: 5%;
+    text-align: justify;
+   font-size: 1.5rem;
+   margin-top: 15%;
 }
 
 .imgBrasao{
     width: 100%; 
-    max-width: 200px; 
+    max-width: 130px; 
     height: auto;
     border: none;
     transition: transform 0.2s; 
     padding: 5%;
     border-radius: 20%;
-    box-shadow: 0 0 5px #00a79d; 
+    box-shadow: 0 0 5px #00a79d;
+    text-align: center; 
 }
 
 .nomeLegislacao{
@@ -977,10 +977,24 @@ button{
     grid-auto-flow: column;
     columns: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2%;
+    gap: 8%;
 }
 
 .pCorpo11D{
+    text-align: center;
+}
+.resultadoC11D{
+    display: flex;
+    flex-direction: column;
+    columns: center;
+    text-align: center;
+    gap: 5%;
+    margin: 2% 0%;
+}
+.imgC11D{
+
+}
+#contagemC11D1, #contagemC11D2, #contagemC11D3{
     text-align: center;
 }
 
@@ -998,10 +1012,11 @@ button{
 .tituloCorpo12{
     font-style: bold;
     color: #00a79d;
+    font-size: 2rem;
 }
 
 .imgCorpo12{
-    width: calc(500px + 5vw);
+    width: calc(300px + 5vw);
     height: auto;
     padding-top: 3%;
 }
@@ -1027,6 +1042,10 @@ button{
     align-items: center;
     margin-left: 10%;
 }
+.imgCorpo13D{
+    width: 100%;
+    max-width: 200PX;
+}
 
 
 /*CORPO 14 - NOTÍCIAS*/
@@ -1038,26 +1057,18 @@ button{
 }
 
 #Corpo14{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-template-columns: 60% 40%;
+    display: grid;
+    grid-auto-flow: column;
+    columns: center;
     margin: 0% 10% 0% 15%;
 }
 
-.corpo14E{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3%;
-}
 
 .imgCorpo14{
-    width: calc(700px + 5vw);
+    width: calc(1000px + 5vw);
     height: auto;
     padding: 2%;
 }
-
 
 /*CORPO 15 -BIBLIOTECA*/
 #Corpo15{
@@ -1120,13 +1131,7 @@ button{
     display: grid;
     grid-auto-flow: column;
     columns: center;
-    margin: 4% 10% 0% 15%;
-}
-
-.tituloCorpo16{
-    font-weight: bold;
-    color: #00a79d;
-    text-align: center;
+    padding-top: 3%;
 }
 
 .fa-solid{
@@ -1134,52 +1139,66 @@ button{
     size: 50%;
 }
 
-.corpo9E2{
+.corpo16E{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 3%;
-    margin: 5% 10% 2% 15%;
-    background-image: linear-gradient(180deg,  #77e7e9 30%, #016185 70%);
-    border-radius: 5%;
 }
-.imgC9E2{
+.imgC16E{
     width: calc(120px + 5vw);
     height: auto;
     margin-top: 3%;  
 }
-.tituloC9E2{
+.tituloC16E{
     margin-bottom: 3%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.6;
-    color: #fff;
+    color: #4a4a4a;
 }
 
-.btnC9E2{
-    width: calc(100px + 5vw);
+.btnC16E{
+    width: calc(150px + 5vw);
     height: auto;
     text-align: center;
     text-decoration: none;
-    font-size: 1.2rem; 
+    font-size: 1rem; 
     font-family: 'Montserrat', sans-serif;
     border: 1px solid #fff;
     background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
     color: #fff;
     text-shadow: 4px 4px 5px #4a4a4a;
     border-radius: 25px;
-    margin: 5% 0% 0% 20%;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    padding: 1% 3% 1% 3%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1%; 
 }
     
-.btnC9E2:hover, .btnC9E2:focus {
+.btnC16E:hover, .btnC16E:focus {
     color: #fff !important;
     background-color: #016185 !important;
     border-color:#00a79d !important;
     box-shadow: 0 0 35px #fed433; /* Efeito brilhante */
     transform: translateY(-3px) !important; /* Levanta o bot o */
+}
+.corpo16D{
+    display: flex;
+    flex-direction: column;
+    columns: center;
+    align-items: center;
+}
+.tituloC16D{
+    font-weight: bold;
+    color: #00a79d;
+    text-align: center;
+}
+.textoC16D{
+    margin-left: 10%;
+}
+.redesSociais{
+    width: 100%;
+    max-width: 300px;
 }
 
 
@@ -1201,19 +1220,22 @@ footer{
 
 /*ABA DO CHAT - SUSito*/
 #chatButton {  
-    width: 7%;
+    width: 6%;
     height: 7%;
-    background-image: linear-gradient(to bottom, #00a79d, #4a4a4a);
+    background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
     color: #fff;
+    text-shadow: 4px 4px 5px #4a4a4a;
     border: none;  
     border-radius: 20PX 0PX 20px 0px;  
     cursor: pointer;  
     position: fixed;  
     bottom: 100px;  
     right: 0;  
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-weight: bold;  
     z-index: 1001;
+    font-size: 1.2rem;
 }  
 
 #susitoImage {  
@@ -1298,4 +1320,7 @@ footer{
     font-size: 0.8rem;
     text-align: center;
     z-index: 1001;
+}
+.btnSUSito{
+    background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);    
 }
