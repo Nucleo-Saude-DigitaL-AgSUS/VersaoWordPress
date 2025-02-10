@@ -137,35 +137,39 @@ function redirectTo(url) {
 
 chatDialog.addEventListener('mouseleave', closeDialog);
 
-/**CORPO - SOU USUÁRIO */
-/* Bloco Sou Usuário    Jeremias Silva 31/01/2025 */
+/**CORPO - SOU USUÁRIO 
+/* Bloco Sou Profissional    Jeremias Silva 31/01/2025 */ 
 document.addEventListener('DOMContentLoaded', () => {  
-    // Seleciona todas as imagens que podem ser clicadas  
+    // Seleciona todas as imagens que podem ser clicadas dentro de #Corpo8E  
     const images = document.querySelectorAll('.botaoClicavel');  
 
     images.forEach((image) => {  
-        image.addEventListener('click', () => {  
-            const textBox = image.nextElementSibling; // Seleciona o próximo elemento (texto)  
+        const textBox = image.nextElementSibling; // Seleciona o próximo elemento (texto)  
 
-            // Exibe o texto suavemente  
+        // Inicializa a opacidade do texto como 0  
+        textBox.style.opacity = '0';  
+        textBox.style.display = 'none'; // Garante que o texto comece oculto  
+
+        // Mostra o texto quando o mouse entra  
+        image.addEventListener('mouseenter', () => {  
             textBox.style.display = 'block'; // Altera o estilo para exibir  
             setTimeout(() => {  
                 textBox.style.opacity = '1'; // Altera a opacidade para 1  
-                // Use uma transição CSS para suavizar essa transição  
             }, 0); // Atraso de 0 para garantir que o display seja alterado antes da opacidade  
+        });  
 
-            // Define um temporizador para ocultar o texto após 30 segundos  
+        // Esconde o texto quando o mouse sai  
+        image.addEventListener('mouseleave', () => {  
+            textBox.style.opacity = '0'; // Define a opacidade para 0  
             setTimeout(() => {  
-                textBox.style.opacity = '0'; // Define a opacidade para 0  
-                setTimeout(() => {  
-                    textBox.style.display = 'none'; // Esconde o texto novamente após a opacidade  
-                }, 600); // Tempo suficiente para a animação de saída  
-            }, 20000); // 27000 ms = 30 segundos  
+                textBox.style.display = 'none'; // Esconde o texto novamente após a opacidade  
+            }, 600); // Tempo suficiente para a animação de saída  
         });  
     });  
 });
 
-/* Bloco Sou Profissional    Jeremias Silva 31/01/2025 */ document.addEventListener('DOMContentLoaded', () => {  
+/* Bloco Sou Profissional    Jeremias Silva 31/01/2025 */ 
+document.addEventListener('DOMContentLoaded', () => {  
     // Seleciona todas as imagens que podem ser clicadas dentro de #Corpo8E  
     const images = document.querySelectorAll('.corpo9E .botaoClicavel');  
 
@@ -195,12 +199,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //* Contador dos Indicadores*/
-
 function animateCounter(element, start, end, duration, isPercentage = false) {
     let count = start;
     let increment = (end - start) / (duration / 20);
-    element.innerText = isPercentage ? `${start.toFixed(1)}%` : start.toFixed(3);
-
+    
     let interval = setInterval(() => {
         count += increment;
         if (count >= end) {
@@ -211,32 +213,32 @@ function animateCounter(element, start, end, duration, isPercentage = false) {
     }, 20);
 }
 
-// Criar um Observer para detectar quando as divs entram na tela
+// Criar um Observer para detectar quando as divs entram na tela de forma centralizada
 let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.intersectionRatio >= 0.75) { // Ativa quando 75% do elemento está visível (mais centralizado)
             let counterElement = entry.target;
-
+            
+            // Reinicia o contador ao entrar novamente na tela
             if (counterElement.id === "contagemC11D1") {
-                animateCounter(counterElement, 0, 6312, 2000); // Contagem de 0 a 6.312
+                animateCounter(counterElement, 0, 6312, 2000); 
             } else if (counterElement.id === "contagemC11D2") {
-                animateCounter(counterElement, 0, 85, 2000, true); // Contagem de 0 a 85%
+                animateCounter(counterElement, 0, 85, 2000, true); 
             } else if (counterElement.id === "contagemC11D3") {
-                animateCounter(counterElement, 0, 97, 2000, true); // Contagem de 0 a 97%
+                animateCounter(counterElement, 0, 97, 2000, true); 
             }
-
-            observer.unobserve(counterElement); // Para evitar múltiplas execuções
         }
     });
-}, { threshold: 0.5 }); // Ativa quando pelo menos 50% do elemento está visível
+}, { threshold: 0.75 }); // O contador só inicia quando 75% do elemento estiver visível
 
-// Observar os elementos com IDs "ContagemC10D1", "ContagemC10D2" e "ContagemC10D3"
+// Observar os elementos com IDs
 ["contagemC11D1", "contagemC11D2", "contagemC11D3"].forEach(id => {
     let element = document.getElementById(id);
     if (element) {
         observer.observe(element);
     }
 });
+
 
 // FLIP DO SOU GESTOR - Critérios //
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,14 +6,14 @@
 
 body, html {
     font-family: 'Open Sans', sans-serif;
-    margin: 0% 15% 0% 15%;
+    margin: 0% 10% 0% 10%;
 }
 
 header {
     background-image: linear-gradient(to bottom, #00a79d, #016185);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-around;
     padding: 10px 5%;
     border-radius: 0 0 30px 30px;
     width: 100%;
@@ -23,15 +23,16 @@ header {
     z-index: 1000;
 }
 
+/* Navbar container */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
     width: 100%;
 }
 
+/* Responsividade da logo */
 .logo {
     max-width: 100%;
     height: auto;
@@ -39,51 +40,43 @@ header {
 }
 
 @media (max-width: 768px) {
-    .Logo {
+    .logo {
         width: 80px;
     }
 }
 
+/* Configuração da navbar */
+#navbarNav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    gap: 2%;
+    width: 100%;
+    padding: 0% 50% 0% 0%;
+}
+
+/* Links da navbar */
 .navbar .nav-link,
 .dropdown .btn-secondary {
     font-weight: bold;
     font-size: 1rem;
     text-decoration: none;
     color: #fff;
-    padding: 10px;
+    padding: 12px 15px;
     white-space: nowrap;
-    margin: 0% 5% 0% 5%;
+    flex: 1;
+    text-align: center;
 }
 
-#navbarNav {
-    display: grid;
-    grid-auto-flow: column;
-    justify-items: center;
-    gap: 2%;
-}
-
-#dropdownMenuLink {
-    text-decoration: none;
-    background-color: transparent;
-    border: none;
-}
-
-@media (max-width: 992px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar .nav-link,
-    .dropdown .btn-secondary {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-}
-
+/* Estilização do menu suspenso */
 .dropdown-menu {
     font-size: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#dropdownMenuLink{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 
 .dropdown-item {
@@ -91,16 +84,40 @@ header {
     text-align: left;
 }
 
-@media (max-width: 768px) {
-    .navbar-collapse {
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #00a79d;
+}
+
+/* 🔹 Responsividade para telas menores (Ajuste automático da largura) */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbarNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .navbar .nav-link,
+    .dropdown .btn-secondary {
+        font-size: 0.9rem;
+        padding: 12px;
+        width: 100%; /* Cada link ocupa 100% da largura */
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        width: 100%;
         text-align: center;
     }
 }
 
-.dropdown-item:hover {
-    background-color: #555;
-    color: #00a79d;
-}
 
 h1, h2 {
     font-family: "Quicksand", serif;
@@ -349,7 +366,7 @@ img {
 #carrosselEquipe {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -597,7 +614,7 @@ img {
 
 /*CORPO 8 - SOU USUÁRIO*/
 .tituloC8{
-    margin: 5% 10% 0% 10%;
+    margin: 4% 10% 0% 10%;
     text-shadow: 2px 2px 0px black, -2px -2px 0px white;
 }
 
@@ -663,22 +680,23 @@ ul li img {
 }
 
 .textoExplicativo {  
-    width: calc(87% + 5vw); 
-    margin-top: 1px; 
-    position: justify;  
-    top: -10;  
-    left: 0;  
-    text-align: left;  
-    background-color: #f0f0f0; 
-    border: 2px solid #fbfdfdf3;  
-    border-radius: 20px;
-    padding: 35px; 
-    opacity: 0; 
-    transition: opacity 0.8s; 
-    display: none; 
-    color: #070606; 
-    font-size: 0.8rem; 
-    font-family: 'Arial', sans-serif; 
+    margin-top: 1px; /* Margem superior para o texto */  
+    position: relative; /* Define o tipo de posicionamento */  
+    top: -6px; /* Ajuste a posição vertical do texto */  
+    left: -5%; /* Ajuste a posição horizontal do texto */  
+    text-align: right; /* Alinhamento do texto à esquerda */  
+    background-color: #f0f0f0; /* Cor de fundo da div */  
+    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
+    border-radius: 20px 20px 10px 30px;  
+    opacity: 0; /* Opacidade inicial como 0 */  
+    transition: opacity 0.8s; /* Transição suave para a opacidade */  
+    display: none; /* Inicia como oculto */  
+    color: #130202; /* Cor do texto */  
+    font-size: 0.8rem; /* Tamanho da fonte */  
+    font-family: 'Arial', sans-serif; /* Tipo de fonte */ 
+    text-align: center;
+    padding: 3%;
+    margin-right: 10%;
 }
 
 
@@ -722,19 +740,23 @@ ul li img {
 }
 
 .textoExplicativoC9 {  
-    width: calc(87% + 5vw);
-    margin-top: 5px; 
-    text-align: left; 
-    background-color: #f0f0f0;  
-    border: 2px solid #fbfdfdf3; 
-    border-radius: 5px; 
-    padding: 10px;  
-    opacity: 0;  
-    transition: opacity 0.8s;   
-    display: none;   
-    color: #070606; 
-    font-size: 0.8rem; 
-    font-family: 'Arial', sans-serif; 
+    margin-top: 1px; /* Margem superior para o texto */  
+    position: relative; /* Define o tipo de posicionamento */  
+    top: -6px; /* Ajuste a posição vertical do texto */  
+    left: 0%; /* Ajuste a posição horizontal do texto */  
+    text-align: right; /* Alinhamento do texto à esquerda */  
+    background-color: #f0f0f0; /* Cor de fundo da div */  
+    border: 2px solid #fbfdfdf3; /* Borda semi-transparente */  
+    border-radius: 20px 20px 10px 30px;  
+    opacity: 0; /* Opacidade inicial como 0 */  
+    transition: opacity 0.8s; /* Transição suave para a opacidade */  
+    display: none; /* Inicia como oculto */  
+    color: #130202; /* Cor do texto */  
+    font-size: 0.8rem; /* Tamanho da fonte */  
+    font-family: 'Arial', sans-serif; /* Tipo de fonte */ 
+    text-align: center;
+    padding: 3%;
+    margin-right: 15%;
 }
 
  .corpo9D{
@@ -1220,13 +1242,13 @@ footer{
 
 /*ABA DO CHAT - SUSito*/
 #chatButton {  
-    width: 6%;
-    height: 7%;
+    width: 3%;
+    height: 5%;
     background-image: linear-gradient(180deg, #016185 30%, #71d285 70%);
     color: #fff;
     text-shadow: 4px 4px 5px #4a4a4a;
     border: none;  
-    border-radius: 20PX 0PX 20px 0px;  
+    border-radius: 20PX 0PX 0px 20px;  
     cursor: pointer;  
     position: fixed;  
     bottom: 100px;  
@@ -1235,7 +1257,10 @@ footer{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-weight: bold;  
     z-index: 1001;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: right;
+    padding-right: 3%;
+    padding-left: 1%;
 }  
 
 #susitoImage {  
