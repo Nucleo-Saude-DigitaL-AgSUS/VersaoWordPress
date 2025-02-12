@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/png" href="LogoCrua.png.png">
     <title>Núcleo de Saúde Digital</title>
@@ -44,7 +45,6 @@
                         </div>
                         <a class="nav-link px-3" href="#Corpo10Ancora">Nossa História</a>
                         <a class="nav-link px-3" href="#contagemC11D1">Comunidade</a>
-                        <a class="nav-link px-3" href="#Corpo12">Vem por aí</a>
                         <a class="nav-link px-3" href="#Corpo14">Biblioteca</a>
                         <a class="nav-link px-3" href="#Corpo16">Contato</a>
                     </div>
@@ -52,6 +52,12 @@
             </div>
         </header>
     </div>
+
+    <div class="intro">
+        <img src="Imagens/LOGOS_NSD (1) (1).png" class="logoIntro" alt="NSD Logo">
+    </div>
+    <audio id="introSound" src="nsd-intro-song.mp3"></audio>
+
 
 <!--CORPO 1 - VOCÊ JÁ CONHECE A AGSUS?--> 
     <div id="Corpo1">
@@ -67,15 +73,15 @@
     <h1 class="tituloDiretoria">Conheça os Diretores da AgSUS!</h1>
     <div id="diretoriaC1">
         <div class="diretor">
-            <img class="diretoriaImg" src="Diretoria/Andre.png" alt="Foto de André Longo">
+            <img class="diretoriaImg" src="Diretoria/Andre.png"  alt="Foto de André Longo">
             <p class="textoDiretor"><b>André Longo</b><br>Diretor-Presidente</p> 
         </div>
         <div class="diretor">
-            <img class="diretoriaImg" src="Diretoria/Luciana.png" alt="Foto de Luciana Maciel">
+            <img class="diretoriaImg" src="Diretoria/Luciana.png"  alt="Foto de Luciana Maciel">
             <p class="textoLuciana"><b>Luciana Maciel</b><br>Diretora de Atenção Integral à Saúde</p>
         </div>
         <div class="diretor">
-            <img class="diretoriaImg" src="Diretoria/Willames.png" alt="Foto de Willames Pimentel">
+            <img class="diretoriaImg" src="Diretoria/Willames.png"  alt="Foto de Willames Pimentel">
           <div id="Corpo2Ancora"> <p class="textoDiretor"><b>Willames Pimentel</b><br>Diretor de Operações</p></div>
         </div>
     </div>
@@ -341,19 +347,18 @@
                 </li>
             </ul>
         </div>
-        <div class="corpo16E">
-            <img class="imgC16E" src="Imagens/PMedico.png" alt="PMédico">
-            <h2 class="tituloC16E"> <b>É Médico de Família e Comunidade 
+        <div class="corpo9D">
+            <img class="imgC9D" src="Imagens/PMedico.png" alt="PMédico">
+            <h2 class="tituloC9D"> <b>É Médico de Família e Comunidade 
                 e tem interesse de atuar no NSD?
                 Envie seu currículo para o banco de talentos da AgSUS!</b>
             </h2>
-            <a class="btnC16E" href="https://agenciasus.org.br/trabalheconosco/" target="_blank">Banco de talentos da AgSUS</a>
+            <a class="btnC9D" href="https://agenciasus.org.br/trabalheconosco/" target="_blank">Banco de talentos da AgSUS</a>
         </div>
     </div>
-    
-    <div id="Corpo92">
-        <div class="corpo9D">
-            <h2 class="tituloC9D">Descubra o que o seu Conselho <br> Profissional diz sobre Teleconsulta</h2>
+    <div id="Corpo9E2">
+        <div class="corpo9E2">
+            <h2 class="tituloC9E2">Descubra o que o seu Conselho <br> Profissional diz sobre Teleconsulta</h2>
             <div class="conselhos1">
                 <button> <img src="Corpo6 Sou profisional/CFM.png" alt="CFM" class="imgConselhos" onclick="window.open('https://encurtador.com.br/fSpdY', '_blank')" target="_blank"> </button>
                 <button> <img src="Corpo6 Sou profisional/COFEN.png" alt="COFEN" class="imgConselhos" onclick="window.open('https://encurtador.com.br/wuHzP', '_blank')" target="_blank"> </button>
@@ -368,7 +373,7 @@
             </div>
         </div>
             
-        <div class="c92D"> <h2 class="tituloLegislacoes"> Conheça as Normativas e Diretrizes da <br> Saúde Digital no Brasil</h2>
+        <div class="corpo9D2"> <h2 class="tituloLegislacoes"> Conheça as Normativas e Diretrizes da <br> Saúde Digital no Brasil</h2>
             <div class="legislacoes">
                 <div data-info="Dispõe sobre as ações e serviços de Telessaúde no âmbito do SUS.">
                     <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2022/prt1348_03_06_2022.html" target="_blank">
@@ -391,8 +396,6 @@
             </div> 
         </div>       
     </div>
-    
-    
 <!--FIM DO CORPO 9-->
         
 <!--CORPO 10 - NOSSA HISTÓRIA-->
@@ -498,49 +501,7 @@
     </div>  
     <img class="redesSociais" src="Imagens/Redes Sociais.png" alt="Redes sociais">
 </div> <!-- Fechando a div #Corpo16 -->
-
 <!--FIM DO CORPO 16-->
-  
-        
-    </div>
-
-<!--FORMULARIO
-    <div id="Formulario">
-        <form action="/submit" method="post">
-            <fieldset>
-                <legend> <b>Gostou da iniciativa e ficou com alguma dúvida? Entre em contato com nosso time:</b></legend>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" required class="inputUser" required>
-                    <label for="nome"> Nome Completo </label>
-                </div>
-                <div class="inputBox">
-                    <input type="email" name="email" id="email" required class="inputUser" required>
-                    <label for="email"> E-mail </label>
-                </div>
-                <div class="inputBox">
-                    <input type="tel" name="tel" id="tel" required class="inputUser" required>
-                    <label for="tel"> Telefone </label>
-                </div>
-                <p>Assunto:</p>
-                <label for="assunto">Escolha o assunto:</label>
-                <select id="assunto" name="assunto">
-                    <option value="">Selecione um assunto</option>
-                    <option value="suporte">Sou paciente e tenho dúvidas sobre teleconsulta</option>
-                    <option value="financeiro">Sou gestor e tenho dúvidas sobre teleconsulta</option>
-                    <option value="vendas">Sou profissional de Saúde e tenho dúvidas sobre teleconsulta</option>
-                    <option value="vendas">Sou Médico MFC e quero trabalhar no NSD</option>
-                    <option value="vendas">Sugestões, Reclamações e Elogios</option>
-                    <option value="outro">Outros Assuntos</option>
-                </select>
-                <label for="mensagem">Digite Sua Mensagem:</label>
-                <textarea name="mensagem" id="mensagem"rows="5" cols="40" placeholder="Digite sua mensagem aqui..." required> </textarea>
-  
-                <button type="submit">Enviar</button>
-            </fieldset>
-        </form>
-    </div>
--->
 
 <!--RODAPÉ-->
     <footer>
@@ -551,6 +512,9 @@
     </footer>
 <!--FIM DO RODAPÉ-->
 
-    <script src="Script.js"></script>   
+<script src="Script.js"></script>
+<!-- Biblioteca JS do AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 </body>
 </html>
