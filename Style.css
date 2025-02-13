@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #00a79d;
+    --secondary-color: #016185;
+    --accent-color: #71d285;
+    --text-color: #4a4a4a;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Quicksand', serif;
+    --font-tertiary: 'Montserrat', sans-serif;
+}
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +19,9 @@ body, html {
 }
 
 header {
-    background-image: linear-gradient(to bottom, #00a79d, #016185);
+    background: linear-gradient(270deg, #016185, #00a79d);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
     display: flex;
     align-items: center;
     justify-content:space-around;
@@ -54,7 +65,7 @@ header {
 }
 .col-2{
     position: absolute;
-    left: 10%; /* Ajuste conforme necessário */
+    left: 10%; 
 }
 
 .navbar .nav-link,
@@ -153,17 +164,29 @@ img {
 
 
 .intro {
+    margin: 0;
+    overflow: hidden;
+    background-color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 1;
     animation: fadeOut 3s ease-in-out 2.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .logoIntro {
@@ -323,12 +346,10 @@ img {
 }
 
 .textoC2{
-
     justify-content: center;
     overflow: visible;
     position: relative;
-    top: 100px;
-    
+    top: 100px; 
 }
 
 .logoC2{
@@ -337,8 +358,9 @@ img {
     overflow: visible;
     position: relative;
     top: -90px;
-    z-index: 10;;
+    z-index: 10;
 }
+
 .imgSusito{
     margin-top: 35%;
 }
@@ -561,16 +583,16 @@ img {
     display: grid;
     grid-auto-flow: column;
     columns: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: auto;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 1%;
+    margin: 3% 15% 0% 5%;
 }
 
 .imgCorpo7{
     width: calc(60% + 5vw);  
     height: auto;  
     border: 0px solid #8b0d0d;  
-    margin: 2% 0% 0% 10%;  
+    margin: 1% 0% 0% 10%;  
     transition: transform 0.2s;
     cursor: pointer; 
 }
@@ -687,9 +709,10 @@ img {
 
 #Corpo8{
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     columns: center;
-    gap: 5%;
+    gap: 3%;
+    margin: 3% 10% 0% 5%;
 }
 
 .tituloC8E{
@@ -718,14 +741,13 @@ ul li {
 }
 
 ul li img {
-    display: block;
-    width: 1000px; 
-    max-width: 100%; 
+    width: calc(1000px + 5vw);  
     height: auto;
 }
 
 .botaoClicavel {
     cursor: pointer;
+    width: calc(1000px + 5vw);  
     height: auto;
     border: 0px solid #ccc;
     transition: transform 0.2s; 
@@ -770,9 +792,8 @@ ul li img {
 
 #Corpo9{
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); 
-    columns: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    margin: 3% 10% 0% 5%;
 }
 
 .corpo9E{
@@ -830,7 +851,7 @@ ul li img {
     margin: 10% 15% 15% 0%;
 }
 .imgC9D{
-    width: calc(150px + 5vw);
+    width: calc(200px + 5vw);
     height: auto;
 }
 .tituloC9D{
@@ -870,7 +891,8 @@ ul li img {
     display: grid;
     grid-auto-flow: column;
     columns: center;
-    
+    margin: 0% 15% 0% 5%;
+    border-radius: 10%;   
 }
 
 .corpo9E2{
@@ -883,7 +905,7 @@ ul li img {
     width: 100%;
     box-sizing: border-box;  
     background-image: linear-gradient(to left, #fff 30%, #e5e5e5 70%);
-
+    border-radius: 10%;
 }
 
 .tituloC9E2{
@@ -930,6 +952,7 @@ button{
     align-items: center;
     text-align: center;
     background-image: linear-gradient(to right, #fff 30%, #e5e5e5 70%);
+    border-radius: 10%;
 }
 
 .tituloLegislacoes{
@@ -1011,7 +1034,7 @@ button{
     grid-auto-flow: column;
     columns: center;
     gap: 5%;
-    margin: 0% 5% 0% 0%;
+    margin: 3% 10% 0% 5%;
 }
 
 #video{
@@ -1142,9 +1165,7 @@ button{
     gap: 5%;
     margin: 2% 0%;
 }
-.imgC11D{
 
-}
 #contagemC11D1, #contagemC11D2, #contagemC11D3{
     text-align: center;
 }
@@ -1204,28 +1225,23 @@ button{
     font-weight: bold;
     color: #52b297;
     text-align: center;
-    margin: 5% 10% 0% 15%;
+    margin: 5% 10% 3% 15%;
 }
 
 #Corpo14{
-    display: grid;
-    grid-auto-flow: column;
-    columns: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0% 10% 0% 15%;
 }
 
 
-.imgCorpo14{
+.imgCorpo14, .imgCorpo142{
     width: calc(500px + 5vw);
     height: auto;
     padding: 2%;
 }
-.imgCorpo142{
-    width: calc(30px + 5vw);
-    height: 80%;
-    margin-top: 20%;
 
-}
 
 /*CORPO 15 -BIBLIOTECA*/
 #Corpo15{
@@ -1237,7 +1253,8 @@ button{
 }
 
 .imgTituloCorpo15{
-    width: calc(500px + 5vw);   
+    width: calc(500px + 5vw);
+    margin-top: 8%;   
 }
 
 .textoCorpo15{
@@ -1250,7 +1267,8 @@ button{
 }
 
 .corpo15D{
-    padding-top: 15%;
+    padding-top: 20%;
+    margin-top: 10%;
 }
 
 .corpo15D ul li{
@@ -1288,12 +1306,15 @@ button{
     display: grid;
     grid-auto-flow: column;
     columns: center;
+    grid-template-columns: 50% 50% 50%;
+    gap: 5%;
+    margin: 5% 10% 0% 15%;
 }
 .corpo162{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 10%;
+    align-items: left;
+    padding-left: 3%;
 }
 
 .fa-solid{
@@ -1304,16 +1325,50 @@ button{
 .tituloC16D{
     font-weight: bold;
     color: #00a79d;
-    text-align: center;
 }
-.textoC16D{
-    margin-left: 10%;
-    text-align: justify;
+
+.redesSociais {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    border-radius: 20%;
+    color: #070606;
 }
-.redesSociais{
-    width: 100%;
-    max-width: 500px;
-    padding-top: 3%;
+
+.redesSociais h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.redesSociais div {
+    display: flex;
+    align-items: center; /* Alinha os elementos verticalmente */
+    gap: 10px;
+}
+
+.redesSociais img {
+    width: 30px;
+    height: auto;
+    padding-bottom: 3%;
+}
+
+.redesSociais a {
+    text-decoration: none;
+    color: #070606;
+    padding-bottom: 3%;
+}
+
+.redesSociais p {
+    margin: 0; /* Remove margens para evitar desalinhamento */
+    font-size: 1rem;
+}
+.imgRedesSociaisSUSito{
+    position: relative;
+    margin-left: -60%;
+    width: calc(100px + 5vw);
+    height: auto;
+
 }
 
 
@@ -1328,11 +1383,18 @@ footer{
     text-align: center;
 }
 
-.imgInstituicoes, .imgRodape{
+.imgInstituicoes{
     text-align: center;
     max-width: 70%;
 }
-
+.imgRodape{
+    width: 100vw;
+    height: auto;
+    display: block;
+    margin: 0%;
+    padding: 0%;
+    background-size: 400% 400%;
+}
 /*ABA DO CHAT - SUSito*/
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
