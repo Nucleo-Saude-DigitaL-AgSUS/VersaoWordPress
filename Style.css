@@ -166,7 +166,7 @@ img {
 .intro {
     margin: 0;
     overflow: hidden;
-    background-color: #4a4a4a;
+    background-color: #070606;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1172,7 +1172,7 @@ button{
 
 
 /*CORPO 12 - COMUNIDADE DE PRÁICAS*/
-#Corpo12{
+#Corpo12 {
     display: flex;
     flex-direction: column;
     gap: 10%;
@@ -1181,13 +1181,13 @@ button{
     margin: 5% 10% 0% 10%;
 }
 
-.tituloCorpo12{
-    font-style: bold;
+.tituloCorpo12 {
+    font-weight: bold;
     color: #00a79d;
     font-size: 2rem;
 }
 
-.imgCorpo12{
+.imgCorpo12 {
     width: calc(300px + 5vw);
     height: auto;
     padding-top: 3%;
@@ -1216,7 +1216,7 @@ button{
 }
 .imgCorpo13D{
     width: 100%;
-    max-width: 200PX;
+    max-width: 200px;
 }
 
 
@@ -1234,7 +1234,6 @@ button{
     align-items: center;
     margin: 0% 10% 0% 15%;
 }
-
 
 .imgCorpo14, .imgCorpo142{
     width: calc(500px + 5vw);
