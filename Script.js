@@ -137,65 +137,56 @@ function redirectTo(url) {
 
 chatDialog.addEventListener('mouseleave', closeDialog);
 
-/**CORPO - SOU USUÁRIO 
-/* Bloco Sou Profissional    Jeremias Silva 31/01/2025 */ 
-document.addEventListener('DOMContentLoaded', () => {  
-    // Seleciona todas as imagens que podem ser clicadas dentro de #Corpo8E  
-    const images = document.querySelectorAll('.botaoClicavel');  
+//CORPO - SOU USUÁRIO 
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.botaoClicavel');
 
-    images.forEach((image) => {  
-        const textBox = image.nextElementSibling; // Seleciona o próximo elemento (texto)  
+    images.forEach((image) => {
+        const textBox = image.nextElementSibling;
 
-        // Inicializa a opacidade do texto como 0  
-        textBox.style.opacity = '0';  
-        textBox.style.display = 'none'; // Garante que o texto comece oculto  
+        textBox.style.opacity = '0';
+        textBox.style.display = 'none';
 
-        // Mostra o texto quando o mouse entra  
-        image.addEventListener('mouseenter', () => {  
-            textBox.style.display = 'block'; // Altera o estilo para exibir  
-            setTimeout(() => {  
-                textBox.style.opacity = '1'; // Altera a opacidade para 1  
-            }, 0); // Atraso de 0 para garantir que o display seja alterado antes da opacidade  
-        });  
-
-        // Esconde o texto quando o mouse sai  
-        image.addEventListener('mouseleave', () => {  
-            textBox.style.opacity = '0'; // Define a opacidade para 0  
-            setTimeout(() => {  
-                textBox.style.display = 'none'; // Esconde o texto novamente após a opacidade  
-            }, 600); // Tempo suficiente para a animação de saída  
-        });  
-    });  
+        image.addEventListener('click', () => {
+            if (textBox.style.display === 'none') {
+                textBox.style.display = 'block';
+                setTimeout(() => {
+                    textBox.style.opacity = '1';
+                }, 0);
+            } else {
+                textBox.style.opacity = '0';
+                setTimeout(() => {
+                    textBox.style.display = 'none';
+                }, 600);
+            }
+        });
+    });
 });
 
 /* Bloco Sou Profissional    Jeremias Silva 31/01/2025 */ 
-document.addEventListener('DOMContentLoaded', () => {  
-    // Seleciona todas as imagens que podem ser clicadas dentro de #Corpo8E  
-    const images = document.querySelectorAll('.corpo9E .botaoClicavel');  
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.corpo9E .botaoClicavel');
 
-    images.forEach((image) => {  
-        const textBox = image.nextElementSibling; // Seleciona o próximo elemento (texto)  
+    images.forEach((image) => {
+        const textBox = image.nextElementSibling;
 
-        // Inicializa a opacidade do texto como 0  
-        textBox.style.opacity = '0';  
-        textBox.style.display = 'none'; // Garante que o texto comece oculto  
+        textBox.style.opacity = '0';
+        textBox.style.display = 'none';
 
-        // Mostra o texto quando o mouse entra  
-        image.addEventListener('mouseenter', () => {  
-            textBox.style.display = 'block'; // Altera o estilo para exibir  
-            setTimeout(() => {  
-                textBox.style.opacity = '1'; // Altera a opacidade para 1  
-            }, 0); // Atraso de 0 para garantir que o display seja alterado antes da opacidade  
-        });  
-
-        // Esconde o texto quando o mouse sai  
-        image.addEventListener('mouseleave', () => {  
-            textBox.style.opacity = '0'; // Define a opacidade para 0  
-            setTimeout(() => {  
-                textBox.style.display = 'none'; // Esconde o texto novamente após a opacidade  
-            }, 600); // Tempo suficiente para a animação de saída  
-        });  
-    });  
+        image.addEventListener('click', () => {
+            if (textBox.style.display === 'none') {
+                textBox.style.display = 'block';
+                setTimeout(() => {
+                    textBox.style.opacity = '1';
+                }, 0);
+            } else {
+                textBox.style.opacity = '0';
+                setTimeout(() => {
+                    textBox.style.display = 'none';
+                }, 60000);
+            }
+        });
+    });
 });
 
 //* Contador dos Indicadores*/
@@ -243,44 +234,45 @@ let observer = new IntersectionObserver(entries => {
 // FLIP DO SOU GESTOR - Critérios //
 document.addEventListener("DOMContentLoaded", function () {
     const flipper = document.querySelector(".flipper");
-    const front = document.querySelector(".front");
 
-    front.addEventListener("mouseenter", function () {
-        flipper.style.transform = "rotateY(180deg)";
-    });
-
-    flipper.addEventListener("mouseleave", function () {
-        flipper.style.transform = "rotateY(0deg)";
+    flipper.addEventListener("click", function () {
+        flipper.classList.toggle("flipped");
     });
 });
-
 /** Corpo 7E Sou Gestor  */
-document.addEventListener('DOMContentLoaded', () => {  
-    // Seleciona todas as imagens que podem ser clicadas dentro do bloco Corpo7  
-    const images = document.querySelectorAll('#Corpo7 .imgCorpo7');  
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('#Corpo7 .imgCorpo7');
 
-    images.forEach((image) => {  
-        // Cria ou seleciona o elemento texto explicativo  
-        let textBox = image.nextElementSibling; // O texto explicativo deve ser próximo da imagem  
+    images.forEach((image) => {
+        let textBox = image.nextElementSibling;
 
-        // Inicializa a opacidade do texto como 0  
-        textBox.style.opacity = '0';  
-        textBox.style.display = 'none'; // Garante que o texto comece oculto  
+        textBox.style.opacity = '0';
+        textBox.style.display = 'none';
 
-        // Mostra o texto quando o mouse entra  
-        image.addEventListener('mouseenter', () => {  
-            textBox.style.display = 'block'; // Exibe o texto  
-            setTimeout(() => {  
-                textBox.style.opacity = '1'; // Muda a opacidade para 1  
-            }, 0);  
-        });  
-
-        // Esconde o texto quando o mouse sai  
-        image.addEventListener('mouseleave', () => {  
-            textBox.style.opacity = '0'; // Define a opacidade para 0  
-            setTimeout(() => {  
-                textBox.style.display = 'none'; // Esconde o texto novamente  
-            }, 600);  
-        });  
-    });  
+        image.addEventListener('click', () => {
+            if (textBox.style.display === 'none') {
+                textBox.style.display = 'block';
+                setTimeout(() => {
+                    textBox.style.opacity = '1';
+                }, 0);
+            } else {
+                textBox.style.opacity = '0';
+                setTimeout(() => {
+                    textBox.style.display = 'none';
+                }, 600);
+            }
+        });
+    });
 });
+
+// SOM AO INICIAR //
+    document.addEventListener("DOMContentLoaded", function() {
+        let audio = document.getElementById("siteAudio");
+
+        // Aguarda um pequeno tempo para iniciar o som com a logo
+        setTimeout(() => {
+            audio.play().catch(error => console.log("Reprodução automática bloqueada pelo navegador:", error));
+        }, 500); // Ajuste o tempo conforme necessário para sincronizar com a logo
+    });
+
+ 

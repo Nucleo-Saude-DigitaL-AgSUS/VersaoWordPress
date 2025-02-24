@@ -291,26 +291,32 @@ img {
     grid-auto-flow: column;
     columns: center;
     column-gap: 5%;
-    margin:2% 20% 0% 20%;
+    margin:2% 15% 0% 15%;
     border-radius: 10px;
-    padding: 20px;
     color: #070606;
 }
 
 .diretoriaImg{
-    width: calc(1000px + 5vw);
+    width: 100%;
+    max-width: 800px;
     height: auto;
     padding-bottom: 3%;
 }
 
+.diretoriaImgLuciana{
+    width: 105%; /* Aumenta o tamanho em relação às outras imagens */
+    max-width: 800px; /* Ajusta o limite máximo */
+    height: auto;
+    align-self: center; /* Mantém alinhado verticalmente */
+}
+
 .textoDiretor{
     text-align: center;
-    padding-top: 5%;
-    
+    padding-top: 5%;    
 }
 
 .textoLuciana{
-    padding-top: 15%;
+    padding-top: 13%;
     text-align: center;
 }
 
@@ -653,9 +659,10 @@ img {
     align-items: center;
 }
 
-.flip-container:hover .flipper {
+.flipped {
     transform: rotateY(180deg);
 }
+
 
 .front, .back {
     position: absolute;
@@ -1377,9 +1384,31 @@ footer{
     text-align: center;
 }
 
-.texto1Rodape, .texto2Rodape{
+.texto1Rodape {
     font-size: 0.7rem;
     text-align: center;
+}
+.texto2Rodape{
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    animation: fadeInGlowLoop 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeInGlowLoop {
+    0% {
+        opacity: 0;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
 }
 
 .imgInstituicoes{
@@ -1394,6 +1423,8 @@ footer{
     padding: 0%;
     background-size: 400% 400%;
 }
+
+
 /*ABA DO CHAT - SUSito*/
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
